@@ -17,7 +17,7 @@ class cGroup
         if(!($student instanceof cStudent) ) return false;
         if (isset($this->students[$student->getNickName()])) return false;
 
-        //дописать
+        $this->students[$student->getNickName()] = $student;
 
         return true;
     }

@@ -1,5 +1,6 @@
 <?php
 include_once "cUser.php";
+include_once "Constants.php";
 
 /**
  * Created by PhpStorm.
@@ -12,14 +13,20 @@ class cStudent extends cUser
     private $calendarMarks; //key: date; value: mark
     public $groupID;
 
-    public function __construct($nick, $password, $groupID)
+    public function __construct($nick, $password)
     {
         parent::__construct($nick, $password);
-        $this->groupID = $groupID;
+        //$this->groupID = $groupID;
     }
 
     public function editMark($date, $dayInfo)
     {
         $this->calendarMarks[$date] = $dayInfo;
+    }
+
+    public function Save()
+    {
+        $str = json_encode($this);
+        file_put_contents($ROOT_PATH . "students/" . $this->getNickName(),$str);
     }
 }

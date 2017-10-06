@@ -6,7 +6,7 @@
  * Date: 06.10.2017
  * Time: 19:46
  */
-class cUser
+abstract class cUser
 {
     private $nickName;
     private $passwordHash;
@@ -23,4 +23,6 @@ class cUser
     {
         return $this->nickName;
     }
+
+    public abstract function Save();
 }
