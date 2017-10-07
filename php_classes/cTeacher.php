@@ -9,7 +9,7 @@ include_once "Constants.php";
  * Date: 06.10.2017
  * Time: 20:07
  */
-class cTeacher extends cUser
+class cTeacher extends cUser implements JsonSerializable
 {
     public $groups;
 
@@ -29,5 +29,10 @@ class cTeacher extends cUser
         $str = json_encode($this);
         echo Constants::$ROOT_PATH . "teachers/";
         file_put_contents(Constants::$ROOT_PATH . "teachers/" . $this->getNickName() . ".json", $str);
+    }
+
+    function jsonSerialize()
+    {
+        // TODO: Implement jsonSerialize() method.
     }
 }

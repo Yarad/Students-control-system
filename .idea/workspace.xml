@@ -48,8 +48,8 @@
       <file leaf-file-name="cTeacher.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php_classes/cTeacher.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="51" lean-forward="false" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+            <state relative-caret-position="268">
+              <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -95,8 +95,8 @@
         <option value="$PROJECT_DIR$/php_classes/cGroup.php" />
         <option value="$PROJECT_DIR$/php_classes/cStudent.php" />
         <option value="$PROJECT_DIR$/php_classes/Constants.php" />
-        <option value="$PROJECT_DIR$/php_classes/cTeacher.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/php_classes/cTeacher.php" />
       </list>
     </option>
   </component>
@@ -201,12 +201,12 @@
       <option name="presentableId" value="Default" />
       <updated>1507311638112</updated>
       <workItem from="1507311646693" duration="5825000" />
-      <workItem from="1507319265910" duration="7646000" />
+      <workItem from="1507319265910" duration="9780000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13471000" />
+    <option name="totallyTimeSpent" value="15605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -350,8 +350,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php_classes/cTeacher.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="51" lean-forward="false" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+        <state relative-caret-position="268">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
           <folding />
         </state>
       </provider>
