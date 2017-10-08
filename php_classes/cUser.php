@@ -6,23 +6,35 @@
  * Date: 06.10.2017
  * Time: 19:46
  */
-abstract class cUser
+abstract class cUser implements JsonSerializable
 {
-    private $nickName;
-    private $passwordHash;
+    public $nickName;
+    public $passwordHash;
     public $extraInfo;
 
     public function __construct($nick, $password)
     {
         $this->nickName = $nick;
         $this->passwordHash = $password; //пока что сохраняем просто так
-
-    }
-
-    public function getNickName()
-    {
-        return $this->nickName;
+        $extraInfo = "";
     }
 
     public abstract function Save();
+
+    function jsonSerialize()
+    {
+        $array = [];
+        foreach($this as $k => $v){
+            if(is_array($v) || is_object($v)){
+                $array[$k] = array_keys($v);
+            }
+            else
+            {
+                $array[$k] = $v;
+            }
+        }
+        return $array;
+    }
+
+    public abstract static function JsonDecode($jsonStr);
 }

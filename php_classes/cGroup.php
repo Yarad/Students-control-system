@@ -15,9 +15,9 @@ class cGroup
     public function addStudent($student)
     {
         if(!($student instanceof cStudent) ) return false;
-        if (isset($this->students[$student->getNickName()])) return false;
+        if (isset($this->students[$student->nickName])) return false;
 
-        $this->students[$student->getNickName()] = $student;
+        $this->students[$student->nickName] = $student;
 
         return true;
     }

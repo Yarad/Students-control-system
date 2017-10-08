@@ -27,6 +27,14 @@ class cStudent extends cUser
     public function Save()
     {
         $str = json_encode($this);
-        file_put_contents($ROOT_PATH . "students/" . $this->getNickName(),$str);
+        file_put_contents($ROOT_PATH . "students/" . $this->nickName,$str);
+    }
+
+    public static function JsonDecode($jsonStr)
+    {
+        $arr = json_decode($jsonStr);
+        $retRecord = new cStudent($arr["nickName"],$arr["passwordHash"]);
+        $retRecord->extraInfo = $arr["extraInfo"];
+        return $retRecord;
     }
 }
