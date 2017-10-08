@@ -38,4 +38,9 @@ class cTeacher extends cUser
         $retRecord->extraInfo = $arr["extraInfo"];
         return $retRecord;
     }
+
+    public function getGroupsIDs()
+    {
+        return implode(',',array_keys($this->groups));
+    }
 }

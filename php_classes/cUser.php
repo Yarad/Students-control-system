@@ -16,7 +16,7 @@ abstract class cUser implements JsonSerializable
     {
         $this->nickName = $nick;
         $this->passwordHash = $password; //пока что сохраняем просто так
-        $extraInfo = "";
+        $this->extraInfo = "";
     }
 
     public abstract function Save();
@@ -24,16 +24,20 @@ abstract class cUser implements JsonSerializable
     function jsonSerialize()
     {
         $array = [];
-        foreach($this as $k => $v){
-            if(is_array($v) || is_object($v)){
+        foreach ($this as $k => $v) {
+            if (is_array($v) || is_object($v)) {
                 $array[$k] = array_keys($v);
-            }
-            else
-            {
+            } else {
                 $array[$k] = $v;
             }
         }
         return $array;
+    }
+
+    public function getCurrentHash()
+    {
+        return $this->passwordHash;
+        //временная мера
     }
 
     public abstract static function JsonDecode($jsonStr);

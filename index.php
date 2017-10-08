@@ -1,5 +1,6 @@
 <?php
 include_once "php_classes/cTeacher.php";
+include_once "php_classes/cDB.php";
 /**
  * Created by PhpStorm.
  * User: user
@@ -7,9 +8,7 @@ include_once "php_classes/cTeacher.php";
  * Time: 20:43
  */
 
-echo $_SERVER['DOCUMENT_ROOT'];
-$test = new cTeacher("teacher_nick","smth");
-$test->addGroup("15-16 years old");
-$test->groups["15-16 years old"] -> addStudent(new cStudent("yarad","yarad"));
-$test->Save();
-var_dump($test->groups["15-16 years old"]);
+$db = new cDB();
+
+$db->LoadTeacherByNickName("teacher_nick");
+//var_dump($test->groups["15-16 years old"]);
