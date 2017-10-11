@@ -18,9 +18,15 @@
       <file leaf-file-name="Constants.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php_classes/Constants.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-              <folding />
+            <state relative-caret-position="157">
+              <caret line="23" column="70" lean-forward="false" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
+              <folding>
+                <element signature="e#7#87#0#PHP" expanded="false" />
+                <element signature="n#random_string#0;n#Constants#0;n#!!top" expanded="false" />
+                <element signature="e#1154#1631#0#PHP" expanded="false" />
+                <element signature="e#1264#1631#0#PHP" expanded="false" />
+                <element signature="e#1938#2262#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -28,47 +34,64 @@
       <file leaf-file-name="cUser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php_classes/cUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            <state relative-caret-position="17">
+              <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
               <folding>
+                <element signature="e#7#87#0#PHP" expanded="false" />
+                <element signature="n#__construct#0;n#cUser#0;n#!!top" expanded="false" />
                 <element signature="n#jsonSerialize#0;n#cUser#0;n#!!top" expanded="false" />
+                <element signature="e#591#792#0#PHP" expanded="false" />
+                <element signature="e#633#782#0#PHP" expanded="false" />
+                <element signature="e#729#782#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cGroup.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php_classes/cGroup.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-              <folding>
-                <element signature="e#35#115#0#PHP" expanded="false" />
-                <element signature="n#addStudent#0;n#cGroup#0;n#!!top" expanded="false" />
-                <element signature="n#getAverageMark#0;n#cGroup#0;n#!!top" expanded="false" />
-                <element signature="n#getGroupInfo#0;n#cGroup#0;n#!!top" expanded="false" />
-                <element signature="n#changeGroupInfo#0;n#cGroup#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cDB.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cDB.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php_classes/cDB.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+            <state relative-caret-position="17">
+              <caret line="76" column="25" lean-forward="true" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
               <folding>
-                <marker date="1507500631103" expanded="true" signature="410:423" ph="INSERT INTO " />
-                <marker date="1507500631103" expanded="true" signature="410:541" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-                <marker date="1507500631103" expanded="true" signature="410:570" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-                <marker date="1507500631103" expanded="true" signature="410:640" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-                <marker date="1507500631103" expanded="true" signature="410:668" ph="INSERT INTO `$`... " />
-                <marker date="1507500631103" expanded="true" signature="410:705" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-                <marker date="1507500631103" expanded="true" signature="816:860" ph="SELECT * FRO... teachers" />
-                <marker date="1507500631103" expanded="true" signature="816:876" ph="SELECT * FRO... teachers" />
-                <marker date="1507500631103" expanded="true" signature="816:877" ph="SELECT * FRO... teachers" />
-                <marker date="1507500631103" expanded="true" signature="816:878" ph="SELECT * FRO... teachers" />
+                <element signature="e#7#87#0#PHP" expanded="false" />
+                <element signature="n#__construct#0;n#cDB#0;n#!!top" expanded="false" />
+                <element signature="n#SaveTeacher#0;n#cDB#0;n#!!top" expanded="false" />
+                <element signature="e#357#652#0#PHP" expanded="false" />
+                <element signature="n#SaveGroup#0;n#cDB#0;n#!!top" expanded="false" />
+                <element signature="e#855#1108#0#PHP" expanded="false" />
+                <element signature="n#SaveStudent#0;n#cDB#0;n#!!top" expanded="false" />
+                <element signature="e#1317#1534#0#PHP" expanded="false" />
+                <element signature="n#LoadTeacherByNickName#0;n#cDB#0;n#!!top" expanded="false" />
+                <element signature="e#1956#2091#0#PHP" expanded="false" />
+                <element signature="n#LoadGroupByID#0;n#cDB#0;n#!!top" expanded="false" />
+                <element signature="e#2443#2590#0#PHP" expanded="false" />
+                <element signature="n#LoadStudentByNickName#0;n#cDB#0;n#!!top" expanded="false" />
+                <element signature="e#3440#3546#0#PHP" expanded="false" />
+                <element signature="e#4125#4451#0#PHP" expanded="false" />
+                <element signature="n#LogOut#0;n#cDB#0;n#!!top" expanded="false" />
+                <marker date="1507732263026" expanded="false" signature="379:392" ph="INSERT INTO " />
+                <marker date="1507732263026" expanded="false" signature="379:510" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+                <marker date="1507732263026" expanded="false" signature="379:539" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+                <marker date="1507732263026" expanded="false" signature="379:578" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+                <marker date="1507732263026" expanded="false" signature="379:585" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+                <marker date="1507732263026" expanded="false" signature="379:613" ph="INSERT INTO `$`... " />
+                <marker date="1507732263026" expanded="false" signature="379:650" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+                <marker date="1507732263026" expanded="false" signature="877:980" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+                <marker date="1507732263026" expanded="false" signature="877:1074" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+                <marker date="1507732263026" expanded="false" signature="877:1106" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+                <marker date="1507732263026" expanded="false" signature="1339:1352" ph="INSERT INTO " />
+                <marker date="1507732263026" expanded="false" signature="1339:1387" ph="INSERT INTO " />
+                <marker date="1507732263026" expanded="false" signature="1339:1461" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+                <marker date="1507732263026" expanded="false" signature="1339:1462" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+                <marker date="1507732263026" expanded="false" signature="1339:1507" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+                <marker date="1507732263026" expanded="false" signature="1339:1532" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+                <marker date="1507732263026" expanded="false" signature="1699:1762" ph="SELECT * FRO... teachers" />
+                <marker date="1507732263026" expanded="false" signature="2218:2272" ph="SELECT * FRO... groups" />
+                <marker date="1507732263026" expanded="true" signature="2891:2971" ph="SELECT * FRO... ${Constants::$DB_TABLE_TEACHERS}" />
+                <marker date="1507732263026" expanded="true" signature="3025:3105" ph="SELECT * FRO... ${Constants::$DB_TABLE_STUDENTS}" />
+                <marker date="1507732263026" expanded="true" signature="5174:5272" ph="SELECT `curr... ${Constants::$DB_TABLE_TEACHERS}" />
+                <marker date="1507732263026" expanded="true" signature="5326:5424" ph="SELECT `curr... ${Constants::$DB_TABLE_STUDENTS}" />
               </folding>
             </state>
           </provider>
@@ -77,13 +100,15 @@
       <file leaf-file-name="cTeacher.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php_classes/cTeacher.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
                 <element signature="e#90#170#0#PHP" expanded="false" />
                 <element signature="n#addGroup#0;n#cTeacher#0;n#!!top" expanded="false" />
-                <element signature="e#363#488#0#PHP" expanded="false" />
+                <element signature="e#363#476#0#PHP" expanded="false" />
+                <element signature="n#Save#0;n#cTeacher#0;n#!!top" expanded="false" />
                 <element signature="n#JsonDecode#0;n#cTeacher#0;n#!!top" expanded="false" />
+                <element signature="n#getGroupsIDs#0;n#cTeacher#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -92,19 +117,34 @@
       <file leaf-file-name="cStudent.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php_classes/cStudent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+            <state relative-caret-position="299">
+              <caret line="36" column="50" lean-forward="false" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+            <state relative-caret-position="242">
+              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cGroup.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php_classes/cGroup.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+              <folding>
+                <element signature="e#35#115#0#PHP" expanded="false" />
+                <element signature="n#addStudent#0;n#cGroup#0;n#!!top" expanded="false" />
+                <element signature="n#getGroupInfo#0;n#cGroup#0;n#!!top" expanded="false" />
+                <element signature="n#changeGroupInfo#0;n#cGroup#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,13 +155,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/php_classes/cDayInfo.php" />
-        <option value="$PROJECT_DIR$/php_classes/cGroup.php" />
         <option value="$PROJECT_DIR$/teachers/teacher_nick.json" />
         <option value="$PROJECT_DIR$/php_classes/cStudent.php" />
         <option value="$PROJECT_DIR$/php_classes/DB.php" />
         <option value="$PROJECT_DIR$/php_classes/cTeacher.php" />
-        <option value="$PROJECT_DIR$/php_classes/Constants.php" />
+        <option value="$PROJECT_DIR$/php_classes/cGroup.php" />
         <option value="$PROJECT_DIR$/php_classes/cUser.php" />
+        <option value="$PROJECT_DIR$/php_classes/Constants.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/php_classes/cDB.php" />
       </list>
@@ -197,8 +237,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -211,7 +251,13 @@
       <recent name="D:\Projects\WEB\students_control" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHP Script.index.php">
+    <configuration default="false" name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/students_control/index.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/index.php">
+      <method />
+    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
@@ -244,6 +290,16 @@
       <envs />
       <method />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.php" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Script.index.php" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.index.php" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -257,12 +313,15 @@
       <updated>1507311638112</updated>
       <workItem from="1507311646693" duration="5825000" />
       <workItem from="1507319265910" duration="10021000" />
-      <workItem from="1507467201362" duration="13834000" />
+      <workItem from="1507467201362" duration="14430000" />
+      <workItem from="1507562717723" duration="1977000" />
+      <workItem from="1507633708577" duration="12506000" />
+      <workItem from="1507671924670" duration="5376000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29680000" />
+    <option name="totallyTimeSpent" value="50135000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -273,18 +332,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4883721" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -314,16 +373,382 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/php_classes/Constants.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="70" lean-forward="false" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
+          <folding>
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <element signature="n#random_string#0;n#Constants#0;n#!!top" expanded="false" />
+            <element signature="e#1154#1631#0#PHP" expanded="false" />
+            <element signature="e#1264#1631#0#PHP" expanded="false" />
+            <element signature="e#1938#2262#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/cUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#cUser#0;n#!!top" expanded="false" />
+            <element signature="n#jsonSerialize#0;n#cUser#0;n#!!top" expanded="false" />
+            <element signature="e#591#792#0#PHP" expanded="false" />
+            <element signature="e#633#782#0#PHP" expanded="false" />
+            <element signature="e#729#782#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/cDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="n#SaveTeacher#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#357#652#0#PHP" expanded="false" />
+            <element signature="n#SaveGroup#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#855#1108#0#PHP" expanded="false" />
+            <element signature="n#SaveStudent#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#1317#1534#0#PHP" expanded="false" />
+            <element signature="n#LoadTeacherByNickName#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#1956#2091#0#PHP" expanded="false" />
+            <element signature="n#LoadGroupByID#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#2443#2590#0#PHP" expanded="false" />
+            <element signature="n#LoadStudentByNickName#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#3440#3546#0#PHP" expanded="false" />
+            <element signature="e#4125#4451#0#PHP" expanded="false" />
+            <element signature="n#LogOut#0;n#cDB#0;n#!!top" expanded="false" />
+            <marker date="1507732263026" expanded="false" signature="379:392" ph="INSERT INTO " />
+            <marker date="1507732263026" expanded="false" signature="379:510" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="379:539" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="379:578" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="379:585" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="379:613" ph="INSERT INTO `$`... " />
+            <marker date="1507732263026" expanded="false" signature="379:650" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="877:980" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+            <marker date="1507732263026" expanded="false" signature="877:1074" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+            <marker date="1507732263026" expanded="false" signature="877:1106" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1339:1352" ph="INSERT INTO " />
+            <marker date="1507732263026" expanded="false" signature="1339:1387" ph="INSERT INTO " />
+            <marker date="1507732263026" expanded="false" signature="1339:1461" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1339:1462" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1339:1507" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1339:1532" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1699:1762" ph="SELECT * FRO... teachers" />
+            <marker date="1507732263026" expanded="false" signature="2218:2272" ph="SELECT * FRO... groups" />
+            <marker date="1507732263026" expanded="true" signature="2891:2971" ph="SELECT * FRO... ${Constants::$DB_TABLE_TEACHERS}" />
+            <marker date="1507732263026" expanded="true" signature="3025:3105" ph="SELECT * FRO... ${Constants::$DB_TABLE_STUDENTS}" />
+            <marker date="1507732263026" expanded="true" signature="5174:5272" ph="SELECT `curr... ${Constants::$DB_TABLE_TEACHERS}" />
+            <marker date="1507732263026" expanded="true" signature="5326:5424" ph="SELECT `curr... ${Constants::$DB_TABLE_STUDENTS}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/cTeacher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#90#170#0#PHP" expanded="false" />
+            <element signature="n#addGroup#0;n#cTeacher#0;n#!!top" expanded="false" />
+            <element signature="e#363#476#0#PHP" expanded="false" />
+            <element signature="n#Save#0;n#cTeacher#0;n#!!top" expanded="false" />
+            <element signature="n#JsonDecode#0;n#cTeacher#0;n#!!top" expanded="false" />
+            <element signature="n#getGroupsIDs#0;n#cTeacher#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/cStudent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="50" lean-forward="false" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/cGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="e#35#115#0#PHP" expanded="false" />
+            <element signature="n#addStudent#0;n#cGroup#0;n#!!top" expanded="false" />
+            <element signature="n#getGroupInfo#0;n#cGroup#0;n#!!top" expanded="false" />
+            <element signature="n#changeGroupInfo#0;n#cGroup#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/Constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <element signature="n#random_string#0;n#Constants#0;n#!!top" expanded="false" />
+            <element signature="e#1154#1631#0#PHP" expanded="false" />
+            <element signature="e#1264#1631#0#PHP" expanded="false" />
+            <element signature="e#1938#2262#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/cUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#cUser#0;n#!!top" expanded="false" />
+            <element signature="n#jsonSerialize#0;n#cUser#0;n#!!top" expanded="false" />
+            <element signature="e#591#792#0#PHP" expanded="false" />
+            <element signature="e#633#782#0#PHP" expanded="false" />
+            <element signature="e#729#782#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/cGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="56" lean-forward="false" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
+          <folding>
+            <element signature="e#35#115#0#PHP" expanded="false" />
+            <element signature="n#addStudent#0;n#cGroup#0;n#!!top" expanded="false" />
+            <element signature="n#getGroupInfo#0;n#cGroup#0;n#!!top" expanded="false" />
+            <element signature="n#changeGroupInfo#0;n#cGroup#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/cDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="n#SaveTeacher#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#357#652#0#PHP" expanded="false" />
+            <element signature="n#SaveGroup#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#855#1108#0#PHP" expanded="false" />
+            <element signature="n#SaveStudent#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#1317#1534#0#PHP" expanded="false" />
+            <element signature="n#LoadTeacherByNickName#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#1956#2091#0#PHP" expanded="false" />
+            <element signature="n#LoadGroupByID#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#2443#2590#0#PHP" expanded="false" />
+            <element signature="n#LoadStudentByNickName#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#3440#3546#0#PHP" expanded="false" />
+            <element signature="e#4125#4451#0#PHP" expanded="false" />
+            <element signature="n#LogOut#0;n#cDB#0;n#!!top" expanded="false" />
+            <marker date="1507732263026" expanded="false" signature="379:392" ph="INSERT INTO " />
+            <marker date="1507732263026" expanded="false" signature="379:510" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="379:539" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="379:578" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="379:585" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="379:613" ph="INSERT INTO `$`... " />
+            <marker date="1507732263026" expanded="false" signature="379:650" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="877:980" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+            <marker date="1507732263026" expanded="false" signature="877:1074" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+            <marker date="1507732263026" expanded="false" signature="877:1106" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1339:1352" ph="INSERT INTO " />
+            <marker date="1507732263026" expanded="false" signature="1339:1387" ph="INSERT INTO " />
+            <marker date="1507732263026" expanded="false" signature="1339:1461" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1339:1462" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1339:1507" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1339:1532" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1699:1762" ph="SELECT * FRO... teachers" />
+            <marker date="1507732263026" expanded="false" signature="2218:2272" ph="SELECT * FRO... groups" />
+            <marker date="1507732263026" expanded="true" signature="2891:2971" ph="SELECT * FRO... ${Constants::$DB_TABLE_TEACHERS}" />
+            <marker date="1507732263026" expanded="true" signature="3025:3105" ph="SELECT * FRO... ${Constants::$DB_TABLE_STUDENTS}" />
+            <marker date="1507732263026" expanded="true" signature="5174:5272" ph="SELECT `curr... ${Constants::$DB_TABLE_TEACHERS}" />
+            <marker date="1507732263026" expanded="true" signature="5326:5424" ph="SELECT `curr... ${Constants::$DB_TABLE_STUDENTS}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/cTeacher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#90#170#0#PHP" expanded="false" />
+            <element signature="n#addGroup#0;n#cTeacher#0;n#!!top" expanded="false" />
+            <element signature="e#363#476#0#PHP" expanded="false" />
+            <element signature="n#Save#0;n#cTeacher#0;n#!!top" expanded="false" />
+            <element signature="n#JsonDecode#0;n#cTeacher#0;n#!!top" expanded="false" />
+            <element signature="n#getGroupsIDs#0;n#cTeacher#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/cStudent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="2" lean-forward="false" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/Constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <element signature="n#random_string#0;n#Constants#0;n#!!top" expanded="false" />
+            <element signature="e#1154#1631#0#PHP" expanded="false" />
+            <element signature="e#1264#1631#0#PHP" expanded="false" />
+            <element signature="e#1938#2262#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/cUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#cUser#0;n#!!top" expanded="false" />
+            <element signature="n#jsonSerialize#0;n#cUser#0;n#!!top" expanded="false" />
+            <element signature="e#591#792#0#PHP" expanded="false" />
+            <element signature="e#633#782#0#PHP" expanded="false" />
+            <element signature="e#729#782#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/cGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="e#35#115#0#PHP" expanded="false" />
+            <element signature="n#addStudent#0;n#cGroup#0;n#!!top" expanded="false" />
+            <element signature="n#getGroupInfo#0;n#cGroup#0;n#!!top" expanded="false" />
+            <element signature="n#changeGroupInfo#0;n#cGroup#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/cDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="n#SaveTeacher#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#357#652#0#PHP" expanded="false" />
+            <element signature="n#SaveGroup#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#855#1108#0#PHP" expanded="false" />
+            <element signature="n#SaveStudent#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#1317#1534#0#PHP" expanded="false" />
+            <element signature="n#LoadTeacherByNickName#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#1956#2091#0#PHP" expanded="false" />
+            <element signature="n#LoadGroupByID#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#2443#2590#0#PHP" expanded="false" />
+            <element signature="n#LoadStudentByNickName#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#3440#3546#0#PHP" expanded="false" />
+            <element signature="e#4125#4451#0#PHP" expanded="false" />
+            <element signature="n#LogOut#0;n#cDB#0;n#!!top" expanded="false" />
+            <marker date="1507732263026" expanded="false" signature="379:392" ph="INSERT INTO " />
+            <marker date="1507732263026" expanded="false" signature="379:510" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="379:539" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="379:578" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="379:585" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="379:613" ph="INSERT INTO `$`... " />
+            <marker date="1507732263026" expanded="false" signature="379:650" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="877:980" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+            <marker date="1507732263026" expanded="false" signature="877:1074" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+            <marker date="1507732263026" expanded="false" signature="877:1106" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1339:1352" ph="INSERT INTO " />
+            <marker date="1507732263026" expanded="false" signature="1339:1387" ph="INSERT INTO " />
+            <marker date="1507732263026" expanded="false" signature="1339:1461" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1339:1462" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1339:1507" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1339:1532" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1699:1762" ph="SELECT * FRO... teachers" />
+            <marker date="1507732263026" expanded="false" signature="2218:2272" ph="SELECT * FRO... groups" />
+            <marker date="1507732263026" expanded="true" signature="2891:2971" ph="SELECT * FRO... ${Constants::$DB_TABLE_TEACHERS}" />
+            <marker date="1507732263026" expanded="true" signature="3025:3105" ph="SELECT * FRO... ${Constants::$DB_TABLE_STUDENTS}" />
+            <marker date="1507732263026" expanded="true" signature="5174:5272" ph="SELECT `curr... ${Constants::$DB_TABLE_TEACHERS}" />
+            <marker date="1507732263026" expanded="true" signature="5326:5424" ph="SELECT `curr... ${Constants::$DB_TABLE_STUDENTS}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/cTeacher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#90#170#0#PHP" expanded="false" />
+            <element signature="n#addGroup#0;n#cTeacher#0;n#!!top" expanded="false" />
+            <element signature="e#363#476#0#PHP" expanded="false" />
+            <element signature="n#Save#0;n#cTeacher#0;n#!!top" expanded="false" />
+            <element signature="n#JsonDecode#0;n#cTeacher#0;n#!!top" expanded="false" />
+            <element signature="n#getGroupsIDs#0;n#cTeacher#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/cStudent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/Constants.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
+          <folding>
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <element signature="n#random_string#0;n#Constants#0;n#!!top" expanded="false" />
+            <element signature="e#1154#1631#0#PHP" expanded="false" />
+            <element signature="e#1264#1631#0#PHP" expanded="false" />
+            <element signature="e#1938#2262#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -332,7 +757,12 @@
         <state relative-caret-position="187">
           <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#cUser#0;n#!!top" expanded="false" />
             <element signature="n#jsonSerialize#0;n#cUser#0;n#!!top" expanded="false" />
+            <element signature="e#591#792#0#PHP" expanded="false" />
+            <element signature="e#633#782#0#PHP" expanded="false" />
+            <element signature="e#729#782#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -352,8 +782,10 @@
           <folding>
             <element signature="e#90#170#0#PHP" expanded="false" />
             <element signature="n#addGroup#0;n#cTeacher#0;n#!!top" expanded="false" />
-            <element signature="e#363#488#0#PHP" expanded="false" />
+            <element signature="e#363#476#0#PHP" expanded="false" />
+            <element signature="n#Save#0;n#cTeacher#0;n#!!top" expanded="false" />
             <element signature="n#JsonDecode#0;n#cTeacher#0;n#!!top" expanded="false" />
+            <element signature="n#getGroupsIDs#0;n#cTeacher#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -365,7 +797,6 @@
           <folding>
             <element signature="e#35#115#0#PHP" expanded="false" />
             <element signature="n#addStudent#0;n#cGroup#0;n#!!top" expanded="false" />
-            <element signature="n#getAverageMark#0;n#cGroup#0;n#!!top" expanded="false" />
             <element signature="n#getGroupInfo#0;n#cGroup#0;n#!!top" expanded="false" />
             <element signature="n#changeGroupInfo#0;n#cGroup#0;n#!!top" expanded="false" />
           </folding>
@@ -392,7 +823,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <element signature="n#random_string#0;n#Constants#0;n#!!top" expanded="false" />
+            <element signature="e#1154#1631#0#PHP" expanded="false" />
+            <element signature="e#1264#1631#0#PHP" expanded="false" />
+            <element signature="e#1938#2262#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -401,7 +838,12 @@
         <state relative-caret-position="391">
           <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
           <folding>
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#cUser#0;n#!!top" expanded="false" />
             <element signature="n#jsonSerialize#0;n#cUser#0;n#!!top" expanded="false" />
+            <element signature="e#591#792#0#PHP" expanded="false" />
+            <element signature="e#633#782#0#PHP" expanded="false" />
+            <element signature="e#729#782#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -421,8 +863,10 @@
           <folding>
             <element signature="e#90#170#0#PHP" expanded="false" />
             <element signature="n#addGroup#0;n#cTeacher#0;n#!!top" expanded="false" />
-            <element signature="e#363#488#0#PHP" expanded="false" />
+            <element signature="e#363#476#0#PHP" expanded="false" />
+            <element signature="n#Save#0;n#cTeacher#0;n#!!top" expanded="false" />
             <element signature="n#JsonDecode#0;n#cTeacher#0;n#!!top" expanded="false" />
+            <element signature="n#getGroupsIDs#0;n#cTeacher#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -434,7 +878,6 @@
           <folding>
             <element signature="e#35#115#0#PHP" expanded="false" />
             <element signature="n#addStudent#0;n#cGroup#0;n#!!top" expanded="false" />
-            <element signature="n#getAverageMark#0;n#cGroup#0;n#!!top" expanded="false" />
             <element signature="n#getGroupInfo#0;n#cGroup#0;n#!!top" expanded="false" />
             <element signature="n#changeGroupInfo#0;n#cGroup#0;n#!!top" expanded="false" />
           </folding>
@@ -457,14 +900,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/temp.json" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/json.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -473,19 +909,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php_classes/cStudent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/teachers/teacher_nick.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -497,83 +924,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php_classes/DB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/DB.php" />
     <entry file="file://$PROJECT_DIR$/php_classes/cGroup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        <state relative-caret-position="85">
+          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding>
             <element signature="e#35#115#0#PHP" expanded="false" />
             <element signature="n#addStudent#0;n#cGroup#0;n#!!top" expanded="false" />
-            <element signature="n#getAverageMark#0;n#cGroup#0;n#!!top" expanded="false" />
             <element signature="n#getGroupInfo#0;n#cGroup#0;n#!!top" expanded="false" />
             <element signature="n#changeGroupInfo#0;n#cGroup#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php_classes/Constants.php">
+    <entry file="file://$PROJECT_DIR$/php_classes/cStudent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        <state relative-caret-position="299">
+          <caret line="36" column="50" lean-forward="false" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php_classes/cTeacher.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="e#90#170#0#PHP" expanded="false" />
             <element signature="n#addGroup#0;n#cTeacher#0;n#!!top" expanded="false" />
-            <element signature="e#363#488#0#PHP" expanded="false" />
+            <element signature="e#363#476#0#PHP" expanded="false" />
+            <element signature="n#Save#0;n#cTeacher#0;n#!!top" expanded="false" />
             <element signature="n#JsonDecode#0;n#cTeacher#0;n#!!top" expanded="false" />
+            <element signature="n#getGroupsIDs#0;n#cTeacher#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php_classes/cUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state relative-caret-position="17">
+          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#cUser#0;n#!!top" expanded="false" />
             <element signature="n#jsonSerialize#0;n#cUser#0;n#!!top" expanded="false" />
+            <element signature="e#591#792#0#PHP" expanded="false" />
+            <element signature="e#633#782#0#PHP" expanded="false" />
+            <element signature="e#729#782#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/Constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="23" column="70" lean-forward="false" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
+          <folding>
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <element signature="n#random_string#0;n#Constants#0;n#!!top" expanded="false" />
+            <element signature="e#1154#1631#0#PHP" expanded="false" />
+            <element signature="e#1264#1631#0#PHP" expanded="false" />
+            <element signature="e#1938#2262#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php_classes/cDB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+        <state relative-caret-position="17">
+          <caret line="76" column="25" lean-forward="true" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
           <folding>
-            <marker date="1507500631103" expanded="true" signature="410:423" ph="INSERT INTO " />
-            <marker date="1507500631103" expanded="true" signature="410:541" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-            <marker date="1507500631103" expanded="true" signature="410:570" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-            <marker date="1507500631103" expanded="true" signature="410:640" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-            <marker date="1507500631103" expanded="true" signature="410:668" ph="INSERT INTO `$`... " />
-            <marker date="1507500631103" expanded="true" signature="410:705" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-            <marker date="1507500631103" expanded="true" signature="816:860" ph="SELECT * FRO... teachers" />
-            <marker date="1507500631103" expanded="true" signature="816:876" ph="SELECT * FRO... teachers" />
-            <marker date="1507500631103" expanded="true" signature="816:877" ph="SELECT * FRO... teachers" />
-            <marker date="1507500631103" expanded="true" signature="816:878" ph="SELECT * FRO... teachers" />
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="n#SaveTeacher#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#357#652#0#PHP" expanded="false" />
+            <element signature="n#SaveGroup#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#855#1108#0#PHP" expanded="false" />
+            <element signature="n#SaveStudent#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#1317#1534#0#PHP" expanded="false" />
+            <element signature="n#LoadTeacherByNickName#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#1956#2091#0#PHP" expanded="false" />
+            <element signature="n#LoadGroupByID#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#2443#2590#0#PHP" expanded="false" />
+            <element signature="n#LoadStudentByNickName#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#3440#3546#0#PHP" expanded="false" />
+            <element signature="e#4125#4451#0#PHP" expanded="false" />
+            <element signature="n#LogOut#0;n#cDB#0;n#!!top" expanded="false" />
+            <marker date="1507732263026" expanded="false" signature="379:392" ph="INSERT INTO " />
+            <marker date="1507732263026" expanded="false" signature="379:510" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="379:539" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="379:578" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="379:585" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="379:613" ph="INSERT INTO `$`... " />
+            <marker date="1507732263026" expanded="false" signature="379:650" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="877:980" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+            <marker date="1507732263026" expanded="false" signature="877:1074" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+            <marker date="1507732263026" expanded="false" signature="877:1106" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1339:1352" ph="INSERT INTO " />
+            <marker date="1507732263026" expanded="false" signature="1339:1387" ph="INSERT INTO " />
+            <marker date="1507732263026" expanded="false" signature="1339:1461" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1339:1462" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1339:1507" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1339:1532" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1507732263026" expanded="false" signature="1699:1762" ph="SELECT * FRO... teachers" />
+            <marker date="1507732263026" expanded="false" signature="2218:2272" ph="SELECT * FRO... groups" />
+            <marker date="1507732263026" expanded="true" signature="2891:2971" ph="SELECT * FRO... ${Constants::$DB_TABLE_TEACHERS}" />
+            <marker date="1507732263026" expanded="true" signature="3025:3105" ph="SELECT * FRO... ${Constants::$DB_TABLE_STUDENTS}" />
+            <marker date="1507732263026" expanded="true" signature="5174:5272" ph="SELECT `curr... ${Constants::$DB_TABLE_TEACHERS}" />
+            <marker date="1507732263026" expanded="true" signature="5326:5424" ph="SELECT `curr... ${Constants::$DB_TABLE_STUDENTS}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>

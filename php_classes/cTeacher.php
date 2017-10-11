@@ -18,8 +18,7 @@ class cTeacher extends cUser
         if (isset($this->groups[$groupID]))
             return false;
         else {
-            $t = new cGroup();
-            $this->groups[$groupID] = new cGroup();
+            $this->groups[$groupID] = new cGroup($groupID,$groupInfo);
             return false;
         }
     }

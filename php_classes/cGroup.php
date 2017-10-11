@@ -8,9 +8,16 @@ include_once "cStudent.php";
  */
 class cGroup
 {
-    private $students;
+    public $students =[];
     private $groupInfo;
+    public $groupID;
     public $groupTimetable; //не знаю, что это такое. Надо смотреть/придумывать
+
+    public function __construct($id, $groupInfo="")
+    {
+        $this->groupID = $id;
+        $this->groupInfo = $groupInfo;
+    }
 
     public function addStudent($student)
     {
@@ -37,5 +44,14 @@ class cGroup
         $this->groupInfo = $newGroupInfo;
     }
 
+    public function getTimetable()
+    {
+        return "No timetable";
+    }
+
+    public function getStudentsIDs()
+    {
+        return implode(',',array_keys($this->students));
+    }
     
 }
