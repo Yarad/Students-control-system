@@ -61,4 +61,9 @@ class Constants
         // возвращаем результат
         return $string;
     }
+    static function authFailed()
+    {
+        header("Location: index.php");
+        exit();
+    }
 }

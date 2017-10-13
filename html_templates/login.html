@@ -9,10 +9,11 @@
     <header>
         <!--вернуться на главную-->
     </header>
-    <form action="loginHandle.php" id="LoginForm">
+    <form action="index.php"  id="LoginForm" method="post">
         <img id="loginLogo" src="images/logo2.png">
-        <input type="text" title="login" value="Логин">
-        <input type="text" title="password" value="Пароль">
+        {loginError}
+        <input type="text" name="login" value="Логин">
+        <input type="text" name="password" value="Пароль">
         <button id="loginButton" type="submit">Войти</button>
     </form>
 </body>

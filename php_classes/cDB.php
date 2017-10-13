@@ -1,4 +1,6 @@
 <?php
+include_once "cTeacher.php";
+include_once "cUser.php";
 
 /**
  * Created by PhpStorm.

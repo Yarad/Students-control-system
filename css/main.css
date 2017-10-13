@@ -54,3 +54,10 @@ header{
     height: 40px;
     font-size: 1.05em;
 }
+
+#ErrorMessage
+{
+    font-size: 1.05em;
+    color: #000057;
+    font-weight: bold;
+}
