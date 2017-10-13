@@ -126,6 +126,8 @@ class cDB
 
     public function VerifyUser()
     {
+        if(!isset($_COOKIE['id']))  return false;
+
         $nick = $_COOKIE['id'];
         $hash = $_COOKIE['curr_session_hash'];
 
