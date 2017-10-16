@@ -47,24 +47,34 @@ class cDrawer
         $resArr = [];
         //получение всех дат в resArr
 
-        $start = new DateTime("Y-m-01", strtotime("+$monthOffset month")); // первый день месяца
-        $end = new DateTime('Y-m-t', strtotime("+$monthOffset month")); // последний день месяца ПОД ВОПРОСОМ ЗНАК +
+        $start = new DateTime(date('Y-m-01')); // первый день месяца
+        $start->add(new DateInterval("P" . $monthOffset . "M"));
 
-        $dateInterval = new DateInterval("1 day");
+        $end = new DateTime(date('Y-m-t')); // последний день месяца ПОД ВОПРОСОМ ЗНАК +
+        $end->add(new DateInterval("P" . $monthOffset . "M"));
+
+        $dateInterval = new DateInterval("P1D");
         $dateRange = new DatePeriod($start, $dateInterval, $end);
 
+        $week=1;
         foreach ($dateRange as $dt) {
-            foreach ($weekTimetable as $value) {
-                $dayNum = $value['dayOfWeek'];
-                $time = $value['time'];
+            foreach ($weekTimetable->getDaysArray() as $value) {
+                $dayNum = $value->day;
+                $time = $value->time;
 
                 if ($dt->format('N') == $dayNum)
-                    $resArr[] = array("day" => $dt, "time" => $time);
+                    $resArr[$week][] = array("day" => $dt, "time" => $time);
             }
+            $week++;
         }
 
-        foreach ($resArr as $value) {
-            $resStr .= $value["day"] . $value["time"] . "<br>";
+
+        foreach ($resArr as $week) {
+            $tempStr= $oneWeekTemplate;
+            $temp2Str =$oneDayTemplate;
+            foreach ($week as $day) {
+                $temp2Str = str_replace();
+            }
         }
 
         return $resStr;

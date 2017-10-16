@@ -10,5 +10,4 @@ class сOneDayRecord
 {
     public $mark;
     public $note;
-
 }

@@ -13,13 +13,13 @@ abstract class cUser implements JsonSerializable
     public $currSessionHash;
     public $extraInfo;
 
-    public $Surname;
-    public $Name;
+    public $surname_name;
 
-    public function __construct($nick, $password)
+    public function __construct($nick, $password, $surnameName)
     {
         $this->nickName = $nick;
-        $this->passwordHash = password_hash($password,PASSWORD_DEFAULT); //пока что сохраняем просто так
+        $this->passwordHash = password_hash($password,PASSWORD_DEFAULT);
+        $this->surname_name = $surnameName;
         $this->extraInfo = "";
     }
 

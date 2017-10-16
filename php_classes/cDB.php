@@ -19,7 +19,7 @@ class cDB
 
     public function SaveTeacher($teacher)
     {
-        $bool1 = $this->dbLink->query("INSERT INTO `" . Constants::$DB_TABLE_TEACHERS . "`(`nickName`, `passwordHash`, `curr_session_hash`, `extraInfo`,`groups`) VALUES ('" . $teacher->nickName . "','" . $teacher->passwordHash . "','" . "" . "','" . $teacher->extraInfo . "','" . $teacher->getGroupsIDs() . "')");
+        $bool1 = $this->dbLink->query("INSERT INTO `" . Constants::$DB_TABLE_TEACHERS . "`(`nickName`, `passwordHash`, `curr_session_hash`, `extraInfo`,`groups`,`surname_name`) VALUES ('" . $teacher->nickName . "','" . $teacher->passwordHash . "','" . "" . "','" . $teacher->extraInfo . "','" . $teacher->getGroupsIDs() . "','" . $teacher->surname_name . "')");
         foreach ($teacher->groups as $key => $value)
             $bool1 = $bool1 && $this->SaveGroup($value);
         return $bool1;
@@ -27,7 +27,7 @@ class cDB
 
     public function SaveGroup($group)
     {
-        $bool1 = $this->dbLink->query("INSERT INTO `" . Constants::$DB_TABLE_GROUPS . "`(`id`, `timetable`, `students`, `extraInfo`) VALUES ('" . $group->groupID . "','" . $group->getTimetable() . "','" . $group->getStudentsIDs() . "','" . $group->getGroupInfo() . "')");
+        $bool1 = $this->dbLink->query("INSERT INTO `" . Constants::$DB_TABLE_GROUPS . "`(`id`, `timetable`, `students`, `extraInfo`) VALUES ('" . $group->groupID . "','" . $group->weekTimetable->getTimetableInJSON() . "','" . $group->getStudentsIDs() . "','" . $group->getGroupInfo() . "')");
         foreach ($group->students as $key => $value)
             $bool1 = $bool1 && $this->SaveStudent($value);
         return $bool1;
@@ -35,8 +35,7 @@ class cDB
 
     public function SaveStudent($student)
     {
-        $bool1 = $this->dbLink->query("INSERT INTO `" . Constants::$DB_TABLE_STUDENTS . "`(`nickName`, `passwordHash`, `curr_session_hash`, `extraInfo`) VALUES ('$student->nickName','$student->passwordHash','','$student->extraInfo')");
-        //сохранение расписания
+        $bool1 = $this->dbLink->query("INSERT INTO `" . Constants::$DB_TABLE_STUDENTS . "`(`nickName`, `passwordHash`, `curr_session_hash`, `extraInfo`,`surname_name`) VALUES ('$student->nickName','$student->passwordHash','','$student->extraInfo','" . $student->surname_name . "')");
         return $bool1;
     }
 
@@ -44,8 +43,10 @@ class cDB
     {
         $dbAnswer = $this->dbLink->query("SELECT * FROM `teachers` WHERE `nickName` = '" . $nickName . "'");
         $dbObject = $dbAnswer->fetch_object();
-        $retRecord = new cTeacher($dbObject->nickName, $dbObject->passwordHash);
+        $retRecord = new cTeacher($dbObject->nickName, $dbObject->passwordHash,$dbObject->surname_name);
         $retRecord->extraInfo = $dbObject->extraInfo;
+        $retRecord->surname_name = $dbObject->surname_name;
+
         foreach (explode(',', $dbObject->groups) as $key => $value) {
             $retRecord->addGroup($this->LoadGroupByID($value));
         }
@@ -57,7 +58,8 @@ class cDB
         $dbAnswer = $this->dbLink->query("SELECT * FROM `groups` WHERE `id` = '" . $groupID . "'");
         $dbObject = $dbAnswer->fetch_object();
         $retRecord = new cGroup($dbObject->id, $dbObject->extraInfo);
-        //не умеет работать с расписанием
+        $retRecord->weekTimetable->loadTimetableFromJSON($dbObject->timetable);
+        //умеет работать с расписанием
         foreach (explode(',', $dbObject->students) as $key => $value) {
             $retRecord->addStudent($this->LoadStudentByNickName($value));
         }
@@ -68,8 +70,9 @@ class cDB
     {
         $dbAnswer = $this->dbLink->query("SELECT * FROM `students` WHERE `nickName` = '" . $nickName . "'");
         $dbObject = $dbAnswer->fetch_object();
-        $retRecord = new cStudent($dbObject->nickName, $dbObject->passwordHash);
+        $retRecord = new cStudent($dbObject->nickName, $dbObject->passwordHash, $dbObject->surname_name);
         $retRecord->extraInfo = $dbObject->extraInfo;
+        $retRecord->surname_name = $dbObject->surname_name;
         return $retRecord;
     }
 
@@ -101,7 +104,7 @@ class cDB
         $currSessionHash = Constants::random_string(10);
         if ($isTeacher) {
 
-            $retRecord = new cTeacher($userInfo['nickName'], "unavailable");
+            $retRecord = new cTeacher($userInfo['nickName'], "unavailable", $userInfo['surname_name']);
             $retRecord->currSessionHash = $currSessionHash;
             $this->dbLink->query("UPDATE " . Constants::$DB_TABLE_TEACHERS . " SET curr_session_hash = '$currSessionHash' WHERE nickName ='" . $userInfo['nickName'] . "'");
         } else {
@@ -131,7 +134,7 @@ class cDB
 
     public function VerifyUser()
     {
-        if(!isset($_COOKIE['id']))  return null;
+        if (!isset($_COOKIE['id'])) return null;
 
         $nick = $_COOKIE['id'];
         $hash = $_COOKIE['curr_session_hash'];
@@ -151,10 +154,9 @@ class cDB
         }
         $hash = $_COOKIE['curr_session_hash'];
 
-        if ($hash == $dbHash)
-        {
+        if ($hash == $dbHash) {
             return $this->LoadTeacherByNickName($nick);
-        }
-        else return null;
+        } else return null;
     }
+
 }

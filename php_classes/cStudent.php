@@ -13,9 +13,9 @@ class cStudent extends cUser
     private $calendarMarks; //key: date; value: mark
     public $groupID;
 
-    public function __construct($nick, $password)
+    public function __construct($nick, $password,$surnameName)
     {
-        parent::__construct($nick, $password);
+        parent::__construct($nick, $password,$surnameName);
         //$this->groupID = $groupID;
     }
 

@@ -1,5 +1,6 @@
 <?php
 include_once "cStudent.php";
+include_once "cTimetable.php";
 
 /**
  * Created by PhpStorm.
@@ -12,12 +13,13 @@ class cGroup
     public $students = [];
     private $groupInfo;
     public $groupID;
-    public $weekTimetable; //просто массив дней ... нужно ещё добавить как-то время, например ч/з запятую
+    public $weekTimetable ;
 
     public function __construct($id, $groupInfo = "")
     {
         $this->groupID = $id;
         $this->groupInfo = $groupInfo;
+        $this->weekTimetable = new cTimetable();
     }
 
     public function addStudent($student)
@@ -50,4 +52,9 @@ class cGroup
         return implode(',', array_keys($this->students));
     }
 
+    /*буду использовать внутренние метожды weeekTimetable
+     * public function addLessonPerWeek($day,$time)
+    {
+        $this->weekTimetable->addLessonPerWeek($day,$time);
+    }*/
 }

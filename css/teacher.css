@@ -95,3 +95,8 @@ body {
     width:20%;
     float: right;
 }
+
+.oneWeek{
+    width: 100%;
+    border-bottom: 4px double darkolivegreen;
+}

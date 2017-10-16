@@ -10,7 +10,7 @@ function onPageLoad() {
 }
 
 function onListButtonClick(groupID) {
-    currGroupId = groupID;
+    currGroupID = groupID;
     ShowStudentsQuery(groupID);
     ChangeViewOfRightMenuBlocks();
 }

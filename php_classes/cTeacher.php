@@ -11,7 +11,7 @@ include_once "Constants.php";
  */
 class cTeacher extends cUser
 {
-    public $groups;
+    public $groups = [];
 
     public function addGroup($group)
     {
@@ -33,13 +33,13 @@ class cTeacher extends cUser
     public static function JsonDecode($jsonStr)
     {
         $arr = json_decode($jsonStr);
-        $retRecord = new cTeacher($arr["nickName"],$arr["passwordHash"]);
+        $retRecord = new cTeacher($arr["nickName"], $arr["passwordHash"]);
         $retRecord->extraInfo = $arr["extraInfo"];
         return $retRecord;
     }
 
     public function getGroupsIDs()
     {
-        return implode(',',array_keys($this->groups));
+        return implode(',', array_keys($this->groups));
     }
 }

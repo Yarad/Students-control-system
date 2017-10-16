@@ -23,5 +23,6 @@ if ($_POST['task'] == "ShowTimetable") {
     $currGroupID = $_POST['currGroupID'];
     $monthOffset = $_POST['monthOffset'];
 
+    //var_dump($_POST);
     echo '<h2>Расписание студента</h2>' . cDrawer::DrawStudentTimetableToEdit($currTeacher->groups[$currGroupID]->students[$currStudentID], $currTeacher->groups[$currGroupID]->weekTimetable, $monthOffset);
 }
