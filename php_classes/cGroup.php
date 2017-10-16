@@ -1,5 +1,6 @@
 <?php
 include_once "cStudent.php";
+
 /**
  * Created by PhpStorm.
  * User: user
@@ -8,12 +9,12 @@ include_once "cStudent.php";
  */
 class cGroup
 {
-    public $students =[];
+    public $students = [];
     private $groupInfo;
     public $groupID;
-    public $groupTimetable; //не знаю, что это такое. Надо смотреть/придумывать
+    public $weekTimetable; //просто массив дней ... нужно ещё добавить как-то время, например ч/з запятую
 
-    public function __construct($id, $groupInfo="")
+    public function __construct($id, $groupInfo = "")
     {
         $this->groupID = $id;
         $this->groupInfo = $groupInfo;
@@ -21,7 +22,7 @@ class cGroup
 
     public function addStudent($student)
     {
-        if(!($student instanceof cStudent) ) return false;
+        if (!($student instanceof cStudent)) return false;
         if (isset($this->students[$student->nickName])) return false;
 
         $this->students[$student->nickName] = $student;
@@ -44,14 +45,9 @@ class cGroup
         $this->groupInfo = $newGroupInfo;
     }
 
-    public function getTimetable()
-    {
-        return "No timetable";
-    }
-
     public function getStudentsIDs()
     {
-        return implode(',',array_keys($this->students));
+        return implode(',', array_keys($this->students));
     }
-    
+
 }

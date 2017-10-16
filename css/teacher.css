@@ -10,6 +10,7 @@ body {
     padding: 20px;
     min-height: 80vh;
     background-color: white;
+    vertical-align: top;
 }
 
 #leftContent {
@@ -82,15 +83,15 @@ body {
 .student-name{
     text-align: left;
     float: left;
-    width:60%;
+    width:56%;
 }
 
 .student-average-mark{
-    width: 18%;
+    width: 20%;
     float: left;
 }
 
 .student-edit-timetable{
-    width:18%;
+    width:20%;
     float: right;
 }

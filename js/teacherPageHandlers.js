@@ -1,6 +1,7 @@
 /**
  * Created by user on 16.10.2017.
  */
+currGroupID='';
 
 function onPageLoad() {
     ShowGroupsQuery();
@@ -9,8 +10,20 @@ function onPageLoad() {
 }
 
 function onListButtonClick(groupID) {
+    currGroupId = groupID;
     ShowStudentsQuery(groupID);
     ChangeViewOfRightMenuBlocks();
+}
+
+function onBackToGroupsButtonClick()
+{
+    currGroupID = '';
+    ShowGroupsQuery();
+    ChangeViewOfRightMenuBlocks();
+}
+
+function onStudentEditTimetableClick($studentLogin){
+    ShowStudentTimetableQuery($studentLogin);
 }
 
 //обработчики
@@ -40,7 +53,25 @@ function ShowGroupsQuery() {
 
 function ShowGroupsHandler(data) {
     doc = document.getElementById("rightContent-inner1");
-    doc.innerHTML = data;
+    doc.innerHTML =  data;
+}
+
+function ShowStudentTimetableQuery(studentLogin) {
+    $.post(
+        "teacherPageHandler.php",
+        {
+            task: "ShowTimetable",
+            studentID: studentLogin,
+            monthOffset: 0, //смещение относительно текущего месяца. Надо будет как-то ограничить
+            currGroupID: currGroupID
+        },
+        ShowStudentTimetableHandler
+    );
+}
+
+function ShowStudentTimetableHandler(data) {
+    doc = document.getElementById("leftContent");
+    doc.innerHTML =  data;
 }
 
 function ShowStudentsHandler(data) {
