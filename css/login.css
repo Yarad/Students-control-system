@@ -1,0 +1,46 @@
+
+#LoginForm{
+    display: inline-block;
+    width: 300px;
+    max-width: 80%;
+    background-color: rgba(229, 255, 114, 0.8);
+    box-shadow: 0px 10px 20px 2px rgba(0,0,0,0.5);
+    padding: 30px 40px;
+    margin: 20vh 0px 0px 0px;
+    transition: 0.8s ease-in;
+    transition-property: transform,box-shadow;
+    text-align:center;
+}
+
+#LoginForm:hover
+{
+    transform: scale(1.02);
+    box-shadow: 0px 20px 20px 2px rgba(0,0,0,0.5);
+}
+
+#LoginForm>input
+{
+    width: 100%;
+    margin: 4px 0px;
+    font-size: 1.5em;
+    padding: 0px 4px;
+    color: #7f696c;
+}
+
+#loginLogo{
+    width: 100%;
+}
+
+#loginButton{
+    width: 60%;
+    margin: 20px 0 0 0 ;
+    height: 40px;
+    font-size: 1.05em;
+}
+
+#ErrorMessage
+{
+    font-size: 1.05em;
+    color: #000057;
+    font-weight: bold;
+}

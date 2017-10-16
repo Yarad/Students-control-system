@@ -13,12 +13,12 @@ class cTeacher extends cUser
 {
     public $groups;
 
-    public function addGroup($groupID, $groupInfo = "")
+    public function addGroup($group)
     {
-        if (isset($this->groups[$groupID]))
+        if (isset($this->groups[$group->groupID]))
             return false;
         else {
-            $this->groups[$groupID] = new cGroup($groupID,$groupInfo);
+            $this->groups[$group->groupID] = $group;
             return false;
         }
     }

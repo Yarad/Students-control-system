@@ -19,6 +19,13 @@ $db->SaveTeacher($temp);
 //$retUser = $db->LogIn('teacher','password',$temp);
 $loginError = "";
 
+$db->LoadTeacherByNickName("teacher");
+
+if($db->VerifyUser()!=null)
+{
+    header("Location: firstAfterLogin.php");
+    exit();
+}
 
 if (isset($_POST["login"]) && isset($_POST["password"])) {
     //пароль введен

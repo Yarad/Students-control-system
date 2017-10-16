@@ -66,8 +66,11 @@ class cDB
 
     public function LoadStudentByNickName($nickName)
     {
-        //TODO загрузка записи ученика
-        return null;
+        $dbAnswer = $this->dbLink->query("SELECT * FROM `students` WHERE `nickName` = '" . $nickName . "'");
+        $dbObject = $dbAnswer->fetch_object();
+        $retRecord = new cStudent($dbObject->nickName, $dbObject->passwordHash);
+        $retRecord->extraInfo = $dbObject->extraInfo;
+        return $retRecord;
     }
 
     public function LogIn($nick, $password, &$outMessage)
@@ -128,7 +131,7 @@ class cDB
 
     public function VerifyUser()
     {
-        if(!isset($_COOKIE['id']))  return false;
+        if(!isset($_COOKIE['id']))  return null;
 
         $nick = $_COOKIE['id'];
         $hash = $_COOKIE['curr_session_hash'];
@@ -148,6 +151,10 @@ class cDB
         }
         $hash = $_COOKIE['curr_session_hash'];
 
-        return $hash == $dbHash;
+        if ($hash == $dbHash)
+        {
+            return $this->LoadTeacherByNickName($nick);
+        }
+        else return null;
     }
 }
