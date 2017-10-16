@@ -20,4 +20,19 @@ class cDrawer
         }
         return $resStr;
     }
+
+    static function DrawStudentsList($students)
+    {
+        $template = file_get_contents(Constants::$ROOT_PATH . "html_templates/studentInList.html");
+        $resStr = file_get_contents(Constants::$ROOT_PATH . "html_templates/backToGroupsButton.html");
+        foreach ($students as $key => $value)
+        {
+            //временно без имен-фамилий
+            $tempStr = str_replace("{NameSurname}",$value->nickName, $template);
+            $tempStr = str_replace("{averageMark}",$value->getAverageMark(), $tempStr);
+            $tempStr = str_replace("{studentLogin}",$value->nickName, $tempStr);
+            $resStr .= $tempStr;
+        }
+        return $resStr;
+    }
 }

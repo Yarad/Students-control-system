@@ -13,6 +13,9 @@ abstract class cUser implements JsonSerializable
     public $currSessionHash;
     public $extraInfo;
 
+    public $Surname;
+    public $Name;
+
     public function __construct($nick, $password)
     {
         $this->nickName = $nick;

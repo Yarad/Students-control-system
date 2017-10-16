@@ -37,4 +37,9 @@ class cStudent extends cUser
         $retRecord->extraInfo = $arr["extraInfo"];
         return $retRecord;
     }
+
+    public function getAverageMark()
+    {
+        return 10;
+    }
 }

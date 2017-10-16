@@ -1,8 +1,10 @@
 @import "usersCommon.css";
-body{
+
+body {
     text-align: center;
 }
-.Column{
+
+.Column {
     display: inline-block;
     margin: 10vh 20px;
     padding: 20px;
@@ -10,48 +12,85 @@ body{
     background-color: white;
 }
 
-#leftContent{
+#leftContent {
     width: 50%;
 }
 
-#rightContent{
+#rightContent {
     width: 30%;
+    overflow: scroll;
 }
 
-.group{
+.group,.student {
     width: 100%;
     height: 80px;
     margin: 10px 0px;
     transition: 0.8s ease-out;
-    transition-property: background-color,box-shadow;
+    transition-property: background-color, box-shadow;
     border-radius: 5px;
 }
 
-.group:hover{
+.group:hover, .student:hover {
     background-color: #cde8c5;
 }
 
-.group-leftColumn{
+.group-leftColumn {
     height: inherit;
     float: left;
     width: 76%;
     padding: 0px 2%;
 }
 
-.group-rightColumn{
+.group-rightColumn {
     height: inherit;
     float: right;
     width: 20%;
 }
 
-.group-extraButtons{
+.group-extraButtons, .student-extraButtons {
     height: inherit;
+    max-width: 100%;
 }
 
-.groupName, .groupStudentsAmount{
+.groupName, .groupStudentsAmount {
     margin: 0px;
     text-align: left;
 }
-.groupName{
+
+.groupName {
     font-size: 1.5em;
+}
+
+.rightContent-inner {
+    transition: 0.8s ease-in;
+    transition-property: display;
+}
+
+#rightContent-inner2 {
+    display: none;
+}
+
+.student{
+    text-align: center;
+}
+
+.student>*{
+    /*display: inline-block;*/
+    height: inherit;
+    font-size: 1.5em;
+}
+.student-name{
+    text-align: left;
+    float: left;
+    width:60%;
+}
+
+.student-average-mark{
+    width: 18%;
+    float: left;
+}
+
+.student-edit-timetable{
+    width:18%;
+    float: right;
 }
