@@ -34,6 +34,11 @@ class cDrawer
         return $resStr;
     }
 
+    static  function DrawStudentTimetableHeader()
+    {
+        echo '<h2 style="display: inline-block">Расписание студента</h2><button style="margin: 8px">Сохранить</button>';
+    }
+
     static function DrawStudentTimetableToEdit($student, $weekTimetable, $monthOffset)
     {
         //нарисовать расписание
@@ -50,31 +55,38 @@ class cDrawer
         $start = new DateTime(date('Y-m-01')); // первый день месяца
         $start->add(new DateInterval("P" . $monthOffset . "M"));
 
-        $end = new DateTime(date('Y-m-t')); // последний день месяца ПОД ВОПРОСОМ ЗНАК +
-        $end->add(new DateInterval("P" . $monthOffset . "M"));
+        $end = new DateTime(date('Y-m-t'));
+        $end->add(new DateInterval("P" . $monthOffset . "M"));// последний день месяца ПОД ВОПРОСОМ ЗНАК +
 
         $dateInterval = new DateInterval("P1D");
         $dateRange = new DatePeriod($start, $dateInterval, $end);
 
-        $week=1;
+        $week = 1;
+
         foreach ($dateRange as $dt) {
             foreach ($weekTimetable->getDaysArray() as $value) {
                 $dayNum = $value->day;
                 $time = $value->time;
 
-                if ($dt->format('N') == $dayNum)
+                if ($dt->format('N') == $dayNum) {
                     $resArr[$week][] = array("day" => $dt, "time" => $time);
+                }
             }
-            $week++;
+            if($dt->format('N')==7)
+                $week++;
         }
 
-
         foreach ($resArr as $week) {
-            $tempStr= $oneWeekTemplate;
-            $temp2Str =$oneDayTemplate;
+            $tempWeekStr = '';
             foreach ($week as $day) {
-                $temp2Str = str_replace();
+                $tempOneDay = $oneDayTemplate;
+                $tempOneDay = str_replace("{date}", Constants::printRusDate($day["day"]), $tempOneDay);
+                $tempOneDay = str_replace("{time}",$day["time"],$tempOneDay);
+                $tempOneDay = str_replace("{note}","<textarea class='note-edit' id='" . $day["day"]->format("d.m") . "'>" . $student->calendarMarks[$day["day"]->format("d M")]["note"] . "</textarea>",$tempOneDay);
+                $tempOneDay = str_replace("{mark}","<textarea class='mark-edit' id='" . $day["day"]->format("d.m") . "'>" . $student->calendarMarks[$day["day"]->format("d M")]["mark"] . "</textarea>",$tempOneDay);
+                $tempWeekStr .= $tempOneDay;
             }
+            $resStr .= str_replace("{days}", $tempWeekStr, $oneWeekTemplate);
         }
 
         return $resStr;

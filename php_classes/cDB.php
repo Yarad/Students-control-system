@@ -35,7 +35,7 @@ class cDB
 
     public function SaveStudent($student)
     {
-        $bool1 = $this->dbLink->query("INSERT INTO `" . Constants::$DB_TABLE_STUDENTS . "`(`nickName`, `passwordHash`, `curr_session_hash`, `extraInfo`,`surname_name`) VALUES ('$student->nickName','$student->passwordHash','','$student->extraInfo','" . $student->surname_name . "')");
+        $bool1 = $this->dbLink->query("INSERT INTO `" . Constants::$DB_TABLE_STUDENTS . "`(`nickName`, `passwordHash`, `curr_session_hash`, `extraInfo`,`surname_name`,`calendar_of_marks`) VALUES ('$student->nickName','$student->passwordHash','','$student->extraInfo','" . $student->surname_name . "','".$student->GetMarksInJson() ."')");
         return $bool1;
     }
 
@@ -71,6 +71,7 @@ class cDB
         $dbAnswer = $this->dbLink->query("SELECT * FROM `students` WHERE `nickName` = '" . $nickName . "'");
         $dbObject = $dbAnswer->fetch_object();
         $retRecord = new cStudent($dbObject->nickName, $dbObject->passwordHash, $dbObject->surname_name);
+        $retRecord->LoadMarksFromJsonStr($dbObject->calendar_of_marks);
         $retRecord->extraInfo = $dbObject->extraInfo;
         $retRecord->surname_name = $dbObject->surname_name;
         return $retRecord;

@@ -100,3 +100,33 @@ body {
     width: 100%;
     border-bottom: 4px double darkolivegreen;
 }
+
+.oneDay{
+    text-align: left;
+    margin: 10px;
+}
+.oneDay > div{
+    display: inline-block;
+    height: inherit;
+    vertical-align: top;
+}
+
+.oneDay-dateTime{
+    width: 20%;
+    border-right: 2px solid #8dac46;
+}
+
+.oneDay-mark{
+    width: 40px;
+    border-right: 2px solid #8dac46;
+    padding-right: 10px;
+}
+
+.oneDay-note{
+    width: 60%;
+}
+
+.note-edit, .mark-edit{
+    width: 100%;
+    resize: vertical;
+}

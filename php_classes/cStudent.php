@@ -10,12 +10,12 @@ include_once "Constants.php";
  */
 class cStudent extends cUser
 {
-    private $calendarMarks; //key: date; value: mark
+    public $calendarMarks; //key: date; value: mark
     public $groupID;
 
-    public function __construct($nick, $password,$surnameName)
+    public function __construct($nick, $password, $surnameName)
     {
-        parent::__construct($nick, $password,$surnameName);
+        parent::__construct($nick, $password, $surnameName);
         //$this->groupID = $groupID;
     }
 
@@ -36,6 +36,16 @@ class cStudent extends cUser
         $retRecord = new cStudent($arr["nickName"], $arr["passwordHash"]);
         $retRecord->extraInfo = $arr["extraInfo"];
         return $retRecord;
+    }
+
+    public function LoadMarksFromJsonStr($jsonStr)
+    {
+        $this->calendarMarks = json_decode($jsonStr);
+    }
+
+    public function GetMarksInJson()
+    {
+        return json_encode($this->calendarMarks);
     }
 
     public function getAverageMark()
