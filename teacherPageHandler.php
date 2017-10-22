@@ -23,11 +23,11 @@ if ($_POST['task'] == "ShowTimetable") {
     $currGroupID = $_POST['currGroupID'];
     $monthOffset = $_POST['monthOffset'];
 
-    echo cDrawer::DrawStudentTimetableHeader() . cDrawer::DrawStudentTimetableToEdit($currTeacher->groups[$currGroupID]->students[$currStudentID], $currTeacher->groups[$currGroupID]->weekTimetable, $monthOffset);
+    echo cDrawer::DrawStudentTimetableHeader(Constants::getMonthNameByOffset($monthOffset)) . cDrawer::DrawStudentTimetableToEdit($currTeacher->groups[$currGroupID]->students[$currStudentID], $currTeacher->groups[$currGroupID]->weekTimetable, $monthOffset);
 }
 
 if ($_POST['task'] == "SaveNotesAndMarks") {
-    echo "<pre>";
-    var_dump($_POST);
-    echo "</pre>";
+    $monthOffset = $_POST["monthOffset"];
+    $notes = json_decode($_POST["notes"]);
+    $marks = json_decode($_POST["marks"]);
 }

@@ -34,9 +34,11 @@ class cDrawer
         return $resStr;
     }
 
-    static  function DrawStudentTimetableHeader()
+    static  function DrawStudentTimetableHeader($monthName)
     {
-        echo '<h2 style="display: inline-block">Расписание студента</h2><button style="margin: 8px" onclick="onSaveStudentNotesClick()">Сохранить</button>';
+        $str = file_get_contents(Constants::$ROOT_PATH . "html_templates/timetableHeader.html");
+        $str = str_replace("{month}",$monthName,$str);
+        return $str;
     }
 
     static function DrawStudentTimetableToEdit($student, $weekTimetable, $monthOffset)
@@ -53,11 +55,17 @@ class cDrawer
         //получение всех дат в resArr
 
         $start = new DateTime(date('Y-m-01')); // первый день месяца
-        $start->add(new DateInterval("P" . $monthOffset . "M"));
-
         $end = new DateTime(date('Y-m-t'));
-        $end->add(new DateInterval("P" . $monthOffset . "M"));// последний день месяца ПОД ВОПРОСОМ ЗНАК +
 
+        if($monthOffset>0) {
+            $start->add(new DateInterval("P" . $monthOffset . "M"));
+            $end->add(new DateInterval("P" . $monthOffset . "M"));
+        }
+        else
+        {
+            $start->sub(new DateInterval("P" . abs($monthOffset) . "M"));
+            $end->sub(new DateInterval("P" . abs($monthOffset) . "M"));
+        }
         $dateInterval = new DateInterval("P1D");
         $dateRange = new DatePeriod($start, $dateInterval, $end);
 

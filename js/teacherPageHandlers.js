@@ -3,6 +3,8 @@
  */
 currGroupID = '';
 currMonthOffset = 0;
+currStudentID = '';
+
 
 function onPageLoad() {
     ShowGroupsQuery();
@@ -22,8 +24,9 @@ function onBackToGroupsButtonClick() {
     ChangeViewOfRightMenuBlocks();
 }
 
-function onStudentEditTimetableClick($studentLogin) {
-    ShowStudentTimetableQuery($studentLogin);
+function onStudentEditTimetableClick(studentLogin) {
+    currStudentID = studentLogin;
+    ShowStudentTimetableQuery();
 }
 
 function onSaveStudentNotesClick() {
@@ -39,9 +42,17 @@ function onSaveStudentNotesClick() {
     for (i = 0; i < currMonthMarks.length; i++)
         currMonthMarksArr[currMonthMarks[i].id] = currMonthMarks[i].value;
 
-    SaveNotesAndMarksQuery(currMonthNotesArr,currMonthMarksArr,currMonthOffset)
+    SaveNotesAndMarksQuery(currMonthNotesArr, currMonthMarksArr, currMonthOffset)
 }
 
+function onPrevMonthClick() {
+    currMonthOffset--;
+    ShowStudentTimetableQuery();
+}
+function onNextMonthClick() {
+    currMonthOffset++;
+    ShowStudentTimetableQuery();
+}
 //обработчики
 
 function ShowStudentsQuery(groupID) {
@@ -65,7 +76,7 @@ function ShowGroupsQuery() {
     );
 }
 
-function SaveNotesAndMarksQuery(notesArr, marksArr,monthOffset) {
+function SaveNotesAndMarksQuery(notesArr, marksArr, monthOffset) {
     $.post(
         "teacherPageHandler.php",
         {
@@ -78,9 +89,23 @@ function SaveNotesAndMarksQuery(notesArr, marksArr,monthOffset) {
     );
 }
 
+function ShowStudentTimetableQuery() {
+    $.post(
+        "teacherPageHandler.php",
+        {
+            task: "ShowTimetable",
+            studentID: currStudentID,
+            monthOffset: currMonthOffset, //смещение относительно текущего месяца. Надо будет как-то ограничить
+            currGroupID: currGroupID
+        },
+        ShowStudentTimetableHandler
+    );
+}
+
 //Ajax Handlers
+
 function SaveNotesAndMarksHandler(data) {
-    doc =document.getElementById('leftContent');
+    doc = document.getElementById('leftContent');
     doc.innerHTML = data;
 }
 
@@ -89,18 +114,6 @@ function ShowGroupsHandler(data) {
     doc.innerHTML = data;
 }
 
-function ShowStudentTimetableQuery(studentLogin) {
-    $.post(
-        "teacherPageHandler.php",
-        {
-            task: "ShowTimetable",
-            studentID: studentLogin,
-            monthOffset: 0, //смещение относительно текущего месяца. Надо будет как-то ограничить
-            currGroupID: currGroupID
-        },
-        ShowStudentTimetableHandler
-    );
-}
 
 function ShowStudentTimetableHandler(data) {
     doc = document.getElementById("leftContent");

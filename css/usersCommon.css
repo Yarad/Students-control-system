@@ -1,0 +1,28 @@
+#prevMonthBlock, #nextMonthBlock{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+}
+
+#prevMonthBlock:hover
+{
+    transform: translateX(-5px);
+}
+
+#nextMonthBlock:hover {
+    transform: translateX(5px);
+}
+
+#nextMonthBlock{
+    background-image: url("../images/next_month.png");
+}
+#prevMonthBlock{
+    background-image: url("../images/prev_month.png");
+}
+
+#currMonthTitle{
+    display: inline-block;
+}
