@@ -1,7 +1,8 @@
 /**
  * Created by user on 16.10.2017.
  */
-currGroupID='';
+currGroupID = '';
+currMonthOffset = 0;
 
 function onPageLoad() {
     ShowGroupsQuery();
@@ -15,15 +16,30 @@ function onListButtonClick(groupID) {
     ChangeViewOfRightMenuBlocks();
 }
 
-function onBackToGroupsButtonClick()
-{
+function onBackToGroupsButtonClick() {
     currGroupID = '';
     ShowGroupsQuery();
     ChangeViewOfRightMenuBlocks();
 }
 
-function onStudentEditTimetableClick($studentLogin){
+function onStudentEditTimetableClick($studentLogin) {
     ShowStudentTimetableQuery($studentLogin);
+}
+
+function onSaveStudentNotesClick() {
+    currMonthNotes = $(".note-edit");
+    currMonthMarks = $(".mark-edit");
+
+    currMonthNotesArr = {};
+    currMonthMarksArr = {};
+
+    for (i = 0; i < currMonthNotes.length; i++)
+        currMonthNotesArr[currMonthNotes[i].id] = currMonthNotes[i].value;
+
+    for (i = 0; i < currMonthMarks.length; i++)
+        currMonthMarksArr[currMonthMarks[i].id] = currMonthMarks[i].value;
+
+    SaveNotesAndMarksQuery(currMonthNotesArr,currMonthMarksArr,currMonthOffset)
 }
 
 //обработчики
@@ -49,11 +65,28 @@ function ShowGroupsQuery() {
     );
 }
 
+function SaveNotesAndMarksQuery(notesArr, marksArr,monthOffset) {
+    $.post(
+        "teacherPageHandler.php",
+        {
+            task: "SaveNotesAndMarks",
+            notes: JSON.stringify(notesArr),
+            marks: JSON.stringify(marksArr),
+            monthOffset: monthOffset
+        },
+        SaveNotesAndMarksHandler
+    );
+}
+
 //Ajax Handlers
+function SaveNotesAndMarksHandler(data) {
+    doc =document.getElementById('leftContent');
+    doc.innerHTML = data;
+}
 
 function ShowGroupsHandler(data) {
     doc = document.getElementById("rightContent-inner1");
-    doc.innerHTML =  data;
+    doc.innerHTML = data;
 }
 
 function ShowStudentTimetableQuery(studentLogin) {
@@ -71,7 +104,7 @@ function ShowStudentTimetableQuery(studentLogin) {
 
 function ShowStudentTimetableHandler(data) {
     doc = document.getElementById("leftContent");
-    doc.innerHTML =  data;
+    doc.innerHTML = data;
 }
 
 function ShowStudentsHandler(data) {
@@ -80,17 +113,15 @@ function ShowStudentsHandler(data) {
     doc.innerHTML = data;
 }
 
-function ChangeViewOfRightMenuBlocks()
-{
+function ChangeViewOfRightMenuBlocks() {
     doc1 = document.getElementById("rightContent-inner1");
     doc2 = document.getElementById("rightContent-inner2");
-    if(doc1.style.display=="none"){
-        doc2.style.display="none";
-        doc1.style.display="block";
+    if (doc1.style.display == "none") {
+        doc2.style.display = "none";
+        doc1.style.display = "block";
     }
-    else
-    {
-        doc1.style.display="none";
-        doc2.style.display="block";
+    else {
+        doc1.style.display = "none";
+        doc2.style.display = "block";
     }
 }
