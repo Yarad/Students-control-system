@@ -22,6 +22,7 @@ function onBackToGroupsButtonClick() {
     currGroupID = '';
     ShowGroupsQuery();
     ChangeViewOfRightMenuBlocks();
+    ClearLeftContent();
 }
 
 function onStudentEditTimetableClick(studentLogin) {
@@ -33,16 +34,14 @@ function onSaveStudentNotesClick() {
     currMonthNotes = $(".note-edit");
     currMonthMarks = $(".mark-edit");
 
-    currMonthNotesArr = {};
-    currMonthMarksArr = {};
+    currMonthNotesAndMarksArr = {};
 
-    for (i = 0; i < currMonthNotes.length; i++)
-        currMonthNotesArr[currMonthNotes[i].id] = currMonthNotes[i].value;
+    for (i = 0; i < currMonthNotes.length; i++) {
+        if (currMonthNotes[i].value != '' && currMonthMarks[i].value != '')
+            currMonthNotesAndMarksArr[currMonthNotes[i].id] = [currMonthNotes[i].value, currMonthMarks[i].value];
+    }
 
-    for (i = 0; i < currMonthMarks.length; i++)
-        currMonthMarksArr[currMonthMarks[i].id] = currMonthMarks[i].value;
-
-    SaveNotesAndMarksQuery(currMonthNotesArr, currMonthMarksArr, currMonthOffset)
+    SaveNotesAndMarksQuery(currMonthNotesAndMarksArr, currMonthOffset)
 }
 
 function onPrevMonthClick() {
@@ -76,13 +75,14 @@ function ShowGroupsQuery() {
     );
 }
 
-function SaveNotesAndMarksQuery(notesArr, marksArr, monthOffset) {
+function SaveNotesAndMarksQuery(currMonthNotesAndMarksArr, monthOffset) {
     $.post(
         "teacherPageHandler.php",
         {
             task: "SaveNotesAndMarks",
-            notes: JSON.stringify(notesArr),
-            marks: JSON.stringify(marksArr),
+            notesAndMarks: JSON.stringify(currMonthNotesAndMarksArr),
+            studentID: currStudentID,
+            currGroupID: currGroupID,
             monthOffset: monthOffset
         },
         SaveNotesAndMarksHandler
@@ -137,4 +137,10 @@ function ChangeViewOfRightMenuBlocks() {
         doc1.style.display = "none";
         doc2.style.display = "block";
     }
+}
+
+function ClearLeftContent()
+{
+    doc = document.getElementById("leftContent");
+    doc.innerHTML = '';
 }

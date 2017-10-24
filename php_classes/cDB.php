@@ -35,7 +35,13 @@ class cDB
 
     public function SaveStudent($student)
     {
-        $bool1 = $this->dbLink->query("INSERT INTO `" . Constants::$DB_TABLE_STUDENTS . "`(`nickName`, `passwordHash`, `curr_session_hash`, `extraInfo`,`surname_name`,`calendar_of_marks`) VALUES ('$student->nickName','$student->passwordHash','','$student->extraInfo','" . $student->surname_name . "','".$student->GetMarksInJson() ."')");
+        $bool1 = $this->dbLink->query("INSERT INTO `" . Constants::$DB_TABLE_STUDENTS . "`(`nickName`, `passwordHash`, `curr_session_hash`, `extraInfo`,`surname_name`,`calendar_of_marks`) VALUES ('$student->nickName','$student->passwordHash','','$student->extraInfo','" . $student->surname_name . "','" . $student->GetMarksInJson() . "')");
+        return $bool1;
+    }
+
+    public function UpdateStudent($student)
+    {
+        $bool1 = $this->dbLink->query("UPDATE `students` SET `extraInfo`='" . $student->extraInfo . "',`surname_name`='" . $student->surname_name . "',`calendar_of_marks`='" . $student->GetMarksInJson() . "' WHERE `nickName`='" . $student->nickName . "'");
         return $bool1;
     }
 
@@ -43,7 +49,7 @@ class cDB
     {
         $dbAnswer = $this->dbLink->query("SELECT * FROM `teachers` WHERE `nickName` = '" . $nickName . "'");
         $dbObject = $dbAnswer->fetch_object();
-        $retRecord = new cTeacher($dbObject->nickName, $dbObject->passwordHash,$dbObject->surname_name);
+        $retRecord = new cTeacher($dbObject->nickName, $dbObject->passwordHash, $dbObject->surname_name);
         $retRecord->extraInfo = $dbObject->extraInfo;
         $retRecord->surname_name = $dbObject->surname_name;
 

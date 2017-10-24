@@ -119,7 +119,6 @@ class Constants
             $tempChar = '+';
         else
             $tempChar = '-';
-        echo $tempChar . $monthOffset . " month";
         $dt = strtotime($tempChar . $monthOffset . " month");
 
         $monthNum = strftime('%m', $dt);
@@ -127,42 +126,53 @@ class Constants
         switch ($monthNum)
         {
             case 1:
-                $month = 'Январь';
+                $month = 'январь';
                 break;
             case 2:
-                $month = 'Февраль';
+                $month = 'февраль';
                 break;
             case 3:
-                $month = 'Март';
+                $month = 'март';
                 break;
             case 4:
-                $month = 'Апрель';
+                $month = 'апрель';
                 break;
             case 5:
-                $month = 'Май';
+                $month = 'май';
                 break;
             case 6:
-                $month = 'Июнь';
+                $month = 'июнь';
                 break;
             case 7:
-                $month = 'Июль';
+                $month = 'июль';
                 break;
             case 8:
-                $month = 'Август';
+                $month = 'август';
                 break;
             case 9:
-                $month = 'Сентябрь';
+                $month = 'сентябрь';
                 break;
             case 10:
-                $month = 'Октябрь';
+                $month = 'октябрь';
                 break;
             case 11:
-                $month = 'Ноябрь';
+                $month = 'ноябрь';
                 break;
             case 12:
-                $month = 'Декабрь';
+                $month = 'декабрь';
                 break;
         }
         return $month;
+    }
+    static function getYeraNumByOffset($monthOffset = 0)
+    {
+        //setlocale(LC_ALL, 'rus_rus');
+        if ($monthOffset >= 0)
+            $tempChar = '+';
+        else
+            $tempChar = '-';
+        $dt = strtotime($tempChar . $monthOffset . " month");
+
+        return strftime('%Y', $dt);
     }
 }

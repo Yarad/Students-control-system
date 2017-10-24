@@ -10,13 +10,13 @@ include_once "Constants.php";
  */
 class cStudent extends cUser
 {
-    public $calendarMarks; //key: date; value: mark
+    public $calendarMarks; //27.05.2017 => [note,mark]
     public $groupID;
 
-    public function __construct($nick, $password, $surnameName)
+    public function __construct($nick, $password, $surnameName,$groupID)
     {
         parent::__construct($nick, $password, $surnameName);
-        //$this->groupID = $groupID;
+        $this->groupID = $groupID;
     }
 
     public function editMark($date, $dayInfo)
@@ -27,7 +27,7 @@ class cStudent extends cUser
     public function Save()
     {
         $str = json_encode($this);
-        file_put_contents($ROOT_PATH . "students/" . $this->nickName, $str);
+        file_put_contents(Constants::$ROOT_PATH . "students/" . $this->nickName, $str);
     }
 
     public static function JsonDecode($jsonStr)
@@ -40,7 +40,11 @@ class cStudent extends cUser
 
     public function LoadMarksFromJsonStr($jsonStr)
     {
-        $this->calendarMarks = json_decode($jsonStr);
+        $tempObj = json_decode($jsonStr);
+        foreach ($tempObj as $key => $obj) {
+            $this->calendarMarks[$key] = $obj;
+        }
+        //return json_decode($jsonStr);
     }
 
     public function GetMarksInJson()

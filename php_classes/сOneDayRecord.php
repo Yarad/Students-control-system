@@ -10,4 +10,10 @@ class сOneDayRecord
 {
     public $mark;
     public $note;
+
+    public function __construct($note, $mark)
+    {
+        $this->mark = $mark;
+        $this->note = $note;
+    }
 }

@@ -1,6 +1,7 @@
 <?php
 include_once "php_classes/cDB.php";
 include_once "php_classes/cDrawer.php";
+include_once "php_classes/сOneDayRecord.php";
 /**
  * Created by PhpStorm.
  * User: user
@@ -23,11 +24,19 @@ if ($_POST['task'] == "ShowTimetable") {
     $currGroupID = $_POST['currGroupID'];
     $monthOffset = $_POST['monthOffset'];
 
-    echo cDrawer::DrawStudentTimetableHeader(Constants::getMonthNameByOffset($monthOffset)) . cDrawer::DrawStudentTimetableToEdit($currTeacher->groups[$currGroupID]->students[$currStudentID], $currTeacher->groups[$currGroupID]->weekTimetable, $monthOffset);
+    echo cDrawer::DrawStudentTimetableHeader(Constants::getMonthNameByOffset($monthOffset), Constants::getYeraNumByOffset($monthOffset)) . cDrawer::DrawStudentTimetableToEdit($currTeacher->groups[$currGroupID]->students[$currStudentID], $currTeacher->groups[$currGroupID]->weekTimetable, $monthOffset);
 }
 
 if ($_POST['task'] == "SaveNotesAndMarks") {
     $monthOffset = $_POST["monthOffset"];
-    $notes = json_decode($_POST["notes"]);
-    $marks = json_decode($_POST["marks"]);
+    $newNotesAndMarks = json_decode($_POST["notesAndMarks"]);
+    $currStudentID = $_POST['studentID'];
+    $currGroupID = $_POST['currGroupID'];
+
+    //добавление оценки
+
+    foreach ($newNotesAndMarks as $key => $value) {
+        $currTeacher->groups[$currGroupID]->students[$currStudentID]->editMark($key,new сOneDayRecord($value[0],$value[1]));
+    }
+    $db->UpdateStudent($currTeacher->groups[$currGroupID]->students[$currStudentID]);
 }

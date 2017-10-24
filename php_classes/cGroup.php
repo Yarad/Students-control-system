@@ -13,12 +13,14 @@ class cGroup
     public $students = [];
     private $groupInfo;
     public $groupID;
-    public $weekTimetable ;
+    public $weekTimetable;
+    public $teacherNickName;
 
-    public function __construct($id, $groupInfo = "")
+    public function __construct($id, $teacherNickName, $groupInfo = "")
     {
         $this->groupID = $id;
         $this->groupInfo = $groupInfo;
+        $this->teacherNickName =$teacherNickName;
         $this->weekTimetable = new cTimetable();
     }
 
