@@ -38,5 +38,7 @@ if ($_POST['task'] == "SaveNotesAndMarks") {
     foreach ($newNotesAndMarks as $key => $value) {
         $currTeacher->groups[$currGroupID]->students[$currStudentID]->editMark($key,new сOneDayRecord($value[0],$value[1]));
     }
+
+
     $db->UpdateStudent($currTeacher->groups[$currGroupID]->students[$currStudentID]);
 }

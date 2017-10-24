@@ -10,10 +10,10 @@ include_once "Constants.php";
  */
 class cStudent extends cUser
 {
-    public $calendarMarks; //27.05.2017 => [note,mark]
+    public $calendarMarks = []; //27.05.2017 => [note,mark]
     public $groupID;
 
-    public function __construct($nick, $password, $surnameName,$groupID)
+    public function __construct($nick, $password, $groupID, $surnameName)
     {
         parent::__construct($nick, $password, $surnameName);
         $this->groupID = $groupID;
@@ -41,6 +41,8 @@ class cStudent extends cUser
     public function LoadMarksFromJsonStr($jsonStr)
     {
         $tempObj = json_decode($jsonStr);
+        if ($tempObj == null) return;
+
         foreach ($tempObj as $key => $obj) {
             $this->calendarMarks[$key] = $obj;
         }

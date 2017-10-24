@@ -11,8 +11,8 @@ include_once "php_classes/cDB.php";
 $db = new cDB();
 /*
 $temp = new cTeacher("teacher", "password", "Onoshecko");
-$temp->addGroup(new cGroup("group1"));
-$temp->groups['group1']->addStudent(new cStudent("stud1", "stud_password", "Zhlobich Andrew"));
+$temp->addGroup(new cGroup("group1",$temp->nickName));
+$temp->groups['group1']->addStudent(new cStudent("stud1", "stud_password",'group1', "Zhlobich Andrew"));
 $temp->groups['group1']->weekTimetable->addLessonPerWeek(1, "15.20");
 $temp->groups['group1']->weekTimetable->addLessonPerWeek(3, "15.20");
 $db->SaveTeacher($temp);

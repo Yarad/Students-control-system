@@ -27,7 +27,7 @@ class cDB
 
     public function SaveGroup($group)
     {
-        $bool1 = $this->dbLink->query("INSERT INTO `" . Constants::$DB_TABLE_GROUPS . "`(`id`, `timetable`, `students`, `extraInfo`) VALUES ('" . $group->groupID . "','" . $group->weekTimetable->getTimetableInJSON() . "','" . $group->getStudentsIDs() . "','" . $group->getGroupInfo() . "')");
+        $bool1 = $this->dbLink->query("INSERT INTO `" . Constants::$DB_TABLE_GROUPS . "`(`id`, `timetable`, `students`, `extraInfo`,`teacherNick`) VALUES ('" . $group->groupID . "','" . $group->weekTimetable->getTimetableInJSON() . "','" . $group->getStudentsIDs() . "','" . $group->getGroupInfo() . "','" . $group->teacherNickName . "')");
         foreach ($group->students as $key => $value)
             $bool1 = $bool1 && $this->SaveStudent($value);
         return $bool1;
@@ -35,13 +35,14 @@ class cDB
 
     public function SaveStudent($student)
     {
-        $bool1 = $this->dbLink->query("INSERT INTO `" . Constants::$DB_TABLE_STUDENTS . "`(`nickName`, `passwordHash`, `curr_session_hash`, `extraInfo`,`surname_name`,`calendar_of_marks`) VALUES ('$student->nickName','$student->passwordHash','','$student->extraInfo','" . $student->surname_name . "','" . $student->GetMarksInJson() . "')");
+        $bool1 = $this->dbLink->query("INSERT INTO `" . Constants::$DB_TABLE_STUDENTS . "`(`nickName`, `passwordHash`, `curr_session_hash`, `extraInfo`,`surname_name`,`calendar_of_marks`,`groupID`) VALUES ('$student->nickName','$student->passwordHash','','$student->extraInfo','" . $student->surname_name . "','" . $student->GetMarksInJson() . "','" . $student->groupID."')");
         return $bool1;
     }
 
     public function UpdateStudent($student)
     {
-        $bool1 = $this->dbLink->query("UPDATE `students` SET `extraInfo`='" . $student->extraInfo . "',`surname_name`='" . $student->surname_name . "',`calendar_of_marks`='" . $student->GetMarksInJson() . "' WHERE `nickName`='" . $student->nickName . "'");
+        $bool1 = $this->dbLink->query("UPDATE `students` SET `groupID`='" . $student->groupID . "', `extraInfo`='" . $student->extraInfo . "',`surname_name`='" . $student->surname_name . "',`calendar_of_marks`='" . $student->GetMarksInJson() . "' WHERE `nickName`='" . $student->nickName . "'");
+        //var_dump("UPDATE `students` SET `groupID`='" . $student->groupID . "' `,extraInfo`='" . $student->extraInfo . "',`surname_name`='" . $student->surname_name . "',`calendar_of_marks`='" . $student->GetMarksInJson() . "' WHERE `nickName`='" . $student->nickName . "'");
         return $bool1;
     }
 
@@ -65,6 +66,7 @@ class cDB
         $dbObject = $dbAnswer->fetch_object();
         $retRecord = new cGroup($dbObject->id, $dbObject->extraInfo);
         $retRecord->weekTimetable->loadTimetableFromJSON($dbObject->timetable);
+        $retRecord->teacherNickName = $dbObject->teacherNick;
         //умеет работать с расписанием
         foreach (explode(',', $dbObject->students) as $key => $value) {
             $retRecord->addStudent($this->LoadStudentByNickName($value));
@@ -76,7 +78,7 @@ class cDB
     {
         $dbAnswer = $this->dbLink->query("SELECT * FROM `students` WHERE `nickName` = '" . $nickName . "'");
         $dbObject = $dbAnswer->fetch_object();
-        $retRecord = new cStudent($dbObject->nickName, $dbObject->passwordHash, $dbObject->surname_name);
+        $retRecord = new cStudent($dbObject->nickName, $dbObject->passwordHash,$dbObject->groupID, $dbObject->surname_name);
         $retRecord->LoadMarksFromJsonStr($dbObject->calendar_of_marks);
         $retRecord->extraInfo = $dbObject->extraInfo;
         $retRecord->surname_name = $dbObject->surname_name;
@@ -159,10 +161,12 @@ class cDB
         } else {
             $dbHash = $dbAnswerStudents->fetch_row()[0];
         }
-        $hash = $_COOKIE['curr_session_hash'];
 
         if ($hash == $dbHash) {
-            return $this->LoadTeacherByNickName($nick);
+            if($isTeacher)
+                return $this->LoadTeacherByNickName($nick);
+            else
+                return $this->LoadStudentByNickName($nick);
         } else return null;
     }
 
