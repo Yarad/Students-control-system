@@ -1,4 +1,4 @@
-#prevMonthBlock, #nextMonthBlock{
+#prevMonthBlock, #nextMonthBlock {
     width: 60px;
     height: 60px;
     display: inline-block;
@@ -7,8 +7,7 @@
     transition: 0.3s;
 }
 
-#prevMonthBlock:hover
-{
+#prevMonthBlock:hover {
     transform: translateX(-5px);
 }
 
@@ -16,13 +15,69 @@
     transform: translateX(5px);
 }
 
-#nextMonthBlock{
+#nextMonthBlock {
     background-image: url("../images/next_month.png");
 }
-#prevMonthBlock{
+
+#prevMonthBlock {
     background-image: url("../images/prev_month.png");
 }
 
-#currMonthTitle{
+#currMonthTitle {
     display: inline-block;
+    vertical-align: top;
+}
+
+.Column {
+    display: inline-block;
+    margin: 10vh 20px;
+    padding: 20px;
+    min-height: 80vh;
+    background-color: white;
+    vertical-align: top;
+}
+
+#leftContent {
+    width: 50%;
+}
+
+#rightContent {
+    width: 30%;
+    overflow: scroll;
+}
+
+.oneWeek {
+    width: 100%;
+    border-bottom: 4px double darkolivegreen;
+}
+
+.oneDay {
+    text-align: left;
+    margin: 10px;
+}
+
+.oneDay > div {
+    display: inline-block;
+    height: inherit;
+    vertical-align: top;
+}
+
+.oneDay-dateTime {
+    width: 20%;
+    border-right: 2px solid #8dac46;
+}
+
+.oneDay-mark {
+    width: 40px;
+    border-right: 2px solid #8dac46;
+    padding-right: 10px;
+}
+
+.oneDay-note {
+    width: 60%;
+}
+
+.note-edit, .mark-edit {
+    width: 100%;
+    resize: vertical;
 }

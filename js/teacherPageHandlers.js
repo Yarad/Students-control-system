@@ -5,7 +5,6 @@ currGroupID = '';
 currMonthOffset = 0;
 currStudentID = '';
 
-
 function onPageLoad() {
     ShowGroupsQuery();
     //обработчик внутри
@@ -22,7 +21,6 @@ function onBackToGroupsButtonClick() {
     currGroupID = '';
     ShowGroupsQuery();
     ChangeViewOfRightMenuBlocks();
-    ClearLeftContent();
 }
 
 function onStudentEditTimetableClick(studentLogin) {
@@ -142,5 +140,5 @@ function ChangeViewOfRightMenuBlocks() {
 function ClearLeftContent()
 {
     doc = document.getElementById("leftContent");
-    doc.innerHTML = '';
+    doc.innerHTML
 }

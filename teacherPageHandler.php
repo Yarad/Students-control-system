@@ -24,7 +24,7 @@ if ($_POST['task'] == "ShowTimetable") {
     $currGroupID = $_POST['currGroupID'];
     $monthOffset = $_POST['monthOffset'];
 
-    echo cDrawer::DrawStudentTimetableHeader(Constants::getMonthNameByOffset($monthOffset), Constants::getYeraNumByOffset($monthOffset)) . cDrawer::DrawStudentTimetableToEdit($currTeacher->groups[$currGroupID]->students[$currStudentID], $currTeacher->groups[$currGroupID]->weekTimetable, $monthOffset);
+    echo cDrawer::DrawTimetableHeader(Constants::getMonthNameByOffset($monthOffset), Constants::getYeraNumByOffset($monthOffset),true) . cDrawer::DrawStudentTimetableToEdit($currTeacher->groups[$currGroupID]->students[$currStudentID], $currTeacher->groups[$currGroupID]->weekTimetable, $monthOffset);
 }
 
 if ($_POST['task'] == "SaveNotesAndMarks") {

@@ -1,12 +1,8 @@
 /**
  * Created by user on 24.10.2017.
  */
-/**
- * Created by user on 16.10.2017.
- */
-currGroupID = '';
 currMonthOffset = 0;
-currStudentID = '';
+//остальное добавляется php ... велосипед, блин. Надо бы переделать ч/з cookie
 
 function onPrevMonthClick() {
     currMonthOffset--;
@@ -16,16 +12,21 @@ function onNextMonthClick() {
     currMonthOffset++;
     ShowStudentTimetableQuery();
 }
+//обработчики
 
 function ShowStudentTimetableQuery() {
     $.post(
-        "teacherPageHandler.php",
+        "studentPageHandler.php",
         {
             task: "ShowTimetable",
-            studentID: currStudentID,
             monthOffset: currMonthOffset, //смещение относительно текущего месяца. Надо будет как-то ограничить
             currGroupID: currGroupID
         },
         ShowStudentTimetableHandler
     );
+}
+
+function ShowStudentTimetableHandler(data) {
+    doc = document.getElementById("leftContent");
+    doc.innerHTML = data;
 }

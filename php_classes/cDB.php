@@ -35,18 +35,17 @@ class cDB
 
     public function SaveStudent($student)
     {
-        $bool1 = $this->dbLink->query("INSERT INTO `" . Constants::$DB_TABLE_STUDENTS . "`(`nickName`, `passwordHash`, `curr_session_hash`, `extraInfo`,`surname_name`,`calendar_of_marks`,`groupID`) VALUES ('$student->nickName','$student->passwordHash','','$student->extraInfo','" . $student->surname_name . "','" . $student->GetMarksInJson() . "','" . $student->groupID."')");
+        $bool1 = $this->dbLink->query("INSERT INTO `" . Constants::$DB_TABLE_STUDENTS . "`(`nickName`, `passwordHash`, `curr_session_hash`, `extraInfo`,`surname_name`,`calendar_of_marks`,`groupID`) VALUES ('$student->nickName','$student->passwordHash','','$student->extraInfo','" . $student->surname_name . "','" . $student->GetMarksInJson() . "','" . $student->groupID . "')");
         return $bool1;
     }
 
     public function UpdateStudent($student)
     {
         $bool1 = $this->dbLink->query("UPDATE `students` SET `groupID`='" . $student->groupID . "', `extraInfo`='" . $student->extraInfo . "',`surname_name`='" . $student->surname_name . "',`calendar_of_marks`='" . $student->GetMarksInJson() . "' WHERE `nickName`='" . $student->nickName . "'");
-        //var_dump("UPDATE `students` SET `groupID`='" . $student->groupID . "' `,extraInfo`='" . $student->extraInfo . "',`surname_name`='" . $student->surname_name . "',`calendar_of_marks`='" . $student->GetMarksInJson() . "' WHERE `nickName`='" . $student->nickName . "'");
         return $bool1;
     }
 
-    public function LoadTeacherByNickName($nickName)
+    public function LoadTeacherByNickName($nickName, $subLayers = true)
     {
         $dbAnswer = $this->dbLink->query("SELECT * FROM `teachers` WHERE `nickName` = '" . $nickName . "'");
         $dbObject = $dbAnswer->fetch_object();
@@ -54,13 +53,14 @@ class cDB
         $retRecord->extraInfo = $dbObject->extraInfo;
         $retRecord->surname_name = $dbObject->surname_name;
 
-        foreach (explode(',', $dbObject->groups) as $key => $value) {
-            $retRecord->addGroup($this->LoadGroupByID($value));
-        }
+        if ($subLayers)
+            foreach (explode(',', $dbObject->groups) as $key => $value) {
+                $retRecord->addGroup($this->LoadGroupByID($value));
+            }
         return $retRecord;
     }
 
-    public function LoadGroupByID($groupID)
+    public function LoadGroupByID($groupID, $subLayers = true)
     {
         $dbAnswer = $this->dbLink->query("SELECT * FROM `groups` WHERE `id` = '" . $groupID . "'");
         $dbObject = $dbAnswer->fetch_object();
@@ -68,9 +68,10 @@ class cDB
         $retRecord->weekTimetable->loadTimetableFromJSON($dbObject->timetable);
         $retRecord->teacherNickName = $dbObject->teacherNick;
         //умеет работать с расписанием
-        foreach (explode(',', $dbObject->students) as $key => $value) {
-            $retRecord->addStudent($this->LoadStudentByNickName($value));
-        }
+        if ($subLayers)
+            foreach (explode(',', $dbObject->students) as $key => $value) {
+                $retRecord->addStudent($this->LoadStudentByNickName($value));
+            }
         return $retRecord;
     }
 
@@ -78,7 +79,7 @@ class cDB
     {
         $dbAnswer = $this->dbLink->query("SELECT * FROM `students` WHERE `nickName` = '" . $nickName . "'");
         $dbObject = $dbAnswer->fetch_object();
-        $retRecord = new cStudent($dbObject->nickName, $dbObject->passwordHash,$dbObject->groupID, $dbObject->surname_name);
+        $retRecord = new cStudent($dbObject->nickName, $dbObject->passwordHash, $dbObject->groupID, $dbObject->surname_name);
         $retRecord->LoadMarksFromJsonStr($dbObject->calendar_of_marks);
         $retRecord->extraInfo = $dbObject->extraInfo;
         $retRecord->surname_name = $dbObject->surname_name;
@@ -117,9 +118,9 @@ class cDB
             $retRecord->currSessionHash = $currSessionHash;
             $this->dbLink->query("UPDATE " . Constants::$DB_TABLE_TEACHERS . " SET curr_session_hash = '$currSessionHash' WHERE nickName ='" . $userInfo['nickName'] . "'");
         } else {
-            $retRecord = new cStudent($userInfo['nickName'], "unavailable");
+            $retRecord = $this->LoadStudentByNickName($userInfo['nickName']);
             $retRecord->currSessionHash = $currSessionHash;
-            $this->dbLink->query("UPDATE " . Constants::$DB_TABLE_TEACHERS . " SET curr_session_hash = '$currSessionHash' WHERE nickName ='" . $userInfo['nickName'] . "'");
+            $this->dbLink->query("UPDATE " . Constants::$DB_TABLE_STUDENTS . " SET curr_session_hash = '$currSessionHash' WHERE nickName ='" . $userInfo['nickName'] . "'");
         }
 
         var_dump($_COOKIE);
@@ -163,7 +164,7 @@ class cDB
         }
 
         if ($hash == $dbHash) {
-            if($isTeacher)
+            if ($isTeacher)
                 return $this->LoadTeacherByNickName($nick);
             else
                 return $this->LoadStudentByNickName($nick);

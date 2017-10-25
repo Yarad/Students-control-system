@@ -34,15 +34,19 @@ class cDrawer
         return $resStr;
     }
 
-    static function DrawStudentTimetableHeader($monthName, $yearNum)
+    static function DrawTimetableHeader($monthName, $yearNum, $isTeacher)
     {
-        $str = file_get_contents(Constants::$ROOT_PATH . "html_templates/timetableHeader.html");
+        if($isTeacher)
+        $str = file_get_contents(Constants::$ROOT_PATH . "html_templates/teacherTimetableHeader.html");
+        else
+            $str = file_get_contents(Constants::$ROOT_PATH . "html_templates/studentTimetableHeader.html");
+
         $str = str_replace("{month}", $monthName, $str);
         $str = str_replace("{year}", $yearNum, $str);
         return $str;
     }
 
-    static function DrawStudentTimetableToEdit($student, $weekTimetable, $monthOffset)
+    static function DrawStudentTimetableToEdit($student, $weekTimetable, $monthOffset, $isTeacher = true)
     {
         //нарисовать расписание
         //брать буду за текущий месяц
@@ -93,16 +97,30 @@ class cDrawer
                 $tempOneDay = str_replace("{date}", Constants::printRusDate($day), $tempOneDay);
                 $tempOneDay = str_replace("{time}", $day->format("H.i"), $tempOneDay);
 
-                if (isset($student->calendarMarks[$day->format("d.m.Y")]->note))
-                    $tempOneDay = str_replace("{note}", "<textarea class='note-edit' id='" . $day->format("d.m.Y") . "'>" . $student->calendarMarks[$day->format("d.m.Y")]->note . "</textarea>", $tempOneDay);
-                else
-                    $tempOneDay = str_replace("{note}", "<textarea class='note-edit' id='" . $day->format("d.m.Y") . "'></textarea>", $tempOneDay);
+                if ($isTeacher) {
+                    //отрисовка для учителя
+                    if (isset($student->calendarMarks[$day->format("d.m.Y")]->note))
+                        $tempOneDay = str_replace("{note}", "<textarea class='note-edit' id='" . $day->format("d.m.Y") . "'>" . $student->calendarMarks[$day->format("d.m.Y")]->note . "</textarea>", $tempOneDay);
+                    else
+                        $tempOneDay = str_replace("{note}", "<textarea class='note-edit' id='" . $day->format("d.m.Y") . "'></textarea>", $tempOneDay);
 
-                if (isset($student->calendarMarks[$day->format("d.m.Y")]->mark))
-                    $tempOneDay = str_replace("{mark}", "<textarea class='mark-edit' id='" . $day->format("d.m.Y") . "'>" . $student->calendarMarks[$day->format("d.m.Y")]->mark . "</textarea>", $tempOneDay);
-                else
-                    $tempOneDay = str_replace("{mark}", "<textarea class='mark-edit' id='" . $day->format("d.m.Y") . "'></textarea>", $tempOneDay);
+                    if (isset($student->calendarMarks[$day->format("d.m.Y")]->mark))
+                        $tempOneDay = str_replace("{mark}", "<textarea class='mark-edit' id='" . $day->format("d.m.Y") . "'>" . $student->calendarMarks[$day->format("d.m.Y")]->mark . "</textarea>", $tempOneDay);
+                    else
+                        $tempOneDay = str_replace("{mark}", "<textarea class='mark-edit' id='" . $day->format("d.m.Y") . "'></textarea>", $tempOneDay);
+                } else {
+                    //отрисовка для студента
+                    if (isset($student->calendarMarks[$day->format("d.m.Y")]->note))
+                        $tempOneDay = str_replace("{note}", "<div class='note-edit' id='" . $day->format("d.m.Y") . "'>" . $student->calendarMarks[$day->format("d.m.Y")]->note . "</div>", $tempOneDay);
+                    else
+                        $tempOneDay = str_replace("{note}", "<div class='note-edit' id='" . $day->format("d.m.Y") . "'></div>", $tempOneDay);
 
+                    if (isset($student->calendarMarks[$day->format("d.m.Y")]->mark))
+                        $tempOneDay = str_replace("{mark}", "<div class='mark-edit' id='" . $day->format("d.m.Y") . "'>" . $student->calendarMarks[$day->format("d.m.Y")]->mark . "</div>", $tempOneDay);
+                    else
+                        $tempOneDay = str_replace("{mark}", "<div class='mark-edit' id='" . $day->format("d.m.Y") . "'></div>", $tempOneDay);
+
+                }
                 $tempWeekStr .= $tempOneDay;
             }
             $resStr .= str_replace("{days}", $tempWeekStr, $oneWeekTemplate);
