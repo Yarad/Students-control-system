@@ -36,8 +36,8 @@ class cDrawer
 
     static function DrawTimetableHeader($monthName, $yearNum, $isTeacher)
     {
-        if($isTeacher)
-        $str = file_get_contents(Constants::$ROOT_PATH . "html_templates/teacherTimetableHeader.html");
+        if ($isTeacher)
+            $str = file_get_contents(Constants::$ROOT_PATH . "html_templates/teacherTimetableHeader.html");
         else
             $str = file_get_contents(Constants::$ROOT_PATH . "html_templates/studentTimetableHeader.html");
 
@@ -121,6 +121,67 @@ class cDrawer
                         $tempOneDay = str_replace("{mark}", "<div class='mark-edit' id='" . $day->format("d.m.Y") . "'></div>", $tempOneDay);
 
                 }
+                $tempWeekStr .= $tempOneDay;
+            }
+            $resStr .= str_replace("{days}", $tempWeekStr, $oneWeekTemplate);
+        }
+
+        return $resStr;
+    }
+
+    static function DrawEmptyTimetableToEdit($weekTimetable, $monthOffset)
+    {
+        //нарисовать расписание
+        //брать буду за текущий месяц
+        //студент; monday,15.20; 07
+
+        $oneWeekTemplate = file_get_contents(Constants::$ROOT_PATH . "html_templates/oneCalendarWeek.html");
+        $oneDayTemplate = file_get_contents(Constants::$ROOT_PATH . "html_templates/oneCalendarDay.html");
+
+        $resStr = "";
+        $resArr = [];
+        //получение всех дат в resArr
+
+        $start = new DateTime(date('Y-m-01')); // первый день месяца
+        $end = new DateTime(date('Y-m-t'));
+
+        if ($monthOffset > 0) {
+            $start->add(new DateInterval("P" . $monthOffset . "M"));
+            $end->add(new DateInterval("P" . $monthOffset . "M"));
+        } else {
+            $start->sub(new DateInterval("P" . abs($monthOffset) . "M"));
+            $end->sub(new DateInterval("P" . abs($monthOffset) . "M"));
+        }
+        $dateInterval = new DateInterval("P1D");
+        $dateRange = new DatePeriod($start, $dateInterval, $end);
+
+        $week = 1;
+
+        foreach ($dateRange as $dt) {
+            foreach ($weekTimetable->getDaysArray() as $value) {
+                $dayNum = $value->day;
+                $time = explode('.', $value->time);
+
+                if ($dt->format('N') == $dayNum) {
+                    $dt->SetTime($time[0], $time[1]);
+                    $resArr[$week][] = $dt;
+                }
+            }
+            if ($dt->format('N') == 7)
+                $week++;
+        }
+        //здесь в resArray массив дат, разюитый по неделям
+
+        //var_dump($student->calendarMarks);
+        foreach ($resArr as $week) {
+            $tempWeekStr = '';
+            foreach ($week as $day) {
+                $tempOneDay = $oneDayTemplate;
+                $tempOneDay = str_replace("{date}", Constants::printRusDate($day), $tempOneDay);
+                $tempOneDay = str_replace("{time}", $day->format("H.i"), $tempOneDay);
+                $tempOneDay = str_replace("{note}", "<textarea class='note-edit' id='" . $day->format("d.m.Y") . "'></textarea>", $tempOneDay);
+                $tempOneDay = str_replace("{mark}", "<textarea class='mark-edit' id='" . $day->format("d.m.Y") . "'></textarea>", $tempOneDay);
+
                 $tempWeekStr .= $tempOneDay;
             }
             $resStr .= str_replace("{days}", $tempWeekStr, $oneWeekTemplate);

@@ -14,4 +14,14 @@ body{
 header{
     height: 60px;
     width: 100%;
+    text-align: right;
+}
+
+header>a{
+    font-size: 1.5em;
+    padding: 10px;
+    margin:10px;
+    background-color: #4f632c;
+    color: white;
+    cursor: pointer;
 }

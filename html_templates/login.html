@@ -8,18 +8,19 @@
     <script src="js/loginPageHandler.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", onPageLoad);
+
     </script>
 </head>
 <body>
-    <header>
-        <!--вернуться на главную-->
-    </header>
-    <form action="index.php"  id="LoginForm" method="post">
-        <img id="loginLogo" src="images/logo2.png">
-        {loginError}
-        <input type="text" name="login" value="Логин">
-        <input type="password" name="password" value="Пароль">
-        <button id="loginButton" type="submit">Войти</button>
-    </form>
+<header>
+    <!--вернуться на главную-->
+</header>
+<form action="index.php" id="LoginForm" method="post">
+    <img id="loginLogo" src="images/logo2.png">
+    {loginError}
+    <input type="text" name="login" value="Логин">
+    <input type="password" name="password" value="Пароль">
+    <button id="loginButton" type="submit">Войти</button>
+</form>
 </body>
 </html>

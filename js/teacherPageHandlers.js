@@ -11,6 +11,8 @@ function onPageLoad() {
     //ShowStudentsQuery('group1');
 }
 
+
+
 function onListButtonClick(groupID) {
     currGroupID = groupID;
     ShowStudentsQuery(groupID);
@@ -21,6 +23,11 @@ function onBackToGroupsButtonClick() {
     currGroupID = '';
     ShowGroupsQuery();
     ChangeViewOfRightMenuBlocks();
+}
+
+function onCommonHomeworkButtonClick() {
+    currStudentID = "ALL_STUDENTS";
+    GiveCommonHomeworkQuery();
 }
 
 function onStudentEditTimetableClick(studentLogin) {
@@ -35,7 +42,7 @@ function onSaveStudentNotesClick() {
     currMonthNotesAndMarksArr = {};
 
     for (i = 0; i < currMonthNotes.length; i++) {
-        if (currMonthNotes[i].value != '' && currMonthMarks[i].value != '')
+        if (currMonthNotes[i].value != '' || currMonthMarks[i].value != '')
             currMonthNotesAndMarksArr[currMonthNotes[i].id] = [currMonthNotes[i].value, currMonthMarks[i].value];
     }
 
@@ -100,6 +107,18 @@ function ShowStudentTimetableQuery() {
     );
 }
 
+function GiveCommonHomeworkQuery() {
+    $.post(
+        "teacherPageHandler.php",
+        {
+            task: "ShowCommonTimetable",
+            monthOffset: currMonthOffset, //смещение относительно текущего месяца. Надо будет как-то ограничить
+            currGroupID: currGroupID
+        },
+        ShowStudentTimetableHandler
+    );
+}
+
 //Ajax Handlers
 
 function SaveNotesAndMarksHandler(data) {
@@ -137,8 +156,7 @@ function ChangeViewOfRightMenuBlocks() {
     }
 }
 
-function ClearLeftContent()
-{
+function ClearLeftContent() {
     doc = document.getElementById("leftContent");
-    doc.innerHTML
+    doc.innerHTML = "";
 }

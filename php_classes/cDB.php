@@ -137,7 +137,7 @@ class cDB
 
     public function LogOut($currUser)
     {
-        $this->dbLink->query("UPDATE " . Constants::$DB_TABLE_TEACHERS . " SET curr_session_hash = '' WHERE nickName ='" . $currUser['nickName'] . "'");
+        $this->dbLink->query("UPDATE " . Constants::$DB_TABLE_TEACHERS . " SET curr_session_hash = '' WHERE nickName ='" . $currUser->nickName . "'");
         setcookie("id", "");
         setcookie("currSessionHash", "");
     }

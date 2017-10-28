@@ -16,6 +16,8 @@ $scriptToAdd = '';
 $cssToAdd = '';
 $leftContent = '';
 
+$scriptToAdd .= '<script type="application/javascript" src="js/commonPageHandlers.js"></script>';
+
 if ($currUser instanceof cTeacher) {
     $scriptToAdd .= '<script type="application/javascript" src="js/teacherPageHandlers.js"></script>';
     $cssToAdd .= '<link rel="stylesheet" href="css/teacher.css">';

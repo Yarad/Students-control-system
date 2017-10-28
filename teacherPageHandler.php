@@ -16,7 +16,7 @@ if ($_POST['task'] == "ShowGroups")
 
 if ($_POST['task'] == "ShowStudents") {
     $index = $_POST['groupID'];
-    echo file_get_contents(Constants::$ROOT_PATH . "html_templates/backToGroupsButton.html") . cDrawer::DrawStudentsList($currTeacher->groups[$index]->students);
+    echo file_get_contents(Constants::$ROOT_PATH . "html_templates/backToGroupsButton.html") . file_get_contents(Constants::$ROOT_PATH . "html_templates/commonHomeworkButton.html") . cDrawer::DrawStudentsList($currTeacher->groups[$index]->students);
 }
 
 if ($_POST['task'] == "ShowTimetable") {
@@ -24,7 +24,8 @@ if ($_POST['task'] == "ShowTimetable") {
     $currGroupID = $_POST['currGroupID'];
     $monthOffset = $_POST['monthOffset'];
 
-    echo cDrawer::DrawTimetableHeader(Constants::getMonthNameByOffset($monthOffset), Constants::getYeraNumByOffset($monthOffset),true) . cDrawer::DrawStudentTimetableToEdit($currTeacher->groups[$currGroupID]->students[$currStudentID], $currTeacher->groups[$currGroupID]->weekTimetable, $monthOffset);
+    echo cDrawer::DrawTimetableHeader(Constants::getMonthNameByOffset($monthOffset), Constants::getYeraNumByOffset($monthOffset), true);
+    echo cDrawer::DrawStudentTimetableToEdit($currTeacher->groups[$currGroupID]->students[$currStudentID], $currTeacher->groups[$currGroupID]->weekTimetable, $monthOffset);
 }
 
 if ($_POST['task'] == "SaveNotesAndMarks") {
@@ -34,11 +35,30 @@ if ($_POST['task'] == "SaveNotesAndMarks") {
     $currGroupID = $_POST['currGroupID'];
 
     //добавление оценки
+    if($currStudentID != "ALL_STUDENTS") {
+        foreach ($newNotesAndMarks as $key => $value) {
+            $currTeacher->groups[$currGroupID]->students[$currStudentID]->editMark($key, new сOneDayRecord($value[0], $value[1]));
+        }
 
-    foreach ($newNotesAndMarks as $key => $value) {
-        $currTeacher->groups[$currGroupID]->students[$currStudentID]->editMark($key,new сOneDayRecord($value[0],$value[1]));
+        $db->UpdateStudent($currTeacher->groups[$currGroupID]->students[$currStudentID]);
     }
+    else
+    {
+        foreach ($currTeacher->groups[$currGroupID]->students as $currStudent) {
+            foreach ($newNotesAndMarks as $key => $value) {
+                $currStudent->editMark($key, new сOneDayRecord($value[0], $value[1]));
+                var_dump($newNotesAndMarks);
+            }
 
+            $db->UpdateStudent($currStudent);
+        }
+    }
+}
 
-    $db->UpdateStudent($currTeacher->groups[$currGroupID]->students[$currStudentID]);
+if ($_POST['task'] == "ShowCommonTimetable") {
+    $currGroupID = $_POST['currGroupID'];
+    $monthOffset = $_POST['monthOffset'];
+
+    echo cDrawer::DrawTimetableHeader(Constants::getMonthNameByOffset($monthOffset), Constants::getYeraNumByOffset($monthOffset), true);
+    echo cDrawer::DrawEmptyTimetableToEdit($currTeacher->groups[$currGroupID]->weekTimetable, $monthOffset);
 }
