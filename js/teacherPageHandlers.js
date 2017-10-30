@@ -12,6 +12,25 @@ function onPageLoad() {
 }
 
 
+function onAddStudentInGroupButtonClick() {
+    var doc = document.getElementById("edit-user-info-form");
+    doc.style.display = "inline-block";
+
+    var btn = document.getElementById('confirmFormButton');
+    btn.onclick = onConfirmFormButtonClick;
+}
+
+function onConfirmFormButtonClick() {
+    var login = document.getElementById("fieldLogin").value;
+    var password = document.getElementById("fieldPassword").value;
+    var surname = document.getElementById("fieldSurname").value;
+    var name = document.getElementById("fieldName").value;
+
+    var doc = document.getElementById("edit-user-info-form");
+    doc.style.display = "none";
+
+    AddStudentQuery(login, password, surname, name);
+}
 
 function onListButtonClick(groupID) {
     currGroupID = groupID;
@@ -58,6 +77,21 @@ function onNextMonthClick() {
     ShowStudentTimetableQuery();
 }
 //обработчики
+
+function AddStudentQuery(login, password, surname, name) {
+    $.post(
+        "teacherPageHandler.php",
+        {
+            task: "AddStudent",
+            groupID: currGroupID,
+            login: login,
+            password: password,
+            surname: surname,
+            name: name
+        },
+        StudentWasAddedHandler
+    );
+}
 
 function ShowStudentsQuery(groupID) {
     $.post(
@@ -120,6 +154,16 @@ function GiveCommonHomeworkQuery() {
 }
 
 //Ajax Handlers
+
+function StudentWasAddedHandler(data) {
+    if (data == 'DB_ERROR')
+        alert('Ошибка сохранения в БД. Возможно, такой пользователь уже существует.');
+    else if (data == 'INPUT_ERROR') {
+        alert('Неверно введены данные. В логине и пароле допустимы только латиница и цифры');
+    }
+    else
+        document.getElementById('rightContent-inner2').innerHTML = data;
+}
 
 function SaveNotesAndMarksHandler(data) {
     doc = document.getElementById('leftContent');

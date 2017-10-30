@@ -45,6 +45,12 @@ class cDB
         return $bool1;
     }
 
+    public function UpdateGroup($group)
+    {
+        $bool1 = $this->dbLink->query("UPDATE `groups` SET `timetable`='" . $group->weekTimetable->getTimetableInJSON() . "',`students`='" . $group->getStudentsIDs() . "',`extraInfo`='" . $group->getGroupInfo() . "',`teacherNick`='" . $group->teacherNickName . "' WHERE `id`='" . $group->groupID . "'");
+        return $bool1;
+    }
+
     public function LoadTeacherByNickName($nickName, $subLayers = true)
     {
         $dbAnswer = $this->dbLink->query("SELECT * FROM `teachers` WHERE `nickName` = '" . $nickName . "'");
@@ -79,6 +85,9 @@ class cDB
     {
         $dbAnswer = $this->dbLink->query("SELECT * FROM `students` WHERE `nickName` = '" . $nickName . "'");
         $dbObject = $dbAnswer->fetch_object();
+
+        if($dbObject == null)
+            return null;
         $retRecord = new cStudent($dbObject->nickName, $dbObject->passwordHash, $dbObject->groupID, $dbObject->surname_name);
         $retRecord->LoadMarksFromJsonStr($dbObject->calendar_of_marks);
         $retRecord->extraInfo = $dbObject->extraInfo;

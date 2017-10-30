@@ -14,14 +14,48 @@ body{
 header{
     height: 60px;
     width: 100%;
-    text-align: right;
+    text-align: left;
+    background-color: ghostwhite;
+    display: inline-block;
 }
 
-header>a{
-    font-size: 1.5em;
+header>.right{
+    text-align: right;
+    float: right;
+    width: 50%;
+    vertical-align: top;
+}
+
+header>.left{
+    text-align: left;
+    float: left;
+    width: 50%;
+}
+
+header>.left img
+{
+    height: 50px;
+    margin:5px;
+    transition: transform 0.3s linear;
+}
+
+header>.left>img:hover
+{
+    transform: skew(-5deg,0deg);
+}
+
+header a{
+    font-family: Kurale;
+    font-size: 1.8em;
+    text-decoration: underline;
     padding: 10px;
     margin:10px;
-    background-color: #4f632c;
-    color: white;
+    /*background-color: #4f632c;*/
+    color: darkslateblue;
     cursor: pointer;
+}
+
+#logout{
+    height: 50px;
+    margin: 5px;
 }

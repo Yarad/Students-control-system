@@ -16,7 +16,7 @@ if ($_POST['task'] == "ShowGroups")
 
 if ($_POST['task'] == "ShowStudents") {
     $index = $_POST['groupID'];
-    echo file_get_contents(Constants::$ROOT_PATH . "html_templates/backToGroupsButton.html") . file_get_contents(Constants::$ROOT_PATH . "html_templates/commonHomeworkButton.html") . cDrawer::DrawStudentsList($currTeacher->groups[$index]->students);
+    DrawCurrentGroupBlock($currTeacher, $index);
 }
 
 if ($_POST['task'] == "ShowTimetable") {
@@ -35,15 +35,13 @@ if ($_POST['task'] == "SaveNotesAndMarks") {
     $currGroupID = $_POST['currGroupID'];
 
     //добавление оценки
-    if($currStudentID != "ALL_STUDENTS") {
+    if ($currStudentID != "ALL_STUDENTS") {
         foreach ($newNotesAndMarks as $key => $value) {
             $currTeacher->groups[$currGroupID]->students[$currStudentID]->editMark($key, new сOneDayRecord($value[0], $value[1]));
         }
 
         $db->UpdateStudent($currTeacher->groups[$currGroupID]->students[$currStudentID]);
-    }
-    else
-    {
+    } else {
         foreach ($currTeacher->groups[$currGroupID]->students as $currStudent) {
             foreach ($newNotesAndMarks as $key => $value) {
                 $currStudent->editMark($key, new сOneDayRecord($value[0], $value[1]));
@@ -61,4 +59,37 @@ if ($_POST['task'] == "ShowCommonTimetable") {
 
     echo cDrawer::DrawTimetableHeader(Constants::getMonthNameByOffset($monthOffset), Constants::getYeraNumByOffset($monthOffset), true);
     echo cDrawer::DrawEmptyTimetableToEdit($currTeacher->groups[$currGroupID]->weekTimetable, $monthOffset);
+}
+
+if ($_POST['task'] == "AddStudent") {
+    $currGroupID = $_POST['groupID'];
+    $login = $_POST['login'];
+    $password = $_POST['password'];
+    $surname = $_POST['surname'];
+    $name = $_POST['name'];
+
+    $t1 = $currGroupID != '';
+    $t2 = preg_match("#^[a-zA-Z0-9_]+$#", $login);
+    $t3 = preg_match("#^[a-zA-Z0-9_]+$#", $password);
+
+    if ($t1 && $t2 && $t3) {
+        $currTeacher->groups[$currGroupID]->addStudent(new cStudent($login, $password, $currGroupID, trim($surname) . ' ' . trim($name)));
+        $isAdded = $db->UpdateGroup($currTeacher->groups[$currGroupID]);
+        $isAdded = $isAdded && $db->SaveStudent($currTeacher->groups[$currGroupID]->students[$login]);
+        if ($isAdded)
+            DrawCurrentGroupBlock($currTeacher, $currGroupID);
+        else
+            echo 'DB_ERROR';
+    } else {
+        echo 'INPUT_ERROR';
+    }
+}
+
+function DrawCurrentGroupBlock($teacher, $groupID)
+{
+    echo file_get_contents(Constants::$ROOT_PATH . "html_templates/backToGroupsButton.html");
+    echo file_get_contents(Constants::$ROOT_PATH . "html_templates/commonHomeworkButton.html");
+    echo file_get_contents(Constants::$ROOT_PATH . "html_templates/addStudentInGroupButton.html");
+    echo cDrawer::DrawStudentsList($teacher->groups[$groupID]->students);
+    echo file_get_contents(Constants::$ROOT_PATH . "html_templates/editOrAddUserForm.html");
 }

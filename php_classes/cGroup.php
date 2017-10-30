@@ -11,7 +11,7 @@ include_once "cTimetable.php";
 class cGroup
 {
     public $students = [];
-    private $groupInfo;
+    private $groupInfo; //пусть здесь будет её имя
     public $groupID;
     public $weekTimetable;
     public $teacherNickName;

@@ -4,8 +4,7 @@ body {
     text-align: center;
 }
 
-
-.group,.student {
+.group, .student {
     width: 100%;
     height: 80px;
     margin: 10px 0px;
@@ -31,7 +30,12 @@ body {
     width: 20%;
 }
 
-.group-extraButtons, .student-extraButtons {
+.group-extraButtons {
+    height: inherit;
+    max-width: 100%;
+}
+
+.student-extraButtons {
     height: inherit;
     max-width: 100%;
 }
@@ -54,27 +58,57 @@ body {
     display: none;
 }
 
-.student{
+.student {
     text-align: center;
 }
 
-.student>*{
+.student > * {
     /*display: inline-block;*/
     height: inherit;
     font-size: 1.5em;
 }
-.student-name{
+
+.student-name {
     text-align: left;
     float: left;
-    width:56%;
+    width: 56%;
 }
 
-.student-average-mark{
+.student-average-mark {
     width: 20%;
     float: left;
 }
 
-.student-edit-timetable{
-    width:20%;
+.student-edit-timetable {
+    width: 20%;
     float: right;
+}
+
+#edit-user-info-form {
+    width: 400px;
+    left:50%;
+    margin-left: -200px;
+    display: none;
+    position: absolute !important;
+    top: 20vh;
+    background-color: white;
+    box-shadow: 0 0 10px gray;
+}
+
+.field-value{
+    font-size: 1.2em;
+    margin: 4px 0px;
+}
+
+#confirmFormButton{
+    font-size: 2em;
+    padding: 3px 30px;
+    margin: 30px;
+    background-color: #2d4f8a;
+    color: white;
+    transition: background-color 0.5s linear;
+}
+
+#confirmFormButton:hover{
+    background-color: #325fa0;
 }
