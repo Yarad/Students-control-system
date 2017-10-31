@@ -3,11 +3,13 @@
         {NameSurname}
     </div>
 
-    <div class="student-average-mark">
-        {averageMark}
+    <div class="student-edit-timetable">
+        <img src="images/timetable.png" onclick="onStudentEditTimetableClick('{studentLogin}')" id="{studentLogin}"
+             title="Изменить расписание" alt="" class="student-extraButtons"/>
     </div>
 
     <div class="student-edit-timetable">
-        <img src="images/timetable.png" onclick="onStudentEditTimetableClick('{studentLogin}')" id="{studentLogin}" title="Изменить расписание" alt="" class="student-extraButtons"/>
+        <img src="images/timetable.png" onclick="onDeleteStudClick('{studentLogin}')" title="Удалить ученика" alt=""
+             class="student-extraButtons"/>
     </div>
 </div>

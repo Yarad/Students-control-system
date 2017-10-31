@@ -86,7 +86,7 @@ body {
 
 #edit-user-info-form {
     width: 400px;
-    left:50%;
+    left: 50%;
     margin-left: -200px;
     display: none;
     position: absolute !important;
@@ -95,12 +95,12 @@ body {
     box-shadow: 0 0 10px gray;
 }
 
-.field-value{
+.field-value {
     font-size: 1.2em;
     margin: 4px 0px;
 }
 
-#confirmFormButton{
+#confirmFormButton {
     font-size: 2em;
     padding: 3px 30px;
     margin: 30px;
@@ -109,6 +109,12 @@ body {
     transition: background-color 0.5s linear;
 }
 
-#confirmFormButton:hover{
+#confirmFormButton:hover {
     background-color: #325fa0;
+}
+
+.func-buttons-img {
+    padding: 15%;
+    width: 70%;
+    max-height: 70%;
 }

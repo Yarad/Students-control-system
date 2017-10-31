@@ -39,6 +39,12 @@ class cDB
         return $bool1;
     }
 
+    public function DeleteStudent($student)
+    {
+        $bool1 = $this->dbLink->query("");
+        return $bool1;
+    }
+
     public function UpdateStudent($student)
     {
         $bool1 = $this->dbLink->query("UPDATE `students` SET `groupID`='" . $student->groupID . "', `extraInfo`='" . $student->extraInfo . "',`surname_name`='" . $student->surname_name . "',`calendar_of_marks`='" . $student->GetMarksInJson() . "' WHERE `nickName`='" . $student->nickName . "'");

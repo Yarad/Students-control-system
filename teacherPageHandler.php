@@ -85,6 +85,16 @@ if ($_POST['task'] == "AddStudent") {
     }
 }
 
+if ($_POST['task'] == "DeleteStudent") {
+    $currGroupID = $_POST['groupID'];
+    $login = $_POST['nick'];
+    //cDB удаление студента
+    $student = $db->LoadStudentByNickName($login);
+    $group = $db->LoadGroupByID($student->groupID);
+
+}
+
+
 function DrawCurrentGroupBlock($teacher, $groupID)
 {
     echo file_get_contents(Constants::$ROOT_PATH . "html_templates/backToGroupsButton.html");

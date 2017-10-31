@@ -93,6 +93,7 @@
     color: white;
     font-family: Kurale;
     transition: background 0.3s linear;
+    vertical-align: top;
 }
 
 .func-buttons:hover{

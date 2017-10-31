@@ -20,7 +20,7 @@ class cGroup
     {
         $this->groupID = $id;
         $this->groupInfo = $groupInfo;
-        $this->teacherNickName =$teacherNickName;
+        $this->teacherNickName = $teacherNickName;
         $this->weekTimetable = new cTimetable();
     }
 
@@ -31,6 +31,13 @@ class cGroup
 
         $this->students[$student->nickName] = $student;
 
+        return true;
+    }
+
+    public function DeleteStudent($studentNickname)
+    {
+        if (!isset($this->students[$studentNickname])) return false;
+        unset($this->students[$studentNickname]);
         return true;
     }
 

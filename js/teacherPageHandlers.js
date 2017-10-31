@@ -54,6 +54,10 @@ function onStudentEditTimetableClick(studentLogin) {
     ShowStudentTimetableQuery();
 }
 
+function onDeleteStudClick(studLogin) {
+    DeleteStudentQuery(studLogin);
+}
+
 function onSaveStudentNotesClick() {
     currMonthNotes = $(".note-edit");
     currMonthMarks = $(".mark-edit");
@@ -64,8 +68,7 @@ function onSaveStudentNotesClick() {
         if (currMonthNotes[i].value != '' || currMonthMarks[i].value != '')
             currMonthNotesAndMarksArr[currMonthNotes[i].id] = [currMonthNotes[i].value, currMonthMarks[i].value];
     }
-
-    SaveNotesAndMarksQuery(currMonthNotesAndMarksArr, currMonthOffset)
+    SaveNotesAndMarksQuery(currMonthNotesAndMarksArr, currMonthOffset);
 }
 
 function onPrevMonthClick() {
@@ -77,6 +80,18 @@ function onNextMonthClick() {
     ShowStudentTimetableQuery();
 }
 //обработчики
+
+function DeleteStudentQuery(studLogin) {
+    $.post(
+        "teacherPageHandler.php",
+        {
+            task: "DeleteStudent",
+            groupID: currGroupID,
+            nick: studLogin
+        },
+        DeleteStudentHandler
+    );
+}
 
 function AddStudentQuery(login, password, surname, name) {
     $.post(
@@ -154,6 +169,10 @@ function GiveCommonHomeworkQuery() {
 }
 
 //Ajax Handlers
+
+function DeleteStudentHandler(data) {
+
+}
 
 function StudentWasAddedHandler(data) {
     if (data == 'DB_ERROR')
