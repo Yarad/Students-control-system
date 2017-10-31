@@ -13,7 +13,8 @@ class cDrawer
         $template = file_get_contents(Constants::$ROOT_PATH . "html_templates/groupInList.html");
         $resStr = "";
         foreach ($groups as $key => $value) {
-            $tempStr = str_replace("{groupName}", $value->groupID, $template);
+            $tempStr = str_replace("{groupName}", $value->getGroupInfo(), $template);
+            $tempStr = str_replace("{groupID}", $value->groupID, $tempStr);
             $tempStr = str_replace("{groupStudentsAmount}", count($value->students), $tempStr);
             $resStr .= $tempStr;
         }
@@ -26,8 +27,8 @@ class cDrawer
         $resStr = "";
         foreach ($students as $key => $value) {
             //временно без имен-фамилий
-            $tempStr = str_replace("{NameSurname}", $value->nickName, $template);
-            $tempStr = str_replace("{averageMark}", $value->getAverageMark(), $tempStr);
+            $tempStr = str_replace("{NameSurname}", $value->surname_name, $template);
+            //$tempStr = str_replace("{averageMark}", $value->getAverageMark(), $tempStr);
             $tempStr = str_replace("{studentLogin}", $value->nickName, $tempStr);
             $resStr .= $tempStr;
         }
