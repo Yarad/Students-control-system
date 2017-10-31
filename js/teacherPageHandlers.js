@@ -170,8 +170,14 @@ function GiveCommonHomeworkQuery() {
 
 //Ajax Handlers
 
-function DeleteStudentHandler(data) {
 
+function DeleteStudentHandler(data) {
+    if (data == "OK") {
+        ShowStudentsQuery(currGroupID);
+    }
+    else {
+        alert("ERROR");
+    }
 }
 
 function StudentWasAddedHandler(data) {

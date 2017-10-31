@@ -39,9 +39,14 @@ class cDB
         return $bool1;
     }
 
+    //удалаяет и из группы
     public function DeleteStudent($student)
     {
-        $bool1 = $this->dbLink->query("");
+        $group = $this->LoadGroupByID($student->groupID);
+        $group->DeleteStudent($student->nickName);
+        $this->UpdateGroup($group);
+
+        $bool1 = $this->dbLink->query("DELETE FROM `students` WHERE `nickName`='" . $student->nickName ."'");
         return $bool1;
     }
 

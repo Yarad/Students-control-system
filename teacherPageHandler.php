@@ -90,8 +90,14 @@ if ($_POST['task'] == "DeleteStudent") {
     $login = $_POST['nick'];
     //cDB удаление студента
     $student = $db->LoadStudentByNickName($login);
-    $group = $db->LoadGroupByID($student->groupID);
-
+    if ($student != null) {
+        if ($db->DeleteStudent($student))
+            echo "OK";
+        else
+            echo "ERROR";
+    } else {
+        echo "ERROR";
+    }
 }
 
 

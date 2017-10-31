@@ -18,8 +18,8 @@
       <file leaf-file-name="teacherPageHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/teacherPageHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+            <state relative-caret-position="387">
+              <caret line="90" column="27" lean-forward="true" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
               <folding>
                 <element signature="e#128#207#0#PHP" expanded="false" />
                 <element signature="e#385#507#0#PHP" expanded="false" />
@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cGroup.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cGroup.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php_classes/cGroup.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="33" />
               <folding>
                 <element signature="e#67#147#0#PHP" expanded="false" />
                 <element signature="n#__construct#0;n#cGroup#0;n#!!top" expanded="false" />
@@ -70,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teacherPageHandlers.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="teacherPageHandlers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/teacherPageHandlers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="89" column="16" lean-forward="false" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="16" />
+            <state relative-caret-position="583">
+              <caret line="230" column="1" lean-forward="true" selection-start-line="230" selection-start-column="1" selection-end-line="230" selection-end-column="1" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
                 <element signature="n#!!block;n#onPageLoad#0" expanded="false" />
@@ -90,8 +90,6 @@
                 <element signature="n#!!block;n#onNextMonthClick#0" expanded="false" />
                 <element signature="n#!!block;n#AddStudentQuery#0" expanded="false" />
                 <element signature="e#2497#2685#0" expanded="false" />
-                <element signature="n#!!block;n#ShowStudentsQuery#0" expanded="false" />
-                <element signature="e#2820#2894#0" expanded="false" />
                 <element signature="n#!!block;n#ShowGroupsQuery#0" expanded="false" />
                 <element signature="e#3017#3059#0" expanded="false" />
                 <element signature="n#!!block;n#SaveNotesAndMarksQuery#0" expanded="false" />
@@ -101,14 +99,13 @@
                 <element signature="n#!!block;n#GiveCommonHomeworkQuery#0" expanded="false" />
                 <element signature="e#3968#4169#0" expanded="false" />
                 <element signature="n#!!block;n#StudentWasAddedHandler#0" expanded="false" />
-                <element signature="e#4467#4568#0" expanded="false" />
+                <element signature="e#4578#4679#0" expanded="false" />
                 <element signature="n#!!block;n#SaveNotesAndMarksHandler#0" expanded="false" />
                 <element signature="n#!!block;n#ShowGroupsHandler#0" expanded="false" />
                 <element signature="n#!!block;n#ShowStudentTimetableHandler#0" expanded="false" />
-                <element signature="n#!!block;n#ShowStudentsHandler#0" expanded="false" />
                 <element signature="n#!!block;n#ChangeViewOfRightMenuBlocks#0" expanded="false" />
-                <element signature="e#5386#5468#0" expanded="false" />
-                <element signature="e#5478#5560#0" expanded="false" />
+                <element signature="e#5497#5579#0" expanded="false" />
+                <element signature="e#5589#5671#0" expanded="false" />
                 <element signature="n#!!block;n#ClearLeftContent#0" expanded="false" />
               </folding>
             </state>
@@ -118,8 +115,8 @@
       <file leaf-file-name="cDB.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php_classes/cDB.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+            <state relative-caret-position="333">
+              <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
               <folding>
                 <element signature="e#62#142#0#PHP" expanded="false" />
                 <element signature="n#__construct#0;n#cDB#0;n#!!top" expanded="false" />
@@ -130,71 +127,74 @@
                 <element signature="n#SaveStudent#0;n#cDB#0;n#!!top" expanded="false" />
                 <element signature="e#1489#1849#0#PHP" expanded="false" />
                 <element signature="n#UpdateStudent#0;n#cDB#0;n#!!top" expanded="false" />
-                <element signature="e#2071#2348#0#PHP" expanded="false" />
+                <element signature="e#2311#2588#0#PHP" expanded="false" />
                 <element signature="n#UpdateGroup#0;n#cDB#0;n#!!top" expanded="false" />
-                <element signature="e#2443#2728#0#PHP" expanded="false" />
+                <element signature="e#2683#2968#0#PHP" expanded="false" />
                 <element signature="n#LoadTeacherByNickName#0;n#cDB#0;n#!!top" expanded="false" />
-                <element signature="e#3251#3394#0#PHP" expanded="false" />
+                <element signature="e#3491#3634#0#PHP" expanded="false" />
                 <element signature="n#LoadGroupByID#0;n#cDB#0;n#!!top" expanded="false" />
-                <element signature="e#3932#4087#0#PHP" expanded="false" />
+                <element signature="e#4172#4327#0#PHP" expanded="false" />
                 <element signature="n#LoadStudentByNickName#0;n#cDB#0;n#!!top" expanded="false" />
                 <element signature="n#LogIn#0;n#cDB#0;n#!!top" expanded="false" />
-                <element signature="e#5106#5279#0#PHP" expanded="false" />
-                <element signature="e#5289#5534#0#PHP" expanded="false" />
-                <element signature="e#5428#5534#0#PHP" expanded="false" />
-                <element signature="e#5544#5707#0#PHP" expanded="false" />
-                <element signature="e#5774#6467#0#PHP" expanded="false" />
-                <element signature="e#6140#6467#0#PHP" expanded="false" />
+                <element signature="e#5346#5519#0#PHP" expanded="false" />
+                <element signature="e#5529#5774#0#PHP" expanded="false" />
+                <element signature="e#5668#5774#0#PHP" expanded="false" />
+                <element signature="e#5784#5947#0#PHP" expanded="false" />
+                <element signature="e#6014#6707#0#PHP" expanded="false" />
+                <element signature="e#6380#6707#0#PHP" expanded="false" />
                 <element signature="n#LogOut#0;n#cDB#0;n#!!top" expanded="false" />
                 <element signature="n#VerifyUser#0;n#cDB#0;n#!!top" expanded="false" />
-                <element signature="e#7665#7823#0#PHP" expanded="false" />
-                <element signature="e#7750#7823#0#PHP" expanded="false" />
-                <element signature="e#7833#8049#0#PHP" expanded="false" />
-                <marker date="1509473091104" expanded="false" signature="434:447" ph="INSERT INTO " />
-                <marker date="1509473091104" expanded="false" signature="434:580" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-                <marker date="1509473091104" expanded="false" signature="434:609" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-                <marker date="1509473091104" expanded="false" signature="434:648" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-                <marker date="1509473091104" expanded="false" signature="434:655" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-                <marker date="1509473091104" expanded="false" signature="434:683" ph="INSERT INTO `$`... " />
-                <marker date="1509473091104" expanded="false" signature="434:714" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-                <marker date="1509473091104" expanded="false" signature="434:753" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-                <marker date="1509473091104" expanded="false" signature="980:1097" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
-                <marker date="1509473091104" expanded="false" signature="980:1123" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
-                <marker date="1509473091104" expanded="false" signature="980:1212" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
-                <marker date="1509473091104" expanded="false" signature="980:1245" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
-                <marker date="1509473091104" expanded="false" signature="980:1255" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-                <marker date="1509473091104" expanded="false" signature="980:1278" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
-                <marker date="1509473091104" expanded="false" signature="1511:1524" ph="INSERT INTO " />
-                <marker date="1509473091104" expanded="false" signature="1511:1559" ph="INSERT INTO " />
-                <marker date="1509473091104" expanded="false" signature="1511:1678" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
-                <marker date="1509473091104" expanded="false" signature="1511:1679" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
-                <marker date="1509473091104" expanded="false" signature="1511:1724" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
-                <marker date="1509473091104" expanded="false" signature="1511:1750" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
-                <marker date="1509473091104" expanded="false" signature="1511:1783" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
-                <marker date="1509473091104" expanded="false" signature="1511:1820" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
-                <marker date="1509473091104" expanded="false" signature="1511:1847" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
-                <marker date="1509473091104" expanded="false" signature="2093:2126" ph="UPDATE `stud... " />
-                <marker date="1509473091104" expanded="false" signature="2093:2167" ph="UPDATE `stud... " />
-                <marker date="1509473091104" expanded="false" signature="2093:2212" ph="UPDATE `stud... " />
-                <marker date="1509473091104" expanded="false" signature="2093:2265" ph="UPDATE `stud... " />
-                <marker date="1509473091104" expanded="false" signature="2093:2318" ph="UPDATE `stud... " />
-                <marker date="1509473091104" expanded="false" signature="2093:2319" ph="UPDATE `stud... " />
-                <marker date="1509473091104" expanded="false" signature="2093:2346" ph="UPDATE `stud... " />
-                <marker date="1509473091104" expanded="false" signature="2093:2347" ph="UPDATE `stud... " />
-                <marker date="1509473091104" expanded="false" signature="2465:2498" ph="UPDATE `grou... " />
-                <marker date="1509473091104" expanded="false" signature="2465:2563" ph="UPDATE `grou... " />
-                <marker date="1509473091104" expanded="false" signature="2465:2610" ph="UPDATE `grou... " />
-                <marker date="1509473091104" expanded="false" signature="2465:2657" ph="UPDATE `grou... " />
-                <marker date="1509473091104" expanded="false" signature="2465:2696" ph="UPDATE `grou... " />
-                <marker date="1509473091104" expanded="false" signature="2465:2702" ph="UPDATE `grou... " />
-                <marker date="1509473091104" expanded="false" signature="2465:2726" ph="UPDATE `grou... " />
-                <marker date="1509473091104" expanded="false" signature="2880:2943" ph="SELECT * FRO... teachers" />
-                <marker date="1509473091104" expanded="false" signature="3540:3594" ph="SELECT * FRO... groups" />
-                <marker date="1509473091104" expanded="false" signature="4223:4286" ph="SELECT * FRO... students" />
-                <marker date="1509473091104" expanded="false" signature="4879:4959" ph="SELECT * FRO... ${Constants::$DB_TABLE_TEACHERS}" />
-                <marker date="1509473091104" expanded="false" signature="5013:5093" ph="SELECT * FRO... ${Constants::$DB_TABLE_STUDENTS}" />
-                <marker date="1509473091104" expanded="false" signature="7238:7336" ph="SELECT `curr... ${Constants::$DB_TABLE_TEACHERS}" />
-                <marker date="1509473091104" expanded="false" signature="7390:7488" ph="SELECT `curr... ${Constants::$DB_TABLE_STUDENTS}" />
+                <element signature="e#7905#8063#0#PHP" expanded="false" />
+                <element signature="e#7990#8063#0#PHP" expanded="false" />
+                <element signature="e#8073#8289#0#PHP" expanded="false" />
+                <marker date="1509473949350" expanded="false" signature="434:447" ph="INSERT INTO " />
+                <marker date="1509473949350" expanded="false" signature="434:580" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+                <marker date="1509473949350" expanded="false" signature="434:609" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+                <marker date="1509473949350" expanded="false" signature="434:648" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+                <marker date="1509473949350" expanded="false" signature="434:655" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+                <marker date="1509473949350" expanded="false" signature="434:683" ph="INSERT INTO `$`... " />
+                <marker date="1509473949350" expanded="false" signature="434:714" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+                <marker date="1509473949350" expanded="false" signature="434:753" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+                <marker date="1509473949350" expanded="false" signature="980:1097" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+                <marker date="1509473949350" expanded="false" signature="980:1123" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+                <marker date="1509473949350" expanded="false" signature="980:1212" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+                <marker date="1509473949350" expanded="false" signature="980:1245" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+                <marker date="1509473949350" expanded="false" signature="980:1255" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+                <marker date="1509473949350" expanded="false" signature="980:1278" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+                <marker date="1509473949350" expanded="false" signature="1511:1524" ph="INSERT INTO " />
+                <marker date="1509473949350" expanded="false" signature="1511:1559" ph="INSERT INTO " />
+                <marker date="1509473949350" expanded="false" signature="1511:1678" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+                <marker date="1509473949350" expanded="false" signature="1511:1679" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+                <marker date="1509473949350" expanded="false" signature="1511:1724" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+                <marker date="1509473949350" expanded="false" signature="1511:1750" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+                <marker date="1509473949350" expanded="false" signature="1511:1783" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+                <marker date="1509473949350" expanded="false" signature="1511:1820" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+                <marker date="1509473949350" expanded="false" signature="1511:1847" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+                <marker date="1509473949350" expanded="true" signature="2143:2184" ph="DELETE FROM " />
+                <marker date="1509473949350" expanded="true" signature="2143:2210" ph="DELETE FROM " />
+                <marker date="1509473949350" expanded="true" signature="2143:2211" ph="DELETE FROM " />
+                <marker date="1509473949350" expanded="false" signature="2333:2366" ph="UPDATE `stud... " />
+                <marker date="1509473949350" expanded="false" signature="2333:2407" ph="UPDATE `stud... " />
+                <marker date="1509473949350" expanded="false" signature="2333:2452" ph="UPDATE `stud... " />
+                <marker date="1509473949350" expanded="false" signature="2333:2505" ph="UPDATE `stud... " />
+                <marker date="1509473949350" expanded="false" signature="2333:2558" ph="UPDATE `stud... " />
+                <marker date="1509473949350" expanded="false" signature="2333:2559" ph="UPDATE `stud... " />
+                <marker date="1509473949350" expanded="false" signature="2333:2586" ph="UPDATE `stud... " />
+                <marker date="1509473949350" expanded="false" signature="2333:2587" ph="UPDATE `stud... " />
+                <marker date="1509473949350" expanded="false" signature="2705:2738" ph="UPDATE `grou... " />
+                <marker date="1509473949350" expanded="false" signature="2705:2803" ph="UPDATE `grou... " />
+                <marker date="1509473949350" expanded="false" signature="2705:2850" ph="UPDATE `grou... " />
+                <marker date="1509473949350" expanded="false" signature="2705:2897" ph="UPDATE `grou... " />
+                <marker date="1509473949350" expanded="false" signature="2705:2936" ph="UPDATE `grou... " />
+                <marker date="1509473949350" expanded="false" signature="2705:2942" ph="UPDATE `grou... " />
+                <marker date="1509473949350" expanded="false" signature="2705:2966" ph="UPDATE `grou... " />
+                <marker date="1509473949350" expanded="false" signature="3120:3183" ph="SELECT * FRO... teachers" />
+                <marker date="1509473949350" expanded="false" signature="3780:3834" ph="SELECT * FRO... groups" />
+                <marker date="1509473949350" expanded="false" signature="4463:4526" ph="SELECT * FRO... students" />
+                <marker date="1509473949350" expanded="false" signature="5119:5199" ph="SELECT * FRO... ${Constants::$DB_TABLE_TEACHERS}" />
+                <marker date="1509473949350" expanded="false" signature="5253:5333" ph="SELECT * FRO... ${Constants::$DB_TABLE_STUDENTS}" />
+                <marker date="1509473949350" expanded="false" signature="7478:7576" ph="SELECT `curr... ${Constants::$DB_TABLE_TEACHERS}" />
+                <marker date="1509473949350" expanded="false" signature="7630:7728" ph="SELECT `curr... ${Constants::$DB_TABLE_STUDENTS}" />
               </folding>
             </state>
           </provider>
@@ -254,10 +254,10 @@
         <option value="$PROJECT_DIR$/html_templates/commonHomeworkButton.html" />
         <option value="$PROJECT_DIR$/html_templates/addStudentInGroupButton.html" />
         <option value="$PROJECT_DIR$/html_templates/studentInList.html" />
-        <option value="$PROJECT_DIR$/js/teacherPageHandlers.js" />
-        <option value="$PROJECT_DIR$/php_classes/cDB.php" />
-        <option value="$PROJECT_DIR$/teacherPageHandler.php" />
         <option value="$PROJECT_DIR$/php_classes/cGroup.php" />
+        <option value="$PROJECT_DIR$/teacherPageHandler.php" />
+        <option value="$PROJECT_DIR$/php_classes/cDB.php" />
+        <option value="$PROJECT_DIR$/js/teacherPageHandlers.js" />
       </list>
     </option>
   </component>
@@ -445,12 +445,12 @@
       <workItem from="1509377534755" duration="3860000" />
       <workItem from="1509390708874" duration="11675000" />
       <workItem from="1509458815861" duration="1686000" />
-      <workItem from="1509472986146" duration="396000" />
+      <workItem from="1509472986146" duration="1349000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198285000" />
+    <option name="totallyTimeSpent" value="199238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -812,6 +812,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="70" lean-forward="false" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -840,6 +841,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="56" lean-forward="false" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -869,6 +871,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="72" lean-forward="false" selection-start-line="1" selection-start-column="72" selection-end-line="1" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -876,49 +879,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/teacherPageHandlers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="89" column="16" lean-forward="false" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-            <element signature="n#!!block;n#onPageLoad#0" expanded="false" />
-            <element signature="e#153#172#0" expanded="false" />
-            <element signature="n#!!block;n#onAddStudentInGroupButtonClick#0" expanded="false" />
-            <element signature="n#!!block;n#onConfirmFormButtonClick#0" expanded="false" />
-            <element signature="n#!!block;n#onListButtonClick#0" expanded="false" />
-            <element signature="n#!!block;n#onBackToGroupsButtonClick#0" expanded="false" />
-            <element signature="n#!!block;n#onCommonHomeworkButtonClick#0" expanded="false" />
-            <element signature="n#!!block;n#onStudentEditTimetableClick#0" expanded="false" />
-            <element signature="e#1676#1873#0" expanded="false" />
-            <element signature="n#!!block;n#onPrevMonthClick#0" expanded="false" />
-            <element signature="n#!!block;n#onNextMonthClick#0" expanded="false" />
-            <element signature="n#!!block;n#AddStudentQuery#0" expanded="false" />
-            <element signature="e#2497#2685#0" expanded="false" />
-            <element signature="n#!!block;n#ShowStudentsQuery#0" expanded="false" />
-            <element signature="e#2820#2894#0" expanded="false" />
-            <element signature="n#!!block;n#ShowGroupsQuery#0" expanded="false" />
-            <element signature="e#3017#3059#0" expanded="false" />
-            <element signature="n#!!block;n#SaveNotesAndMarksQuery#0" expanded="false" />
-            <element signature="e#3225#3458#0" expanded="false" />
-            <element signature="n#!!block;n#ShowStudentTimetableQuery#0" expanded="false" />
-            <element signature="e#3596#3829#0" expanded="false" />
-            <element signature="n#!!block;n#GiveCommonHomeworkQuery#0" expanded="false" />
-            <element signature="e#3968#4169#0" expanded="false" />
-            <element signature="n#!!block;n#StudentWasAddedHandler#0" expanded="false" />
-            <element signature="e#4467#4568#0" expanded="false" />
-            <element signature="n#!!block;n#SaveNotesAndMarksHandler#0" expanded="false" />
-            <element signature="n#!!block;n#ShowGroupsHandler#0" expanded="false" />
-            <element signature="n#!!block;n#ShowStudentTimetableHandler#0" expanded="false" />
-            <element signature="n#!!block;n#ShowStudentsHandler#0" expanded="false" />
-            <element signature="n#!!block;n#ChangeViewOfRightMenuBlocks#0" expanded="false" />
-            <element signature="e#5386#5468#0" expanded="false" />
-            <element signature="e#5478#5560#0" expanded="false" />
-            <element signature="n#!!block;n#ClearLeftContent#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -930,93 +891,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php_classes/cDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
-          <folding>
-            <element signature="e#62#142#0#PHP" expanded="false" />
-            <element signature="n#__construct#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="n#SaveTeacher#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="e#412#755#0#PHP" expanded="false" />
-            <element signature="n#SaveGroup#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="e#958#1280#0#PHP" expanded="false" />
-            <element signature="n#SaveStudent#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="e#1489#1849#0#PHP" expanded="false" />
-            <element signature="n#UpdateStudent#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="e#2071#2348#0#PHP" expanded="false" />
-            <element signature="n#UpdateGroup#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="e#2443#2728#0#PHP" expanded="false" />
-            <element signature="n#LoadTeacherByNickName#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="e#3251#3394#0#PHP" expanded="false" />
-            <element signature="n#LoadGroupByID#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="e#3932#4087#0#PHP" expanded="false" />
-            <element signature="n#LoadStudentByNickName#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="n#LogIn#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="e#5106#5279#0#PHP" expanded="false" />
-            <element signature="e#5289#5534#0#PHP" expanded="false" />
-            <element signature="e#5428#5534#0#PHP" expanded="false" />
-            <element signature="e#5544#5707#0#PHP" expanded="false" />
-            <element signature="e#5774#6467#0#PHP" expanded="false" />
-            <element signature="e#6140#6467#0#PHP" expanded="false" />
-            <element signature="n#LogOut#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="n#VerifyUser#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="e#7665#7823#0#PHP" expanded="false" />
-            <element signature="e#7750#7823#0#PHP" expanded="false" />
-            <element signature="e#7833#8049#0#PHP" expanded="false" />
-            <marker date="1509473091104" expanded="false" signature="434:447" ph="INSERT INTO " />
-            <marker date="1509473091104" expanded="false" signature="434:580" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-            <marker date="1509473091104" expanded="false" signature="434:609" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-            <marker date="1509473091104" expanded="false" signature="434:648" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-            <marker date="1509473091104" expanded="false" signature="434:655" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-            <marker date="1509473091104" expanded="false" signature="434:683" ph="INSERT INTO `$`... " />
-            <marker date="1509473091104" expanded="false" signature="434:714" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-            <marker date="1509473091104" expanded="false" signature="434:753" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-            <marker date="1509473091104" expanded="false" signature="980:1097" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
-            <marker date="1509473091104" expanded="false" signature="980:1123" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
-            <marker date="1509473091104" expanded="false" signature="980:1212" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
-            <marker date="1509473091104" expanded="false" signature="980:1245" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
-            <marker date="1509473091104" expanded="false" signature="980:1255" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-            <marker date="1509473091104" expanded="false" signature="980:1278" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
-            <marker date="1509473091104" expanded="false" signature="1511:1524" ph="INSERT INTO " />
-            <marker date="1509473091104" expanded="false" signature="1511:1559" ph="INSERT INTO " />
-            <marker date="1509473091104" expanded="false" signature="1511:1678" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
-            <marker date="1509473091104" expanded="false" signature="1511:1679" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
-            <marker date="1509473091104" expanded="false" signature="1511:1724" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
-            <marker date="1509473091104" expanded="false" signature="1511:1750" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
-            <marker date="1509473091104" expanded="false" signature="1511:1783" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
-            <marker date="1509473091104" expanded="false" signature="1511:1820" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
-            <marker date="1509473091104" expanded="false" signature="1511:1847" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
-            <marker date="1509473091104" expanded="false" signature="2093:2126" ph="UPDATE `stud... " />
-            <marker date="1509473091104" expanded="false" signature="2093:2167" ph="UPDATE `stud... " />
-            <marker date="1509473091104" expanded="false" signature="2093:2212" ph="UPDATE `stud... " />
-            <marker date="1509473091104" expanded="false" signature="2093:2265" ph="UPDATE `stud... " />
-            <marker date="1509473091104" expanded="false" signature="2093:2318" ph="UPDATE `stud... " />
-            <marker date="1509473091104" expanded="false" signature="2093:2319" ph="UPDATE `stud... " />
-            <marker date="1509473091104" expanded="false" signature="2093:2346" ph="UPDATE `stud... " />
-            <marker date="1509473091104" expanded="false" signature="2093:2347" ph="UPDATE `stud... " />
-            <marker date="1509473091104" expanded="false" signature="2465:2498" ph="UPDATE `grou... " />
-            <marker date="1509473091104" expanded="false" signature="2465:2563" ph="UPDATE `grou... " />
-            <marker date="1509473091104" expanded="false" signature="2465:2610" ph="UPDATE `grou... " />
-            <marker date="1509473091104" expanded="false" signature="2465:2657" ph="UPDATE `grou... " />
-            <marker date="1509473091104" expanded="false" signature="2465:2696" ph="UPDATE `grou... " />
-            <marker date="1509473091104" expanded="false" signature="2465:2702" ph="UPDATE `grou... " />
-            <marker date="1509473091104" expanded="false" signature="2465:2726" ph="UPDATE `grou... " />
-            <marker date="1509473091104" expanded="false" signature="2880:2943" ph="SELECT * FRO... teachers" />
-            <marker date="1509473091104" expanded="false" signature="3540:3594" ph="SELECT * FRO... groups" />
-            <marker date="1509473091104" expanded="false" signature="4223:4286" ph="SELECT * FRO... students" />
-            <marker date="1509473091104" expanded="false" signature="4879:4959" ph="SELECT * FRO... ${Constants::$DB_TABLE_TEACHERS}" />
-            <marker date="1509473091104" expanded="false" signature="5013:5093" ph="SELECT * FRO... ${Constants::$DB_TABLE_STUDENTS}" />
-            <marker date="1509473091104" expanded="false" signature="7238:7336" ph="SELECT `curr... ${Constants::$DB_TABLE_TEACHERS}" />
-            <marker date="1509473091104" expanded="false" signature="7390:7488" ph="SELECT `curr... ${Constants::$DB_TABLE_STUDENTS}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/teacherPageHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+        <state relative-caret-position="387">
+          <caret line="90" column="27" lean-forward="true" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
           <folding>
             <element signature="e#128#207#0#PHP" expanded="false" />
             <element signature="e#385#507#0#PHP" expanded="false" />
@@ -1038,8 +916,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php_classes/cGroup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="289">
+          <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="33" />
           <folding>
             <element signature="e#67#147#0#PHP" expanded="false" />
             <element signature="n#__construct#0;n#cGroup#0;n#!!top" expanded="false" />
@@ -1050,6 +928,132 @@
             <element signature="n#changeGroupInfo#0;n#cGroup#0;n#!!top" expanded="false" />
             <element signature="n#getStudentsIDs#0;n#cGroup#0;n#!!top" expanded="false" />
             <element signature="e#1428#1607#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/cDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="e#62#142#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="n#SaveTeacher#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#412#755#0#PHP" expanded="false" />
+            <element signature="n#SaveGroup#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#958#1280#0#PHP" expanded="false" />
+            <element signature="n#SaveStudent#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#1489#1849#0#PHP" expanded="false" />
+            <element signature="n#UpdateStudent#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#2311#2588#0#PHP" expanded="false" />
+            <element signature="n#UpdateGroup#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#2683#2968#0#PHP" expanded="false" />
+            <element signature="n#LoadTeacherByNickName#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#3491#3634#0#PHP" expanded="false" />
+            <element signature="n#LoadGroupByID#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#4172#4327#0#PHP" expanded="false" />
+            <element signature="n#LoadStudentByNickName#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="n#LogIn#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#5346#5519#0#PHP" expanded="false" />
+            <element signature="e#5529#5774#0#PHP" expanded="false" />
+            <element signature="e#5668#5774#0#PHP" expanded="false" />
+            <element signature="e#5784#5947#0#PHP" expanded="false" />
+            <element signature="e#6014#6707#0#PHP" expanded="false" />
+            <element signature="e#6380#6707#0#PHP" expanded="false" />
+            <element signature="n#LogOut#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="n#VerifyUser#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="e#7905#8063#0#PHP" expanded="false" />
+            <element signature="e#7990#8063#0#PHP" expanded="false" />
+            <element signature="e#8073#8289#0#PHP" expanded="false" />
+            <marker date="1509473949350" expanded="false" signature="434:447" ph="INSERT INTO " />
+            <marker date="1509473949350" expanded="false" signature="434:580" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1509473949350" expanded="false" signature="434:609" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1509473949350" expanded="false" signature="434:648" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1509473949350" expanded="false" signature="434:655" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1509473949350" expanded="false" signature="434:683" ph="INSERT INTO `$`... " />
+            <marker date="1509473949350" expanded="false" signature="434:714" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1509473949350" expanded="false" signature="434:753" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1509473949350" expanded="false" signature="980:1097" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+            <marker date="1509473949350" expanded="false" signature="980:1123" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+            <marker date="1509473949350" expanded="false" signature="980:1212" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+            <marker date="1509473949350" expanded="false" signature="980:1245" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+            <marker date="1509473949350" expanded="false" signature="980:1255" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1509473949350" expanded="false" signature="980:1278" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+            <marker date="1509473949350" expanded="false" signature="1511:1524" ph="INSERT INTO " />
+            <marker date="1509473949350" expanded="false" signature="1511:1559" ph="INSERT INTO " />
+            <marker date="1509473949350" expanded="false" signature="1511:1678" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1509473949350" expanded="false" signature="1511:1679" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1509473949350" expanded="false" signature="1511:1724" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1509473949350" expanded="false" signature="1511:1750" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1509473949350" expanded="false" signature="1511:1783" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1509473949350" expanded="false" signature="1511:1820" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1509473949350" expanded="false" signature="1511:1847" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1509473949350" expanded="true" signature="2143:2184" ph="DELETE FROM " />
+            <marker date="1509473949350" expanded="true" signature="2143:2210" ph="DELETE FROM " />
+            <marker date="1509473949350" expanded="true" signature="2143:2211" ph="DELETE FROM " />
+            <marker date="1509473949350" expanded="false" signature="2333:2366" ph="UPDATE `stud... " />
+            <marker date="1509473949350" expanded="false" signature="2333:2407" ph="UPDATE `stud... " />
+            <marker date="1509473949350" expanded="false" signature="2333:2452" ph="UPDATE `stud... " />
+            <marker date="1509473949350" expanded="false" signature="2333:2505" ph="UPDATE `stud... " />
+            <marker date="1509473949350" expanded="false" signature="2333:2558" ph="UPDATE `stud... " />
+            <marker date="1509473949350" expanded="false" signature="2333:2559" ph="UPDATE `stud... " />
+            <marker date="1509473949350" expanded="false" signature="2333:2586" ph="UPDATE `stud... " />
+            <marker date="1509473949350" expanded="false" signature="2333:2587" ph="UPDATE `stud... " />
+            <marker date="1509473949350" expanded="false" signature="2705:2738" ph="UPDATE `grou... " />
+            <marker date="1509473949350" expanded="false" signature="2705:2803" ph="UPDATE `grou... " />
+            <marker date="1509473949350" expanded="false" signature="2705:2850" ph="UPDATE `grou... " />
+            <marker date="1509473949350" expanded="false" signature="2705:2897" ph="UPDATE `grou... " />
+            <marker date="1509473949350" expanded="false" signature="2705:2936" ph="UPDATE `grou... " />
+            <marker date="1509473949350" expanded="false" signature="2705:2942" ph="UPDATE `grou... " />
+            <marker date="1509473949350" expanded="false" signature="2705:2966" ph="UPDATE `grou... " />
+            <marker date="1509473949350" expanded="false" signature="3120:3183" ph="SELECT * FRO... teachers" />
+            <marker date="1509473949350" expanded="false" signature="3780:3834" ph="SELECT * FRO... groups" />
+            <marker date="1509473949350" expanded="false" signature="4463:4526" ph="SELECT * FRO... students" />
+            <marker date="1509473949350" expanded="false" signature="5119:5199" ph="SELECT * FRO... ${Constants::$DB_TABLE_TEACHERS}" />
+            <marker date="1509473949350" expanded="false" signature="5253:5333" ph="SELECT * FRO... ${Constants::$DB_TABLE_STUDENTS}" />
+            <marker date="1509473949350" expanded="false" signature="7478:7576" ph="SELECT `curr... ${Constants::$DB_TABLE_TEACHERS}" />
+            <marker date="1509473949350" expanded="false" signature="7630:7728" ph="SELECT `curr... ${Constants::$DB_TABLE_STUDENTS}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/teacherPageHandlers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="230" column="1" lean-forward="true" selection-start-line="230" selection-start-column="1" selection-end-line="230" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+            <element signature="n#!!block;n#onPageLoad#0" expanded="false" />
+            <element signature="e#153#172#0" expanded="false" />
+            <element signature="n#!!block;n#onAddStudentInGroupButtonClick#0" expanded="false" />
+            <element signature="n#!!block;n#onConfirmFormButtonClick#0" expanded="false" />
+            <element signature="n#!!block;n#onListButtonClick#0" expanded="false" />
+            <element signature="n#!!block;n#onBackToGroupsButtonClick#0" expanded="false" />
+            <element signature="n#!!block;n#onCommonHomeworkButtonClick#0" expanded="false" />
+            <element signature="n#!!block;n#onStudentEditTimetableClick#0" expanded="false" />
+            <element signature="e#1676#1873#0" expanded="false" />
+            <element signature="n#!!block;n#onPrevMonthClick#0" expanded="false" />
+            <element signature="n#!!block;n#onNextMonthClick#0" expanded="false" />
+            <element signature="n#!!block;n#AddStudentQuery#0" expanded="false" />
+            <element signature="e#2497#2685#0" expanded="false" />
+            <element signature="n#!!block;n#ShowGroupsQuery#0" expanded="false" />
+            <element signature="e#3017#3059#0" expanded="false" />
+            <element signature="n#!!block;n#SaveNotesAndMarksQuery#0" expanded="false" />
+            <element signature="e#3225#3458#0" expanded="false" />
+            <element signature="n#!!block;n#ShowStudentTimetableQuery#0" expanded="false" />
+            <element signature="e#3596#3829#0" expanded="false" />
+            <element signature="n#!!block;n#GiveCommonHomeworkQuery#0" expanded="false" />
+            <element signature="e#3968#4169#0" expanded="false" />
+            <element signature="n#!!block;n#StudentWasAddedHandler#0" expanded="false" />
+            <element signature="e#4578#4679#0" expanded="false" />
+            <element signature="n#!!block;n#SaveNotesAndMarksHandler#0" expanded="false" />
+            <element signature="n#!!block;n#ShowGroupsHandler#0" expanded="false" />
+            <element signature="n#!!block;n#ShowStudentTimetableHandler#0" expanded="false" />
+            <element signature="n#!!block;n#ChangeViewOfRightMenuBlocks#0" expanded="false" />
+            <element signature="e#5497#5579#0" expanded="false" />
+            <element signature="e#5589#5671#0" expanded="false" />
+            <element signature="n#!!block;n#ClearLeftContent#0" expanded="false" />
           </folding>
         </state>
       </provider>
