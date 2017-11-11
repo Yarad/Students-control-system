@@ -12,7 +12,7 @@ class cTimetable
 
     public function getTimetableInJSON()
     {
-        return json_encode($this->arrayOfDays);
+		return json_encode($this->arrayOfDays);
     }
 
     public function loadTimetableFromJSON($inputStr)

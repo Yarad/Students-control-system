@@ -51,7 +51,7 @@ class cStudent extends cUser
 
     public function GetMarksInJson()
     {
-        return json_encode($this->calendarMarks);
+        return json_encode($this->calendarMarks, JSON_UNESCAPED_UNICODE);
     }
 
     public function getAverageMark()

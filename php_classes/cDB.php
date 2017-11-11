@@ -15,6 +15,14 @@ class cDB
     function __construct()
     {
         $this->dbLink = new mysqli(Constants::$DB_HOST_NAME, Constants::$DB_LOGIN, Constants::$DB_PASSWORD, Constants::$DB_NAME);
+		if($this->dbLink != null)
+		{
+			$this->dbLink->query("SET NAMES utf8");
+			$this->dbLink->query("SET CHARACTER SET utf8");
+			$this->dbLink->query("SET character_set_client = utf8");
+			$this->dbLink->query("SET character_set_connection = utf8");
+			$this->dbLink->query("SET character_set_results = utf8");/**/
+		}
     }
 
     public function SaveTeacher($teacher)
@@ -81,7 +89,8 @@ class cDB
     {
         $dbAnswer = $this->dbLink->query("SELECT * FROM `groups` WHERE `id` = '" . $groupID . "'");
         $dbObject = $dbAnswer->fetch_object();
-        $retRecord = new cGroup($dbObject->id, $dbObject->extraInfo);
+		//var_dump($dbObject);
+        $retRecord = new cGroup($dbObject->id,$dbObject->teacherNick, $dbObject->extraInfo);
         $retRecord->weekTimetable->loadTimetableFromJSON($dbObject->timetable);
         $retRecord->teacherNickName = $dbObject->teacherNick;
         //умеет работать с расписанием

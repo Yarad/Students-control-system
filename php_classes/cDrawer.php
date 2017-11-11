@@ -13,6 +13,7 @@ class cDrawer
         $template = file_get_contents(Constants::$ROOT_PATH . "html_templates/groupInList.html");
         $resStr = "";
         foreach ($groups as $key => $value) {
+			//var_dump($value);
             $tempStr = str_replace("{groupName}", $value->getGroupInfo(), $template);
             $tempStr = str_replace("{groupID}", $value->groupID, $tempStr);
             $tempStr = str_replace("{groupStudentsAmount}", count($value->students), $tempStr);

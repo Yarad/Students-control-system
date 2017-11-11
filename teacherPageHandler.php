@@ -31,6 +31,7 @@ if ($_POST['task'] == "ShowTimetable") {
 if ($_POST['task'] == "SaveNotesAndMarks") {
     $monthOffset = $_POST["monthOffset"];
     $newNotesAndMarks = json_decode($_POST["notesAndMarks"]);
+	var_dump($newNotesAndMarks);
     $currStudentID = $_POST['studentID'];
     $currGroupID = $_POST['currGroupID'];
 
