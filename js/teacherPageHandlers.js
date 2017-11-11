@@ -172,11 +172,11 @@ function GiveCommonHomeworkQuery() {
 
 
 function DeleteStudentHandler(data) {
-    if (data == "OK") {
+    if (data == "Студент успешно удалён из списка") {
         ShowStudentsQuery(currGroupID);
     }
     else {
-        alert("ERROR");
+        alert("Ошибка удаления.");
     }
 }
 
@@ -191,13 +191,19 @@ function StudentWasAddedHandler(data) {
 }
 
 function SaveNotesAndMarksHandler(data) {
-    doc = document.getElementById('leftContent');
-    doc.innerHTML = data;
+	
+    //doc = document.getElementById('leftContent');
+    //doc.innerHTML = data;
+	if(data=="OK")
+		alert("Пометки сохранены");
+	else
+		alert("Ошибка сохранения в БД");
 }
 
 function ShowGroupsHandler(data) {
     doc = document.getElementById("rightContent-inner1");
     doc.innerHTML = data;
+	ClearLeftContent();
 }
 
 

@@ -31,7 +31,7 @@ if ($_POST['task'] == "ShowTimetable") {
 if ($_POST['task'] == "SaveNotesAndMarks") {
     $monthOffset = $_POST["monthOffset"];
     $newNotesAndMarks = json_decode($_POST["notesAndMarks"]);
-	var_dump($newNotesAndMarks);
+	//var_dump($newNotesAndMarks);
     $currStudentID = $_POST['studentID'];
     $currGroupID = $_POST['currGroupID'];
 
@@ -41,15 +41,22 @@ if ($_POST['task'] == "SaveNotesAndMarks") {
             $currTeacher->groups[$currGroupID]->students[$currStudentID]->editMark($key, new сOneDayRecord($value[0], $value[1]));
         }
 
-        $db->UpdateStudent($currTeacher->groups[$currGroupID]->students[$currStudentID]);
+        if($db->UpdateStudent($currTeacher->groups[$currGroupID]->students[$currStudentID]))
+			echo "OK";
+		else
+			echo "ERROR";
     } else {
         foreach ($currTeacher->groups[$currGroupID]->students as $currStudent) {
             foreach ($newNotesAndMarks as $key => $value) {
                 $currStudent->editMark($key, new сOneDayRecord($value[0], $value[1]));
-                var_dump($newNotesAndMarks);
+                //var_dump($newNotesAndMarks);
             }
 
-            $db->UpdateStudent($currStudent);
+            if($db->UpdateStudent($currStudent))
+				echo "OK";
+			else
+				echo "ERROR";
+				
         }
     }
 }
