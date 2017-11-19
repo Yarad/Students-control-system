@@ -46,18 +46,18 @@ if ($_POST['task'] == "SaveNotesAndMarks") {
 		else
 			echo "ERROR";
     } else {
+		$isOK = true;
         foreach ($currTeacher->groups[$currGroupID]->students as $currStudent) {
             foreach ($newNotesAndMarks as $key => $value) {
                 $currStudent->editMark($key, new сOneDayRecord($value[0], $value[1]));
                 //var_dump($newNotesAndMarks);
             }
-
-            if($db->UpdateStudent($currStudent))
-				echo "OK";
-			else
-				echo "ERROR";
-				
+			$isOK = $isOK && $db->UpdateStudent($currStudent);  	
         }
+		if($isOK)
+			echo "OK";
+		else
+			echo "ERROR";
     }
 }
 
@@ -85,7 +85,10 @@ if ($_POST['task'] == "AddStudent") {
         $isAdded = $db->UpdateGroup($currTeacher->groups[$currGroupID]);
         $isAdded = $isAdded && $db->SaveStudent($currTeacher->groups[$currGroupID]->students[$login]);
         if ($isAdded)
+		{
             DrawCurrentGroupBlock($currTeacher, $currGroupID);
+			echo "OK";
+		}
         else
             echo 'DB_ERROR';
     } else {

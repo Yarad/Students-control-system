@@ -55,7 +55,15 @@ header a{
     cursor: pointer;
 }
 
-#logout{
+#logout, #settings{
     height: 50px;
     margin: 5px;
+}
+
+#settings{
+	transition: 0.5s ease-out;
+}
+
+#settings:hover{
+	transform: rotate(20deg);
 }

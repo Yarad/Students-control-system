@@ -102,16 +102,32 @@ body {
 
 #confirmFormButton {
     font-size: 2em;
-    padding: 3px 30px;
-    margin: 30px;
+    padding: 3px 20px;
+    margin: 30px 0;
     background-color: #2d4f8a;
     color: white;
     transition: background-color 0.5s linear;
+	display:inline-block;
 }
 
 #confirmFormButton:hover {
     background-color: #325fa0;
 }
+
+#cancelFormButton {
+    font-size: 2em;
+    padding: 3px 20px;
+    margin: 30px 0;
+    background-color: #2d4f8a;
+    color: white;
+    transition: background-color 0.5s linear;
+	display:inline-block;
+}
+
+#cancelFormButton:hover {
+    background-color: #325fa0;
+}
+
 
 .func-buttons-img {
     padding: 15%;

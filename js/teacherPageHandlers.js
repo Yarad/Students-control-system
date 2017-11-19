@@ -32,6 +32,14 @@ function onConfirmFormButtonClick() {
     AddStudentQuery(login, password, surname, name);
 }
 
+function onCancelFormButtonClick() {
+    var doc = document.getElementById("edit-user-info-form");
+    doc.style.display = "none";
+
+    AddStudentQuery(login, password, surname, name);
+}
+
+
 function onListButtonClick(groupID) {
     currGroupID = groupID;
     ShowStudentsQuery(groupID);
