@@ -64,6 +64,13 @@ class cDB
         return $bool1;
     }
 
+    public function UpdateTeacher($teacher)
+    {
+        $bool1 = $this->dbLink->query("UPDATE `teachers` SET `passwordHash`='" . $teacher->passwordHash . "',`groups`='" . $teacher->getGroupsIDs() . "',`extraInfo`='" . $teacher->extraInfo . "',`surname_name`='" . $teacher->surname_name . "' WHERE `nickName`='" . $teacher->nickName . "'");
+        return $bool1;
+    }
+
+
     public function UpdateGroup($group)
     {
         $bool1 = $this->dbLink->query("UPDATE `groups` SET `timetable`='" . $group->weekTimetable->getTimetableInJSON() . "',`students`='" . $group->getStudentsIDs() . "',`extraInfo`='" . $group->getGroupInfo() . "',`teacherNick`='" . $group->teacherNickName . "' WHERE `id`='" . $group->groupID . "'");
@@ -74,7 +81,8 @@ class cDB
     {
         $dbAnswer = $this->dbLink->query("SELECT * FROM `teachers` WHERE `nickName` = '" . $nickName . "'");
         $dbObject = $dbAnswer->fetch_object();
-        $retRecord = new cTeacher($dbObject->nickName, $dbObject->passwordHash, $dbObject->surname_name);
+        $retRecord = new cTeacher($dbObject->nickName, "", $dbObject->surname_name);
+        $retRecord->passwordHash = $dbObject->passwordHash;
         $retRecord->extraInfo = $dbObject->extraInfo;
         $retRecord->surname_name = $dbObject->surname_name;
 

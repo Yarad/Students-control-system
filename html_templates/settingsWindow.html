@@ -1,0 +1,10 @@
+<div id="settingsWindow">
+    <h2>Настройки:</h2>
+    <p>Старый пароль:</p>
+    <div class="field"><input type="text" onclick="onFieldClickHandler(this)" class="field-value" id="oldPassword"></div>
+    <p>Новый пароль (повторите дважды):</p>
+    <div class="field"><input type="password" onclick="onFieldClickHandler(this)" class="field-value" id="newPassword"></div>
+    <div class="field"><input type="password" onclick="onFieldClickHandler(this)" class="field-value" id="newPassword2"></div>
+    <button class="confirmFormButton" onclick="SaveSettings()">ОК</button>
+    <button class="cancelFormButton" onclick="CancelSettings()">Отмена</button>
+</div>

@@ -23,6 +23,11 @@ abstract class cUser implements JsonSerializable
         $this->extraInfo = "";
     }
 
+    public function SetNewPassword($newPassword)
+    {
+        $this->passwordHash = password_hash($newPassword,PASSWORD_DEFAULT);
+    }
+
     public abstract function Save(); //чисто для JSON
 
     function jsonSerialize()

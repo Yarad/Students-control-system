@@ -111,6 +111,10 @@ if ($_POST['task'] == "DeleteStudent") {
     }
 }
 
+if ($_POST['task'] == "ChangeSettings") {
+
+}
+
 
 function DrawCurrentGroupBlock($teacher, $groupID)
 {
