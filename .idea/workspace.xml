@@ -15,11 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="teacherPageHandler.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="teacherPageHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/teacherPageHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="114" column="0" lean-forward="true" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="98" column="40" lean-forward="false" selection-start-line="98" selection-start-column="40" selection-end-line="98" selection-end-column="40" />
               <folding>
                 <element signature="e#128#207#0#PHP" expanded="false" />
                 <element signature="e#385#507#0#PHP" expanded="false" />
@@ -31,11 +31,76 @@
                 <element signature="e#1690#2037#0#PHP" expanded="false" />
                 <element signature="e#1775#1970#0#PHP" expanded="false" />
                 <element signature="e#2097#2476#0#PHP" expanded="false" />
-                <element signature="e#3362#3723#0#PHP" expanded="false" />
-                <element signature="e#3553#3721#0#PHP" expanded="false" />
-                <element signature="e#3687#3721#0#PHP" expanded="false" />
+                <element signature="e#2478#3360#0#PHP" expanded="false" />
+                <element signature="e#3362#3725#0#PHP" expanded="false" />
                 <element signature="n#DrawCurrentGroupBlock#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teacherPageHandlers.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/teacherPageHandlers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#41#0" expanded="false" />
+                <element signature="n#!!block;n#onPageLoad#0" expanded="false" />
+                <element signature="e#153#172#0" expanded="false" />
+                <element signature="n#!!block;n#onConfirmFormButtonClick#0" expanded="false" />
+                <element signature="n#!!block;n#onCancelFormButtonClick#0" expanded="false" />
+                <element signature="n#!!block;n#onListButtonClick#0" expanded="false" />
+                <element signature="n#!!block;n#onBackToGroupsButtonClick#0" expanded="false" />
+                <element signature="n#!!block;n#onCommonHomeworkButtonClick#0" expanded="false" />
+                <element signature="n#!!block;n#onStudentEditTimetableClick#0" expanded="false" />
+                <element signature="n#!!block;n#onDeleteStudClick#0" expanded="false" />
+                <element signature="n#!!block;n#onSaveStudentNotesClick#0" expanded="false" />
+                <element signature="e#1971#2168#0" expanded="false" />
+                <element signature="n#!!block;n#onPrevMonthClick#0" expanded="false" />
+                <element signature="n#!!block;n#onNextMonthClick#0" expanded="false" />
+                <element signature="n#!!block;n#DeleteStudentQuery#0" expanded="false" />
+                <element signature="e#2530#2638#0" expanded="false" />
+                <element signature="n#!!block;n#AddStudentQuery#0" expanded="false" />
+                <element signature="e#2792#2980#0" expanded="false" />
+                <element signature="n#!!block;n#ShowStudentsQuery#0" expanded="false" />
+                <element signature="e#3115#3189#0" expanded="false" />
+                <element signature="n#!!block;n#ShowGroupsQuery#0" expanded="false" />
+                <element signature="e#3312#3354#0" expanded="false" />
+                <element signature="n#!!block;n#SaveNotesAndMarksQuery#0" expanded="false" />
+                <element signature="e#3520#3753#0" expanded="false" />
+                <element signature="n#!!block;n#ShowStudentTimetableQuery#0" expanded="false" />
+                <element signature="e#3891#4124#0" expanded="false" />
+                <element signature="n#!!block;n#GiveCommonHomeworkQuery#0" expanded="false" />
+                <element signature="e#4263#4464#0" expanded="false" />
+                <element signature="n#!!block;n#DeleteStudentHandler#0" expanded="false" />
+                <element signature="e#4590#4688#0" expanded="false" />
+                <element signature="e#4698#4740#0" expanded="false" />
+                <element signature="n#!!block;n#StudentWasAddedHandler#0" expanded="false" />
+                <element signature="e#4935#5036#0" expanded="false" />
+                <element signature="n#!!block;n#SaveNotesAndMarksHandler#0" expanded="false" />
+                <element signature="e#5169#5216#0" expanded="false" />
+                <element signature="n#!!block;n#ShowGroupsHandler#0" expanded="false" />
+                <element signature="n#!!block;n#ShowStudentTimetableHandler#0" expanded="false" />
+                <element signature="n#!!block;n#ShowStudentsHandler#0" expanded="false" />
+                <element signature="n#!!block;n#ChangeViewOfRightMenuBlocks#0" expanded="false" />
+                <element signature="e#5991#6073#0" expanded="false" />
+                <element signature="e#6083#6165#0" expanded="false" />
+                <element signature="n#!!block;n#ClearLeftContent#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editOrAddUserForm.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html_templates/editOrAddUserForm.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="2" column="134" lean-forward="false" selection-start-line="2" selection-start-column="98" selection-end-line="2" selection-end-column="134" />
+              <caret line="3" column="138" lean-forward="false" selection-start-line="3" selection-start-column="98" selection-end-line="3" selection-end-column="138" />
+              <caret line="4" column="138" lean-forward="false" selection-start-line="4" selection-start-column="98" selection-end-line="4" selection-end-column="138" />
+              <caret line="5" column="131" lean-forward="false" selection-start-line="5" selection-start-column="98" selection-end-line="5" selection-end-column="131" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -43,9 +108,49 @@
       <file leaf-file-name="commonPageHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commonPageHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+            <state relative-caret-position="353">
+              <caret line="27" column="42" lean-forward="false" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cDB.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php_classes/cDB.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="68" column="22" lean-forward="true" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+              <folding>
+                <element signature="e#62#142#0#PHP" expanded="false" />
+                <element signature="n#__construct#0;n#cDB#0;n#!!top" expanded="false" />
+                <element signature="n#SaveTeacher#0;n#cDB#0;n#!!top" expanded="false" />
+                <element signature="n#SaveGroup#0;n#cDB#0;n#!!top" expanded="false" />
+                <element signature="n#SaveStudent#0;n#cDB#0;n#!!top" expanded="false" />
+                <element signature="n#UpdateGroup#0;n#cDB#0;n#!!top" expanded="false" />
+                <element signature="n#LoadGroupByID#0;n#cDB#0;n#!!top" expanded="false" />
+                <element signature="n#LogIn#0;n#cDB#0;n#!!top" expanded="false" />
+                <element signature="n#LogOut#0;n#cDB#0;n#!!top" expanded="false" />
+                <marker date="1511375695940" expanded="true" signature="809:1128" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+                <marker date="1511375695940" expanded="true" signature="1355:1653" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+                <marker date="1511375695940" expanded="true" signature="1886:2222" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+                <marker date="1511375695940" expanded="true" signature="2518:2586" ph="DELETE FROM " />
+                <marker date="1511375695940" expanded="true" signature="2709:3011" ph="UPDATE `stud... " />
+                <marker date="1511375695940" expanded="true" signature="3134:3172" ph="UPDATE `teac... " />
+                <marker date="1511375695940" expanded="true" signature="3134:3214" ph="UPDATE `teac... " />
+                <marker date="1511375695940" expanded="true" signature="3134:3261" ph="UPDATE `teac... " />
+                <marker date="1511375695940" expanded="true" signature="3134:3306" ph="UPDATE `teac... " />
+                <marker date="1511375695940" expanded="true" signature="3134:3338" ph="UPDATE `teac... " />
+                <marker date="1511375695940" expanded="true" signature="3134:3383" ph="UPDATE `teac... " />
+                <marker date="1511375695940" expanded="true" signature="3338:3383" ph="UPDATE `stud... " />
+                <marker date="1511375695940" expanded="true" signature="3502:3763" ph="UPDATE `grou... " />
+                <marker date="1511375695940" expanded="true" signature="3917:3980" ph="SELECT * FRO... teachers" />
+                <marker date="1511375695940" expanded="true" signature="4616:4670" ph="SELECT * FRO... groups" />
+                <marker date="1511375695940" expanded="true" signature="5354:5417" ph="SELECT * FRO... students" />
+                <marker date="1511375695940" expanded="true" signature="6050:6130" ph="SELECT * FRO... ${Constants::$DB_TABLE_TEACHERS}" />
+                <marker date="1511375695940" expanded="true" signature="6184:6264" ph="SELECT * FRO... ${Constants::$DB_TABLE_STUDENTS}" />
+                <marker date="1511375695940" expanded="true" signature="8409:8507" ph="SELECT `curr... ${Constants::$DB_TABLE_TEACHERS}" />
+                <marker date="1511375695940" expanded="true" signature="8561:8659" ph="SELECT `curr... ${Constants::$DB_TABLE_STUDENTS}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,48 +162,6 @@
               <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
               <folding>
                 <element signature="n#jsonSerialize#0;n#cUser#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cDB.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php_classes/cDB.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="125" column="57" lean-forward="false" selection-start-line="125" selection-start-column="57" selection-end-line="125" selection-end-column="57" />
-              <folding>
-                <element signature="e#62#142#0#PHP" expanded="false" />
-                <element signature="n#__construct#0;n#cDB#0;n#!!top" expanded="false" />
-                <element signature="n#SaveTeacher#0;n#cDB#0;n#!!top" expanded="false" />
-                <element signature="n#SaveGroup#0;n#cDB#0;n#!!top" expanded="false" />
-                <element signature="n#SaveStudent#0;n#cDB#0;n#!!top" expanded="false" />
-                <element signature="n#UpdateGroup#0;n#cDB#0;n#!!top" expanded="false" />
-                <element signature="n#LoadGroupByID#0;n#cDB#0;n#!!top" expanded="false" />
-                <element signature="n#LoadStudentByNickName#0;n#cDB#0;n#!!top" expanded="false" />
-                <element signature="n#LogIn#0;n#cDB#0;n#!!top" expanded="false" />
-                <element signature="n#LogOut#0;n#cDB#0;n#!!top" expanded="false" />
-                <element signature="n#VerifyUser#0;n#cDB#0;n#!!top" expanded="false" />
-                <marker date="1511284940873" expanded="true" signature="753:1072" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-                <marker date="1511284940873" expanded="true" signature="1299:1597" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
-                <marker date="1511284940873" expanded="true" signature="1830:2166" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
-                <marker date="1511284940873" expanded="true" signature="2462:2529" ph="DELETE FROM " />
-                <marker date="1511284940873" expanded="true" signature="2652:2905" ph="UPDATE `stud... " />
-                <marker date="1511284940873" expanded="true" signature="3028:3066" ph="UPDATE `teac... " />
-                <marker date="1511284940873" expanded="true" signature="3028:3108" ph="UPDATE `teac... " />
-                <marker date="1511284940873" expanded="true" signature="3028:3155" ph="UPDATE `teac... " />
-                <marker date="1511284940873" expanded="true" signature="3028:3200" ph="UPDATE `teac... " />
-                <marker date="1511284940873" expanded="true" signature="3028:3232" ph="UPDATE `teac... " />
-                <marker date="1511284940873" expanded="true" signature="3028:3277" ph="UPDATE `teac... " />
-                <marker date="1511284940873" expanded="true" signature="3232:3277" ph="UPDATE `stud... " />
-                <marker date="1511284940873" expanded="true" signature="3397:3658" ph="UPDATE `grou... " />
-                <marker date="1511284940873" expanded="true" signature="3812:3875" ph="SELECT * FRO... teachers" />
-                <marker date="1511284940873" expanded="true" signature="4511:4565" ph="SELECT * FRO... groups" />
-                <marker date="1511284940873" expanded="true" signature="5242:5305" ph="SELECT * FRO... students" />
-                <marker date="1511284940873" expanded="true" signature="5898:5978" ph="SELECT * FRO... ${Constants::$DB_TABLE_TEACHERS}" />
-                <marker date="1511284940873" expanded="true" signature="6032:6112" ph="SELECT * FRO... ${Constants::$DB_TABLE_STUDENTS}" />
-                <marker date="1511284940873" expanded="true" signature="8257:8355" ph="SELECT `curr... ${Constants::$DB_TABLE_TEACHERS}" />
-                <marker date="1511284940873" expanded="true" signature="8409:8507" ph="SELECT `curr... ${Constants::$DB_TABLE_STUDENTS}" />
               </folding>
             </state>
           </provider>
@@ -153,21 +216,21 @@
         <option value="$PROJECT_DIR$/html_templates/commonHomeworkButton.html" />
         <option value="$PROJECT_DIR$/html_templates/addStudentInGroupButton.html" />
         <option value="$PROJECT_DIR$/html_templates/studentInList.html" />
-        <option value="$PROJECT_DIR$/js/teacherPageHandlers.js" />
         <option value="$PROJECT_DIR$/php_classes/cGroup.php" />
         <option value="$PROJECT_DIR$/html_templates/groupInList.html" />
         <option value="$PROJECT_DIR$/php_classes/cDrawer.php" />
-        <option value="$PROJECT_DIR$/teacherPageHandler.php" />
         <option value="$PROJECT_DIR$/html_templates/userMainPage.html" />
         <option value="$PROJECT_DIR$/firstAfterLogin.php" />
         <option value="$PROJECT_DIR$/html_templates/editOrAddUserForm.html" />
         <option value="$PROJECT_DIR$/css/teacher.css" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/html_templates/settingsWindow.html" />
-        <option value="$PROJECT_DIR$/php_classes/cDB.php" />
         <option value="$PROJECT_DIR$/php_classes/cUser.php" />
-        <option value="$PROJECT_DIR$/commonPageHandler.php" />
         <option value="$PROJECT_DIR$/js/commonPageHandlers.js" />
+        <option value="$PROJECT_DIR$/teacherPageHandler.php" />
+        <option value="$PROJECT_DIR$/js/teacherPageHandlers.js" />
+        <option value="$PROJECT_DIR$/commonPageHandler.php" />
+        <option value="$PROJECT_DIR$/php_classes/cDB.php" />
       </list>
     </option>
   </component>
@@ -181,7 +244,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1378" />
     <option name="height" value="754" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -239,7 +302,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="php_classes" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -253,7 +316,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="html_templates" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -376,18 +439,20 @@
       <workItem from="1509472986146" duration="3050000" />
       <workItem from="1510746778478" duration="175000" />
       <workItem from="1511107464473" duration="10519000" />
-      <workItem from="1511283528124" duration="3816000" />
+      <workItem from="1511283528124" duration="4130000" />
+      <workItem from="1511305670386" duration="2497000" />
+      <workItem from="1511375060650" duration="624000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215449000" />
+    <option name="totallyTimeSpent" value="218884000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
+    <frame x="-8" y="-8" width="1378" height="754" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24889868" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12093023" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -437,7 +502,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="37" />
+      <option name="time" value="38" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -467,7 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -593,43 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#7#87#0#PHP" expanded="false" />
-            <element signature="n#random_string#0;n#Constants#0;n#!!top" expanded="false" />
-            <element signature="e#1154#1631#0#PHP" expanded="false" />
-            <element signature="e#1264#1631#0#PHP" expanded="false" />
-            <element signature="e#1938#2262#0#PHP" expanded="false" />
-            <element signature="n#authFailed#0;n#Constants#0;n#!!top" expanded="false" />
-            <element signature="n#printRusDate#0;n#Constants#0;n#!!top" expanded="false" />
-            <element signature="e#2517#3525#0#PHP" expanded="false" />
-            <element signature="e#2567#2634#0#PHP" expanded="false" />
-            <element signature="e#2647#2715#0#PHP" expanded="false" />
-            <element signature="e#2728#2794#0#PHP" expanded="false" />
-            <element signature="e#2807#2874#0#PHP" expanded="false" />
-            <element signature="e#2887#2951#0#PHP" expanded="false" />
-            <element signature="e#2964#3029#0#PHP" expanded="false" />
-            <element signature="e#3042#3107#0#PHP" expanded="false" />
-            <element signature="e#3120#3188#0#PHP" expanded="false" />
-            <element signature="e#3201#3270#0#PHP" expanded="false" />
-            <element signature="e#3283#3352#0#PHP" expanded="false" />
-            <element signature="e#3365#3433#0#PHP" expanded="false" />
-            <element signature="e#3446#3515#0#PHP" expanded="false" />
-            <element signature="n#getMonthNameByOffset#0;n#Constants#0;n#!!top" expanded="false" />
-            <element signature="e#3904#4877#0#PHP" expanded="false" />
-            <element signature="e#3945#4010#0#PHP" expanded="false" />
-            <element signature="e#4023#4089#0#PHP" expanded="false" />
-            <element signature="e#4102#4165#0#PHP" expanded="false" />
-            <element signature="e#4178#4243#0#PHP" expanded="false" />
-            <element signature="e#4256#4318#0#PHP" expanded="false" />
-            <element signature="e#4331#4394#0#PHP" expanded="false" />
-            <element signature="e#4407#4470#0#PHP" expanded="false" />
-            <element signature="e#4483#4548#0#PHP" expanded="false" />
-            <element signature="e#4561#4628#0#PHP" expanded="false" />
-            <element signature="e#4641#4708#0#PHP" expanded="false" />
-            <element signature="e#4721#4787#0#PHP" expanded="false" />
-            <element signature="e#4800#4867#0#PHP" expanded="false" />
-            <element signature="n#getYeraNumByOffset#0;n#Constants#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -696,7 +723,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -714,32 +740,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html_templates/editOrAddUserForm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php_classes/cDrawer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding>
-            <element signature="e#7#87#0#PHP" expanded="false" />
-            <element signature="n#DrawStudentsList#0;n#cDrawer#0;n#!!top" expanded="false" />
-            <element signature="n#DrawTimetableHeader#0;n#cDrawer#0;n#!!top" expanded="false" />
-            <element signature="n#DrawStudentTimetableToEdit#0;n#cDrawer#0;n#!!top" expanded="false" />
-            <element signature="n#DrawEmptyTimetableToEdit#0;n#cDrawer#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/teacherPageHandlers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="42" column="22" lean-forward="false" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -754,7 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -762,7 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -778,7 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -786,7 +787,75 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/commonPageHandlers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html_templates/editOrAddUserForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="2" column="134" lean-forward="false" selection-start-line="2" selection-start-column="98" selection-end-line="2" selection-end-column="134" />
+          <caret line="3" column="138" lean-forward="false" selection-start-line="3" selection-start-column="98" selection-end-line="3" selection-end-column="138" />
+          <caret line="4" column="138" lean-forward="false" selection-start-line="4" selection-start-column="98" selection-end-line="4" selection-end-column="138" />
+          <caret line="5" column="131" lean-forward="false" selection-start-line="5" selection-start-column="98" selection-end-line="5" selection-end-column="131" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/teacherPageHandlers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+            <element signature="n#!!block;n#onPageLoad#0" expanded="false" />
+            <element signature="e#153#172#0" expanded="false" />
+            <element signature="n#!!block;n#onConfirmFormButtonClick#0" expanded="false" />
+            <element signature="n#!!block;n#onCancelFormButtonClick#0" expanded="false" />
+            <element signature="n#!!block;n#onListButtonClick#0" expanded="false" />
+            <element signature="n#!!block;n#onBackToGroupsButtonClick#0" expanded="false" />
+            <element signature="n#!!block;n#onCommonHomeworkButtonClick#0" expanded="false" />
+            <element signature="n#!!block;n#onStudentEditTimetableClick#0" expanded="false" />
+            <element signature="n#!!block;n#onDeleteStudClick#0" expanded="false" />
+            <element signature="n#!!block;n#onSaveStudentNotesClick#0" expanded="false" />
+            <element signature="e#1971#2168#0" expanded="false" />
+            <element signature="n#!!block;n#onPrevMonthClick#0" expanded="false" />
+            <element signature="n#!!block;n#onNextMonthClick#0" expanded="false" />
+            <element signature="n#!!block;n#DeleteStudentQuery#0" expanded="false" />
+            <element signature="e#2530#2638#0" expanded="false" />
+            <element signature="n#!!block;n#AddStudentQuery#0" expanded="false" />
+            <element signature="e#2792#2980#0" expanded="false" />
+            <element signature="n#!!block;n#ShowStudentsQuery#0" expanded="false" />
+            <element signature="e#3115#3189#0" expanded="false" />
+            <element signature="n#!!block;n#ShowGroupsQuery#0" expanded="false" />
+            <element signature="e#3312#3354#0" expanded="false" />
+            <element signature="n#!!block;n#SaveNotesAndMarksQuery#0" expanded="false" />
+            <element signature="e#3520#3753#0" expanded="false" />
+            <element signature="n#!!block;n#ShowStudentTimetableQuery#0" expanded="false" />
+            <element signature="e#3891#4124#0" expanded="false" />
+            <element signature="n#!!block;n#GiveCommonHomeworkQuery#0" expanded="false" />
+            <element signature="e#4263#4464#0" expanded="false" />
+            <element signature="n#!!block;n#DeleteStudentHandler#0" expanded="false" />
+            <element signature="e#4590#4688#0" expanded="false" />
+            <element signature="e#4698#4740#0" expanded="false" />
+            <element signature="n#!!block;n#StudentWasAddedHandler#0" expanded="false" />
+            <element signature="e#4935#5036#0" expanded="false" />
+            <element signature="n#!!block;n#SaveNotesAndMarksHandler#0" expanded="false" />
+            <element signature="e#5169#5216#0" expanded="false" />
+            <element signature="n#!!block;n#ShowGroupsHandler#0" expanded="false" />
+            <element signature="n#!!block;n#ShowStudentTimetableHandler#0" expanded="false" />
+            <element signature="n#!!block;n#ShowStudentsHandler#0" expanded="false" />
+            <element signature="n#!!block;n#ChangeViewOfRightMenuBlocks#0" expanded="false" />
+            <element signature="e#5991#6073#0" expanded="false" />
+            <element signature="e#6083#6165#0" expanded="false" />
+            <element signature="n#!!block;n#ClearLeftContent#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -800,72 +869,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php_classes/cDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="125" column="57" lean-forward="false" selection-start-line="125" selection-start-column="57" selection-end-line="125" selection-end-column="57" />
-          <folding>
-            <element signature="e#62#142#0#PHP" expanded="false" />
-            <element signature="n#__construct#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="n#SaveTeacher#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="n#SaveGroup#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="n#SaveStudent#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="n#UpdateGroup#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="n#LoadGroupByID#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="n#LoadStudentByNickName#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="n#LogIn#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="n#LogOut#0;n#cDB#0;n#!!top" expanded="false" />
-            <element signature="n#VerifyUser#0;n#cDB#0;n#!!top" expanded="false" />
-            <marker date="1511284940873" expanded="true" signature="753:1072" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
-            <marker date="1511284940873" expanded="true" signature="1299:1597" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
-            <marker date="1511284940873" expanded="true" signature="1830:2166" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
-            <marker date="1511284940873" expanded="true" signature="2462:2529" ph="DELETE FROM " />
-            <marker date="1511284940873" expanded="true" signature="2652:2905" ph="UPDATE `stud... " />
-            <marker date="1511284940873" expanded="true" signature="3028:3066" ph="UPDATE `teac... " />
-            <marker date="1511284940873" expanded="true" signature="3028:3108" ph="UPDATE `teac... " />
-            <marker date="1511284940873" expanded="true" signature="3028:3155" ph="UPDATE `teac... " />
-            <marker date="1511284940873" expanded="true" signature="3028:3200" ph="UPDATE `teac... " />
-            <marker date="1511284940873" expanded="true" signature="3028:3232" ph="UPDATE `teac... " />
-            <marker date="1511284940873" expanded="true" signature="3028:3277" ph="UPDATE `teac... " />
-            <marker date="1511284940873" expanded="true" signature="3232:3277" ph="UPDATE `stud... " />
-            <marker date="1511284940873" expanded="true" signature="3397:3658" ph="UPDATE `grou... " />
-            <marker date="1511284940873" expanded="true" signature="3812:3875" ph="SELECT * FRO... teachers" />
-            <marker date="1511284940873" expanded="true" signature="4511:4565" ph="SELECT * FRO... groups" />
-            <marker date="1511284940873" expanded="true" signature="5242:5305" ph="SELECT * FRO... students" />
-            <marker date="1511284940873" expanded="true" signature="5898:5978" ph="SELECT * FRO... ${Constants::$DB_TABLE_TEACHERS}" />
-            <marker date="1511284940873" expanded="true" signature="6032:6112" ph="SELECT * FRO... ${Constants::$DB_TABLE_STUDENTS}" />
-            <marker date="1511284940873" expanded="true" signature="8257:8355" ph="SELECT `curr... ${Constants::$DB_TABLE_TEACHERS}" />
-            <marker date="1511284940873" expanded="true" signature="8409:8507" ph="SELECT `curr... ${Constants::$DB_TABLE_STUDENTS}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commonPageHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/commonPageHandlers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc;n#ProvideLogout#0" expanded="false" />
-            <element signature="n#!!block;n#ProvideLogout#0" expanded="false" />
-            <element signature="n#!!block;n#LogoutQuery#0" expanded="false" />
-            <element signature="e#796#1007#0" expanded="false" />
-            <element signature="n#!!block;n#LogoutHandler#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/teacherPageHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="114" column="0" lean-forward="true" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="98" column="40" lean-forward="false" selection-start-line="98" selection-start-column="40" selection-end-line="98" selection-end-column="40" />
           <folding>
             <element signature="e#128#207#0#PHP" expanded="false" />
             <element signature="e#385#507#0#PHP" expanded="false" />
@@ -877,10 +884,55 @@
             <element signature="e#1690#2037#0#PHP" expanded="false" />
             <element signature="e#1775#1970#0#PHP" expanded="false" />
             <element signature="e#2097#2476#0#PHP" expanded="false" />
-            <element signature="e#3362#3723#0#PHP" expanded="false" />
-            <element signature="e#3553#3721#0#PHP" expanded="false" />
-            <element signature="e#3687#3721#0#PHP" expanded="false" />
+            <element signature="e#2478#3360#0#PHP" expanded="false" />
+            <element signature="e#3362#3725#0#PHP" expanded="false" />
             <element signature="n#DrawCurrentGroupBlock#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commonPageHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="27" column="42" lean-forward="false" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php_classes/cDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="68" column="22" lean-forward="true" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+          <folding>
+            <element signature="e#62#142#0#PHP" expanded="false" />
+            <element signature="n#__construct#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="n#SaveTeacher#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="n#SaveGroup#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="n#SaveStudent#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="n#UpdateGroup#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="n#LoadGroupByID#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="n#LogIn#0;n#cDB#0;n#!!top" expanded="false" />
+            <element signature="n#LogOut#0;n#cDB#0;n#!!top" expanded="false" />
+            <marker date="1511375695940" expanded="true" signature="809:1128" ph="INSERT INTO `${Constants::$DB_TABLE_TEACHERS}`... " />
+            <marker date="1511375695940" expanded="true" signature="1355:1653" ph="INSERT INTO `${Constants::$DB_TABLE_GROUPS}`... " />
+            <marker date="1511375695940" expanded="true" signature="1886:2222" ph="INSERT INTO `${Constants::$DB_TABLE_STUDENTS}`... " />
+            <marker date="1511375695940" expanded="true" signature="2518:2586" ph="DELETE FROM " />
+            <marker date="1511375695940" expanded="true" signature="2709:3011" ph="UPDATE `stud... " />
+            <marker date="1511375695940" expanded="true" signature="3134:3172" ph="UPDATE `teac... " />
+            <marker date="1511375695940" expanded="true" signature="3134:3214" ph="UPDATE `teac... " />
+            <marker date="1511375695940" expanded="true" signature="3134:3261" ph="UPDATE `teac... " />
+            <marker date="1511375695940" expanded="true" signature="3134:3306" ph="UPDATE `teac... " />
+            <marker date="1511375695940" expanded="true" signature="3134:3338" ph="UPDATE `teac... " />
+            <marker date="1511375695940" expanded="true" signature="3134:3383" ph="UPDATE `teac... " />
+            <marker date="1511375695940" expanded="true" signature="3338:3383" ph="UPDATE `stud... " />
+            <marker date="1511375695940" expanded="true" signature="3502:3763" ph="UPDATE `grou... " />
+            <marker date="1511375695940" expanded="true" signature="3917:3980" ph="SELECT * FRO... teachers" />
+            <marker date="1511375695940" expanded="true" signature="4616:4670" ph="SELECT * FRO... groups" />
+            <marker date="1511375695940" expanded="true" signature="5354:5417" ph="SELECT * FRO... students" />
+            <marker date="1511375695940" expanded="true" signature="6050:6130" ph="SELECT * FRO... ${Constants::$DB_TABLE_TEACHERS}" />
+            <marker date="1511375695940" expanded="true" signature="6184:6264" ph="SELECT * FRO... ${Constants::$DB_TABLE_STUDENTS}" />
+            <marker date="1511375695940" expanded="true" signature="8409:8507" ph="SELECT `curr... ${Constants::$DB_TABLE_TEACHERS}" />
+            <marker date="1511375695940" expanded="true" signature="8561:8659" ph="SELECT `curr... ${Constants::$DB_TABLE_STUDENTS}" />
           </folding>
         </state>
       </provider>

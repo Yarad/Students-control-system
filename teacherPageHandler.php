@@ -105,9 +105,9 @@ if ($_POST['task'] == "DeleteStudent") {
         if ($db->DeleteStudent($student))
             echo "OK";
         else
-            echo "ERROR";
+            echo "ERROR1";
     } else {
-        echo "ERROR";
+        echo "ERROR2";
     }
 }
 

@@ -15,14 +15,13 @@ class cDB
     function __construct()
     {
         $this->dbLink = new mysqli(Constants::$DB_HOST_NAME, Constants::$DB_LOGIN, Constants::$DB_PASSWORD, Constants::$DB_NAME);
-		if($this->dbLink != null)
-		{
-			$this->dbLink->query("SET NAMES utf8");
-			$this->dbLink->query("SET CHARACTER SET utf8");
-			$this->dbLink->query("SET character_set_client = utf8");
-			$this->dbLink->query("SET character_set_connection = utf8");
-			$this->dbLink->query("SET character_set_results = utf8");/**/
-		}
+        if ($this->dbLink != null) {
+            $this->dbLink->query("SET NAMES utf8");
+            $this->dbLink->query("SET CHARACTER SET utf8");
+            $this->dbLink->query("SET character_set_client = utf8");
+            $this->dbLink->query("SET character_set_connection = utf8");
+            $this->dbLink->query("SET character_set_results = utf8");/**/
+        }
     }
 
     public function SaveTeacher($teacher)
@@ -54,13 +53,13 @@ class cDB
         $group->DeleteStudent($student->nickName);
         $this->UpdateGroup($group);
 
-        $bool1 = $this->dbLink->query("DELETE FROM `students` WHERE `nickName`='" . $student->nickName ."'");
+        $bool1 = $this->dbLink->query("DELETE FROM `students` WHERE `nickName`='" . $student->nickName . "'");
         return $bool1;
     }
 
     public function UpdateStudent($student)
     {
-        $bool1 = $this->dbLink->query("UPDATE `students` SET `groupID`='" . $student->groupID . "', `extraInfo`='" . $student->extraInfo . "',`surname_name`='" . $student->surname_name . "',`calendar_of_marks`='" . $student->GetMarksInJson() . "' WHERE `nickName`='" . $student->nickName . "'");
+        $bool1 = $this->dbLink->query("UPDATE `students` SET `passwordHash`='" . $student->passwordHash . "', `groupID`='" . $student->groupID . "', `extraInfo`='" . $student->extraInfo . "',`surname_name`='" . $student->surname_name . "',`calendar_of_marks`='" . $student->GetMarksInJson() . "' WHERE `nickName`='" . $student->nickName . "'");
         return $bool1;
     }
 
@@ -69,7 +68,6 @@ class cDB
         $bool1 = $this->dbLink->query("UPDATE `teachers` SET `passwordHash`='" . $teacher->passwordHash . "',`groups`='" . $teacher->getGroupsIDs() . "',`extraInfo`='" . $teacher->extraInfo . "',`surname_name`='" . $teacher->surname_name . "' WHERE `nickName`='" . $teacher->nickName . "'");
         return $bool1;
     }
-
 
     public function UpdateGroup($group)
     {
@@ -97,8 +95,8 @@ class cDB
     {
         $dbAnswer = $this->dbLink->query("SELECT * FROM `groups` WHERE `id` = '" . $groupID . "'");
         $dbObject = $dbAnswer->fetch_object();
-		//var_dump($dbObject);
-        $retRecord = new cGroup($dbObject->id,$dbObject->teacherNick, $dbObject->extraInfo);
+        //var_dump($dbObject);
+        $retRecord = new cGroup($dbObject->id, $dbObject->teacherNick, $dbObject->extraInfo);
         $retRecord->weekTimetable->loadTimetableFromJSON($dbObject->timetable);
         $retRecord->teacherNickName = $dbObject->teacherNick;
         //умеет работать с расписанием
@@ -114,10 +112,11 @@ class cDB
         $dbAnswer = $this->dbLink->query("SELECT * FROM `students` WHERE `nickName` = '" . $nickName . "'");
         $dbObject = $dbAnswer->fetch_object();
 
-        if($dbObject == null)
+        if ($dbObject == null)
             return null;
-        $retRecord = new cStudent($dbObject->nickName, $dbObject->passwordHash, $dbObject->groupID, $dbObject->surname_name);
+        $retRecord = new cStudent($dbObject->nickName, "", $dbObject->groupID, $dbObject->surname_name);
         $retRecord->LoadMarksFromJsonStr($dbObject->calendar_of_marks);
+        $retRecord->passwordHash = $dbObject->passwordHash;
         $retRecord->extraInfo = $dbObject->extraInfo;
         $retRecord->surname_name = $dbObject->surname_name;
         return $retRecord;

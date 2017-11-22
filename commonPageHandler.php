@@ -19,18 +19,22 @@ if ($_POST['task'] == "SaveSettings") {
     $oldPassword = $_POST['oldPassword'];
     $newPassword = $_POST['newPassword'];
     if (password_verify($oldPassword, $currUser->passwordHash)) {
-        $t1 = $newPassword != '';
-        $t2 = preg_match("#^[a-zA-Z0-9_]+$#", $newPassword);
-        if ($t1 && $t2) {
+        if ($newPassword != '' && preg_match("#^[a-zA-Z0-9_]+$#", $newPassword)) {
             $currUser->SetNewPassword($newPassword);
-            if ($db->UpdateTeacher($currUser)) {
+
+            if ($currUser instanceof cTeacher)
+                $tempBool = $db->UpdateTeacher($currUser);
+            else
+                $tempBool = $db->UpdateStudent($currUser);
+
+            if ($tempBool) {
                 $nullptr = "";
                 $currUser = $db->LogIn($currUser->nickName, $currUser->passwordHash, $nullptr);
                 echo "OK";
             } else
-                echo "ERROR";
+                echo "ERROR1";
         } else
-            echo "ERROR";
+            echo "ERROR2";
     } else
-        echo "ERROR";
+        echo "ERROR3" . $currUser->passwordHash; //ошибка здесь
 }

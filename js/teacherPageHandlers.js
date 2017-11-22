@@ -13,8 +13,12 @@ function onPageLoad() {
 
 
 function onAddStudentInGroupButtonClick() {
-    var doc = document.getElementById("edit-user-info-form");
-    doc.style.display = "inline-block";
+    $("#edit-user-info-form").css('display', 'inline-block');
+
+    $("#fieldLogin").val("Логин");
+    $("#fieldPassword").val("Пароль");
+    $("#fieldSurname").val("Фамилия");
+    $("#fieldName").val("Имя");
 
     var btn = document.getElementById('confirmFormButton');
     btn.onclick = onConfirmFormButtonClick;
@@ -180,8 +184,9 @@ function GiveCommonHomeworkQuery() {
 
 
 function DeleteStudentHandler(data) {
-    if (data == "Студент успешно удалён из списка") {
+    if (data == "OK") {
         ShowStudentsQuery(currGroupID);
+        alert("Студент успешно удалён из списка");
     }
     else {
         alert("Ошибка удаления.");
@@ -199,19 +204,19 @@ function StudentWasAddedHandler(data) {
 }
 
 function SaveNotesAndMarksHandler(data) {
-	
+
     //doc = document.getElementById('leftContent');
     //doc.innerHTML = data;
-	if(data=="OK")
-		alert("Пометки сохранены");
-	else
-		alert("Ошибка сохранения в БД");
+    if (data == "OK")
+        alert("Пометки сохранены");
+    else
+        alert("Ошибка сохранения в БД");
 }
 
 function ShowGroupsHandler(data) {
     doc = document.getElementById("rightContent-inner1");
     doc.innerHTML = data;
-	ClearLeftContent();
+    ClearLeftContent();
 }
 
 
