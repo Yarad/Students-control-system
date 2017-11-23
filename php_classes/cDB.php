@@ -1,6 +1,7 @@
 <?php
 include_once "cTeacher.php";
 include_once "cUser.php";
+include_once "cAdmin.php";
 
 /**
  * Created by PhpStorm.
@@ -22,6 +23,12 @@ class cDB
             $this->dbLink->query("SET character_set_connection = utf8");
             $this->dbLink->query("SET character_set_results = utf8");/**/
         }
+    }
+
+    public function SaveAdmin($admin)
+    {
+        $bool1 = $this->dbLink->query("INSERT INTO `" . Constants::$DB_TABLE_ADMINS . "`(`nickName`, `passwordHash`, `curr_session_hash`) VALUES ('" . $admin->nickName . "','" . $admin->passwordHash . "','')");
+        return $bool1;
     }
 
     public function SaveTeacher($teacher)
@@ -57,6 +64,12 @@ class cDB
         return $bool1;
     }
 
+    public function UpdateAdmin($admin)
+    {
+        $bool1 = $this->dbLink->query("UPDATE `admins` SET `passwordHash`='" . $admin->passwordHash . "' WHERE `nickName`='" . $admin->nickName . "'");
+        return $bool1;
+    }
+
     public function UpdateStudent($student)
     {
         $bool1 = $this->dbLink->query("UPDATE `students` SET `passwordHash`='" . $student->passwordHash . "', `groupID`='" . $student->groupID . "', `extraInfo`='" . $student->extraInfo . "',`surname_name`='" . $student->surname_name . "',`calendar_of_marks`='" . $student->GetMarksInJson() . "' WHERE `nickName`='" . $student->nickName . "'");
@@ -75,7 +88,38 @@ class cDB
         return $bool1;
     }
 
-    public function LoadTeacherByNickName($nickName, $subLayers = true)
+    public function LoadAdminByNickName($nickName)
+    {
+        $dbAnswer = $this->dbLink->query("SELECT * FROM `admins` WHERE `nickName` = '" . $nickName . "'");
+        $dbObject = $dbAnswer->fetch_object();
+        if ($dbObject != null) {
+            $retRecord = new cAdmin($dbObject->nickName, "", "");
+            $retRecord->passwordHash = $dbObject->passwordHash;
+
+            //if ($subLayers)
+            //    foreach (explode(',', $dbObject->teachers) as $key => $value) {
+            //        $retRecord->addGroup($this->LoadGroupByID($value));
+        } else
+            $retRecord = null;
+        return $retRecord;
+    }
+
+    public
+    function LoadAllTeachers()
+    {
+        $dbAnswer = $this->dbLink->query("SELECT `nickName` FROM `teachers` WHERE 1");
+        $dbArray = $dbAnswer->fetch_array();
+
+        $retArray = [];
+
+        foreach ($dbArray as $currTeacherNick)
+            $retArray[$currTeacherNick] = $this->LoadTeacherByNickName($currTeacherNick, true);
+
+        return $retArray;
+    }
+
+    public
+    function LoadTeacherByNickName($nickName, $subLayers = true)
     {
         $dbAnswer = $this->dbLink->query("SELECT * FROM `teachers` WHERE `nickName` = '" . $nickName . "'");
         $dbObject = $dbAnswer->fetch_object();
@@ -91,7 +135,8 @@ class cDB
         return $retRecord;
     }
 
-    public function LoadGroupByID($groupID, $subLayers = true)
+    public
+    function LoadGroupByID($groupID, $subLayers = true)
     {
         $dbAnswer = $this->dbLink->query("SELECT * FROM `groups` WHERE `id` = '" . $groupID . "'");
         $dbObject = $dbAnswer->fetch_object();
@@ -107,7 +152,8 @@ class cDB
         return $retRecord;
     }
 
-    public function LoadStudentByNickName($nickName)
+    public
+    function LoadStudentByNickName($nickName)
     {
         $dbAnswer = $this->dbLink->query("SELECT * FROM `students` WHERE `nickName` = '" . $nickName . "'");
         $dbObject = $dbAnswer->fetch_object();
@@ -122,58 +168,83 @@ class cDB
         return $retRecord;
     }
 
-    public function LogIn($nick, $password, &$outMessage)
+    public
+    function LogIn($nick, $password, &$outMessage)
     {
         $outMessage = "";
+        $retRecord = null;
+
+        $dbAnswerAdmins = $this->dbLink->query("SELECT * FROM `" . Constants::$DB_TABLE_ADMINS . "` WHERE `nickName` = '$nick'");
         $dbAnswerTeachers = $this->dbLink->query("SELECT * FROM `" . Constants::$DB_TABLE_TEACHERS . "` WHERE `nickName` = '$nick'");
         $dbAnswerStudents = $this->dbLink->query("SELECT * FROM `" . Constants::$DB_TABLE_STUDENTS . "` WHERE `nickName` = '$nick'");
 
-        if ($dbAnswerTeachers->num_rows == 0 && $dbAnswerStudents->num_rows == 0) {
+        if ($dbAnswerTeachers->num_rows == 0 && $dbAnswerStudents->num_rows == 0 && $dbAnswerAdmins->num_rows == 0) {
             $outMessage = Constants::$INCORRECT_LOGIN_MESSAGE;
             return null;
         }
 
+        $isAdmin = false;
+        $isTeacher = false;
+        $isStudent = false;
+
         if ($dbAnswerTeachers->num_rows != 0) {
             $isTeacher = true;
             $userInfo = $dbAnswerTeachers->fetch_array();
-        } else {
-            $isTeacher = false;
+        } elseif ($dbAnswerStudents->num_rows != 0) {
+            $isStudent = true;
             $userInfo = $dbAnswerStudents->fetch_array();
+        } else {
+            $isAdmin = true;
+            $userInfo = $dbAnswerAdmins->fetch_array();
         }
 
         if (!password_verify($password, $userInfo['passwordHash'])) {
-
             $outMessage = Constants::$INCORRECT_PASSWORD_MESSAGE;
             return null;
         }
 
         $currSessionHash = Constants::random_string(10);
         if ($isTeacher) {
-
-            $retRecord = new cTeacher($userInfo['nickName'], "unavailable", $userInfo['surname_name']);
+            $retRecord = $this->LoadTeacherByNickName($userInfo['nickName']);
             $retRecord->currSessionHash = $currSessionHash;
             $this->dbLink->query("UPDATE " . Constants::$DB_TABLE_TEACHERS . " SET curr_session_hash = '$currSessionHash' WHERE nickName ='" . $userInfo['nickName'] . "'");
-        } else {
+        }
+
+        if ($isStudent) {
             $retRecord = $this->LoadStudentByNickName($userInfo['nickName']);
             $retRecord->currSessionHash = $currSessionHash;
             $this->dbLink->query("UPDATE " . Constants::$DB_TABLE_STUDENTS . " SET curr_session_hash = '$currSessionHash' WHERE nickName ='" . $userInfo['nickName'] . "'");
         }
 
-        var_dump($_COOKIE);
+        if ($isAdmin) {
+            $retRecord = $this->LoadAdminByNickName($userInfo['nickName']);
+            $retRecord->currSessionHash = $currSessionHash;
+            $this->dbLink->query("UPDATE " . Constants::$DB_TABLE_ADMINS . " SET curr_session_hash = '$currSessionHash' WHERE nickName ='" . $userInfo['nickName'] . "'");
+        }
 
         setcookie("id", $userInfo['nickName']);
         setcookie("curr_session_hash", $currSessionHash);
 
         $hash = $_COOKIE['curr_session_hash'];
         echo $currSessionHash;
-        var_dump($_COOKIE);
+        //var_dump($_COOKIE);
 
         return $retRecord;
     }
 
     public function LogOut($currUser)
     {
-        $this->dbLink->query("UPDATE " . Constants::$DB_TABLE_TEACHERS . " SET curr_session_hash = '' WHERE nickName ='" . $currUser->nickName . "'");
+        $dbNameStr = "";
+        if ($currUser instanceof cStudent)
+            $dbNameStr = Constants::$DB_TABLE_STUDENTS;
+
+        if ($currUser instanceof cTeacher)
+            $dbNameStr = Constants::$DB_TABLE_TEACHERS;
+
+        if ($currUser instanceof cAdmin)
+            $dbNameStr = Constants::$DB_TABLE_ADMINS;
+
+        $this->dbLink->query("UPDATE " . $dbNameStr . " SET curr_session_hash = '' WHERE nickName ='" . $currUser->nickName . "'");
         setcookie("id", "");
         setcookie("currSessionHash", "");
     }
@@ -184,27 +255,39 @@ class cDB
 
         $nick = $_COOKIE['id'];
         $hash = $_COOKIE['curr_session_hash'];
+        $dbHash = '';
 
         $dbAnswerTeachers = $this->dbLink->query("SELECT `curr_session_hash` FROM `" . Constants::$DB_TABLE_TEACHERS . "` WHERE `nickName` = '$nick'");
         $dbAnswerStudents = $this->dbLink->query("SELECT `curr_session_hash` FROM `" . Constants::$DB_TABLE_STUDENTS . "` WHERE `nickName` = '$nick'");
+        $dbAnswerAdmins = $this->dbLink->query("SELECT `curr_session_hash` FROM `" . Constants::$DB_TABLE_ADMINS . "` WHERE `nickName` = '$nick'");
 
-        if ($dbAnswerTeachers->num_rows == 0 && $dbAnswerStudents->num_rows == 0)
+        if ($dbAnswerTeachers->num_rows == 0 && $dbAnswerStudents->num_rows == 0 && $dbAnswerAdmins->num_rows == 0)
             return null;
 
         $isTeacher = $dbAnswerTeachers->num_rows != 0;
+        $isStudents = $dbAnswerStudents->num_rows != 0;
+        $isAdmins = $dbAnswerAdmins->num_rows != 0;
 
         if ($isTeacher) {
             $dbHash = $dbAnswerTeachers->fetch_row()[0];
-        } else {
+        }
+
+        if ($isStudents) {
             $dbHash = $dbAnswerStudents->fetch_row()[0];
         }
 
+        if ($isAdmins) {
+            $dbHash = $dbAnswerAdmins->fetch_row()[0];
+        }
+        //var_dump($isAdmins);
         if ($hash == $dbHash) {
             if ($isTeacher)
                 return $this->LoadTeacherByNickName($nick);
-            else
+            if ($isStudents)
                 return $this->LoadStudentByNickName($nick);
-        } else return null;
+            if ($isAdmins)
+                return $this->LoadAdminByNickName($nick);
+        } else
+            return null;
     }
-
 }

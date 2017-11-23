@@ -15,6 +15,7 @@ class Constants
     static $DB_NAME = "students_control";
     static $DB_TABLE_STUDENTS = "students";
     static $DB_TABLE_TEACHERS = "teachers";
+    static $DB_TABLE_ADMINS = "admins";
     static $DB_TABLE_GROUPS = "groups";
 
 

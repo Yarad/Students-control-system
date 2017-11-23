@@ -22,10 +22,14 @@ if ($_POST['task'] == "SaveSettings") {
         if ($newPassword != '' && preg_match("#^[a-zA-Z0-9_]+$#", $newPassword)) {
             $currUser->SetNewPassword($newPassword);
 
+            $tempBool = false;
             if ($currUser instanceof cTeacher)
                 $tempBool = $db->UpdateTeacher($currUser);
-            else
+            if ($currUser instanceof cStudent)
                 $tempBool = $db->UpdateStudent($currUser);
+            if ($currUser instanceof cAdmin)
+                $tempBool = $db->UpdateAdmin($currUser);
+
 
             if ($tempBool) {
                 $nullptr = "";

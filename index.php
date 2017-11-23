@@ -1,6 +1,7 @@
 <?php
 include_once "php_classes/cTeacher.php";
 include_once "php_classes/cDB.php";
+include_once "php_classes/cAdmin.php";
 /**
  * Created by PhpStorm.
  * User: user
@@ -10,6 +11,14 @@ include_once "php_classes/cDB.php";
 
 $db = new cDB();
 $loginError = "";
+
+$admin1 = new cAdmin("admin1", "arageddon", "");
+$admin2 = new cAdmin("admin2", "zelyonka", "");
+$admin3 = new cAdmin("admin3", "latte", "");
+
+$db->SaveAdmin($admin1);
+$db->SaveAdmin($admin2);
+$db->SaveAdmin($admin3);
 
 if ($db->VerifyUser() != null) {
     header("Location: firstAfterLogin.php");
@@ -28,8 +37,8 @@ if (isset($_POST["login"]) && isset($_POST["password"])) {
         $loginError = "<p id='ErrorMessage'>Пользователь не найден</p>";
     }
 }
+
 //пароль не ввели
 $page = file_get_contents("html_templates/login.html");
 $page = str_replace("{loginError}", $loginError, $page);
 echo $page;
-
