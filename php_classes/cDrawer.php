@@ -27,6 +27,7 @@ class cDrawer
 
     static function DrawTeachersList($teachers)
     {
+        if ($teachers == null) return '';
         $template = file_get_contents(Constants::$ROOT_PATH . "html_templates/teacherInList.html");
         $resStr = "";
         foreach ($teachers as $key => $value) {

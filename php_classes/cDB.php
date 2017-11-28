@@ -107,16 +107,17 @@ class cDB
     public
     function LoadAllTeachers()
     {
-        $dbAnswer = $this->dbLink->query("SELECT `nickName` FROM `teachers` WHERE 1");
-        $dbArray = $dbAnswer->fetch_all();
-
         $retArray = [];
+        $dbAnswer = $this->dbLink->query("SELECT `nickName` FROM `teachers` WHERE 1");
+        if($dbAnswer == null) return $retArray;
+        $count = $dbAnswer->num_rows;
+        $dbArray = [];
+        for($i=0;$i<$count;$i++)
+            $dbArray[] = $dbAnswer->fetch_object()->nickName;
 
         foreach ($dbArray as $currTeacherNick)
-            $retArray[$currTeacherNick[0]] = $this->LoadTeacherByNickName($currTeacherNick[0], false);
-
-        Constants::Log(var_export($retArray, true));
-
+            $retArray[$currTeacherNick] = $this->LoadTeacherByNickName($currTeacherNick, false);
+        //Constants::Log(var_export($retArray, true));
         return $retArray;
     }
 

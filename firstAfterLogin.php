@@ -55,10 +55,4 @@ $page = str_replace('{right1InitContent}', $right1InitContent, $page);
 $page = str_replace('{right2InitContent}', $right2InitContent, $page);
 $page = str_replace('{extraContent}', $extraContent, $page);
 
-//$groups = $currUser->groups;
-
-
-//$page = str_replace("{groups}", cDrawer::DrawGroupsList($groups), $page);
-//$page = str_replace("{info}", "", $page);
-
 echo $page;

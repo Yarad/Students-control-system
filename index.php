@@ -12,8 +12,6 @@ include_once "php_classes/cAdmin.php";
 $db = new cDB();
 $loginError = "";
 
-//$admin1 = new cAdmin("admin", "password", "");
-//$db->SaveAdmin($admin1);
 
 if ($db->VerifyUser() != null) {
     header("Location: firstAfterLogin.php");
