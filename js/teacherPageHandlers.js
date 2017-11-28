@@ -11,7 +11,6 @@ function onPageLoad() {
     //ShowStudentsQuery('group1');
 }
 
-
 function onAddStudentInGroupButtonClick() {
     $("#edit-user-info-form").css('display', 'inline-block');
 
@@ -47,7 +46,6 @@ function onCancelFormButtonClick() {
 function onListButtonClick(groupID) {
     currGroupID = groupID;
     ShowStudentsQuery(groupID);
-    ChangeViewOfRightMenuBlocks();
 }
 
 function onBackToGroupsButtonClick() {
@@ -219,7 +217,6 @@ function ShowGroupsHandler(data) {
     ClearLeftContent();
 }
 
-
 function ShowStudentTimetableHandler(data) {
     doc = document.getElementById("leftContent");
     doc.innerHTML = data;
@@ -229,6 +226,7 @@ function ShowStudentsHandler(data) {
     //сдвиг блока... помещение data в блок
     doc = document.getElementById("rightContent-inner2");
     doc.innerHTML = data;
+	ChangeViewOfRightMenuBlocks();
 }
 
 function ChangeViewOfRightMenuBlocks() {

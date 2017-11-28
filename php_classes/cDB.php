@@ -108,12 +108,14 @@ class cDB
     function LoadAllTeachers()
     {
         $dbAnswer = $this->dbLink->query("SELECT `nickName` FROM `teachers` WHERE 1");
-        $dbArray = $dbAnswer->fetch_array();
+        $dbArray = $dbAnswer->fetch_all();
 
         $retArray = [];
 
         foreach ($dbArray as $currTeacherNick)
-            $retArray[$currTeacherNick] = $this->LoadTeacherByNickName($currTeacherNick, true);
+            $retArray[$currTeacherNick[0]] = $this->LoadTeacherByNickName($currTeacherNick[0], false);
+
+        Constants::Log(var_export($retArray, true));
 
         return $retArray;
     }
@@ -257,10 +259,11 @@ class cDB
         $hash = $_COOKIE['curr_session_hash'];
         $dbHash = '';
 
+		//var_dump(isset(Constants::$DB_TABLE_ADMINS));
         $dbAnswerTeachers = $this->dbLink->query("SELECT `curr_session_hash` FROM `" . Constants::$DB_TABLE_TEACHERS . "` WHERE `nickName` = '$nick'");
-        $dbAnswerStudents = $this->dbLink->query("SELECT `curr_session_hash` FROM `" . Constants::$DB_TABLE_STUDENTS . "` WHERE `nickName` = '$nick'");
-        $dbAnswerAdmins = $this->dbLink->query("SELECT `curr_session_hash` FROM `" . Constants::$DB_TABLE_ADMINS . "` WHERE `nickName` = '$nick'");
-
+		$dbAnswerStudents = $this->dbLink->query("SELECT `curr_session_hash` FROM `" . Constants::$DB_TABLE_STUDENTS . "` WHERE `nickName` = '$nick'");
+		$dbAnswerAdmins = $this->dbLink->query("SELECT `curr_session_hash` FROM `" . Constants::$DB_TABLE_ADMINS . "` WHERE `nickName` = '$nick'");
+		
         if ($dbAnswerTeachers->num_rows == 0 && $dbAnswerStudents->num_rows == 0 && $dbAnswerAdmins->num_rows == 0)
             return null;
 

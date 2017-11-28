@@ -8,17 +8,12 @@ include_once "php_classes/cAdmin.php";
  * Date: 06.10.2017
  * Time: 20:43
  */
-
+ 
 $db = new cDB();
 $loginError = "";
 
-$admin1 = new cAdmin("admin1", "arageddon", "");
-$admin2 = new cAdmin("admin2", "zelyonka", "");
-$admin3 = new cAdmin("admin3", "latte", "");
-
-$db->SaveAdmin($admin1);
-$db->SaveAdmin($admin2);
-$db->SaveAdmin($admin3);
+//$admin1 = new cAdmin("admin", "password", "");
+//$db->SaveAdmin($admin1);
 
 if ($db->VerifyUser() != null) {
     header("Location: firstAfterLogin.php");

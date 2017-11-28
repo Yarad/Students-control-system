@@ -8,9 +8,24 @@
  */
 class cDrawer
 {
+    static function DrawListOfTeachersHeader()
+    {
+        $resStr = '';
+        $resStr .= '<h2>Список всех учителей</h2>';
+        $resStr .= file_get_contents(Constants::$ROOT_PATH . "html_templates/addTeacherButton.html");
+        return $resStr;
+    }
+
     static function DrawTeachersList($teachers)
     {
-
+        $template = file_get_contents(Constants::$ROOT_PATH . "html_templates/teacherInList.html");
+        $resStr = "";
+        foreach ($teachers as $key => $value) {
+            $tempStr = str_replace("{NameSurname}", $value->surname_name, $template);
+            $tempStr = str_replace("{teacherLogin}", $value->nickName, $tempStr);
+            $resStr .= $tempStr;
+        }
+        return $resStr;
     }
 
     static function DrawGroupsList($groups)

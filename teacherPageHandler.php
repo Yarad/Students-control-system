@@ -9,10 +9,16 @@ include_once "php_classes/сOneDayRecord.php";
  * Time: 1:15
  */
 $db = new cDB();
-$currTeacher = $db->VerifyUser();
 
-if ($_POST['task'] == "ShowGroups")
+if (isset($_COOKIE['teacherUnderAdmin'])) {
+    $currTeacher = $db->LoadTeacherByNickName($_COOKIE['teacherUnderAdmin']);
+}
+else
+    $currTeacher = $db->VerifyUser();
+
+if ($_POST['task'] == "ShowGroups") {
     echo '<h2>Список ваших групп</h2>' . cDrawer::DrawGroupsList($currTeacher->groups);
+}
 
 if ($_POST['task'] == "ShowStudents") {
     $index = $_POST['groupID'];
@@ -31,7 +37,7 @@ if ($_POST['task'] == "ShowTimetable") {
 if ($_POST['task'] == "SaveNotesAndMarks") {
     $monthOffset = $_POST["monthOffset"];
     $newNotesAndMarks = json_decode($_POST["notesAndMarks"]);
-	//var_dump($newNotesAndMarks);
+    //var_dump($newNotesAndMarks);
     $currStudentID = $_POST['studentID'];
     $currGroupID = $_POST['currGroupID'];
 
@@ -41,23 +47,23 @@ if ($_POST['task'] == "SaveNotesAndMarks") {
             $currTeacher->groups[$currGroupID]->students[$currStudentID]->editMark($key, new сOneDayRecord($value[0], $value[1]));
         }
 
-        if($db->UpdateStudent($currTeacher->groups[$currGroupID]->students[$currStudentID]))
-			echo "OK";
-		else
-			echo "ERROR";
+        if ($db->UpdateStudent($currTeacher->groups[$currGroupID]->students[$currStudentID]))
+            echo "OK";
+        else
+            echo "ERROR";
     } else {
-		$isOK = true;
+        $isOK = true;
         foreach ($currTeacher->groups[$currGroupID]->students as $currStudent) {
             foreach ($newNotesAndMarks as $key => $value) {
                 $currStudent->editMark($key, new сOneDayRecord($value[0], $value[1]));
                 //var_dump($newNotesAndMarks);
             }
-			$isOK = $isOK && $db->UpdateStudent($currStudent);  	
+            $isOK = $isOK && $db->UpdateStudent($currStudent);
         }
-		if($isOK)
-			echo "OK";
-		else
-			echo "ERROR";
+        if ($isOK)
+            echo "OK";
+        else
+            echo "ERROR";
     }
 }
 
@@ -84,12 +90,10 @@ if ($_POST['task'] == "AddStudent") {
         $currTeacher->groups[$currGroupID]->addStudent(new cStudent($login, $password, $currGroupID, trim($surname) . ' ' . trim($name)));
         $isAdded = $db->UpdateGroup($currTeacher->groups[$currGroupID]);
         $isAdded = $isAdded && $db->SaveStudent($currTeacher->groups[$currGroupID]->students[$login]);
-        if ($isAdded)
-		{
+        if ($isAdded) {
             DrawCurrentGroupBlock($currTeacher, $currGroupID);
-			echo "OK";
-		}
-        else
+            echo "OK";
+        } else
             echo 'DB_ERROR';
     } else {
         echo 'INPUT_ERROR';

@@ -22,9 +22,17 @@ class Constants
     static $INCORRECT_LOGIN_MESSAGE = "Неверный логин";
     static $INCORRECT_PASSWORD_MESSAGE = "Неверный пароль";
 
+    /**
+     * @param string $DB_TABLE_ADMINS
+     */
+    public static function Log($logStr)
+    {
+        file_put_contents(Constants::$ROOT_PATH . "log.html", "<pre>" . $logStr . "</pre>");
+    }
+
     static function random_string($length, $chartypes = "numbers,lower")
     {
-        $chartypes_array=explode(",", $chartypes);
+        $chartypes_array = explode(",", $chartypes);
         // задаем строки символов.
         //Здесь вы можете редактировать наборы символов при необходимости
         $lower = 'abcdefghijklmnopqrstuvwxyz'; // lowercase
@@ -35,15 +43,15 @@ class Constants
         // определяем на основе полученных параметров,
         //из чего будет сгенерирована наша строка.
         if (in_array('all', $chartypes_array)) {
-            $chars = $lower . $upper. $numbers . $special;
+            $chars = $lower . $upper . $numbers . $special;
         } else {
-            if(in_array('lower', $chartypes_array))
+            if (in_array('lower', $chartypes_array))
                 $chars = $lower;
-            if(in_array('upper', $chartypes_array))
+            if (in_array('upper', $chartypes_array))
                 $chars .= $upper;
-            if(in_array('numbers', $chartypes_array))
+            if (in_array('numbers', $chartypes_array))
                 $chars .= $numbers;
-            if(in_array('special', $chartypes_array))
+            if (in_array('special', $chartypes_array))
                 $chars .= $special;
         }
         // длина строки с символами
@@ -62,16 +70,17 @@ class Constants
         // возвращаем результат
         return $string;
     }
+
     static function authFailed()
     {
         header("Location: index.php");
         exit();
     }
+
     static function printRusDate($date)
     {
         $retStr = $date->format("d");
-        switch ($date->format("m"))
-        {
+        switch ($date->format("m")) {
             case '1':
                 $month = 'Января';
                 break;
@@ -116,7 +125,7 @@ class Constants
     static function getMonthNameByOffset($monthOffset = 0)
     {
         //setlocale(LC_ALL, 'rus_rus');
-        if($monthOffset>=0)
+        if ($monthOffset >= 0)
             $tempChar = '+';
         else
             $tempChar = '-';
@@ -124,8 +133,7 @@ class Constants
 
         $monthNum = strftime('%m', $dt);
 
-        switch ($monthNum)
-        {
+        switch ($monthNum) {
             case 1:
                 $month = 'январь';
                 break;
@@ -165,6 +173,7 @@ class Constants
         }
         return $month;
     }
+
     static function getYeraNumByOffset($monthOffset = 0)
     {
         //setlocale(LC_ALL, 'rus_rus');

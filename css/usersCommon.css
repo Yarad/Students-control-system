@@ -32,7 +32,7 @@
     display: inline-block;
     margin: 3vh 20px;
     padding: 20px;
-    min-height: 80vh;
+    height: 80vh;
     background-color: white;
     vertical-align: top;
 }
@@ -96,6 +96,6 @@
     vertical-align: top;
 }
 
-.func-buttons:hover{
+.func-buttons:hover {
     background-color: #26873f;
 }
