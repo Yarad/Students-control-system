@@ -12,5 +12,5 @@ $db = new cDB();
 $currUser = $db->VerifyUser();
 
 if ($_POST['task'] == "ShowTeachers") {
-    echo cDrawer::DrawTeachersList($db->LoadAllTeachers());
+    echo cDrawer::DrawListOfTeachersHeader() . cDrawer::DrawTeachersList($db->LoadAllTeachers());
 }

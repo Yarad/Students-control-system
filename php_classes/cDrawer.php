@@ -16,6 +16,15 @@ class cDrawer
         return $resStr;
     }
 
+    static function DrawAdminFunctionalityInGroups()
+    {
+        $retStr = '';
+        $retStr .= file_get_contents('html_templates/backToTeachersListButton.html');
+
+
+        echo $retStr;
+    }
+
     static function DrawTeachersList($teachers)
     {
         $template = file_get_contents(Constants::$ROOT_PATH . "html_templates/teacherInList.html");

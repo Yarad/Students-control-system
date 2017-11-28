@@ -17,7 +17,10 @@ else
     $currTeacher = $db->VerifyUser();
 
 if ($_POST['task'] == "ShowGroups") {
-    echo '<h2>Список ваших групп</h2>' . cDrawer::DrawGroupsList($currTeacher->groups);
+    echo '<h2>Список ваших групп</h2>';
+    if (isset($_COOKIE['teacherUnderAdmin']))
+        cDrawer::DrawAdminFunctionalityInGroups();
+    echo cDrawer::DrawGroupsList($currTeacher->groups);
 }
 
 if ($_POST['task'] == "ShowStudents") {
@@ -118,7 +121,6 @@ if ($_POST['task'] == "DeleteStudent") {
 if ($_POST['task'] == "ChangeSettings") {
 
 }
-
 
 function DrawCurrentGroupBlock($teacher, $groupID)
 {

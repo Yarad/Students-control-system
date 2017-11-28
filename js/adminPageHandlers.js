@@ -25,7 +25,7 @@ function ShowTeachersHandler(data) {
 }
 
 function onTeacherRecordClick(teacherId) {
-    if (event.target != event.currentTarget) return;
+    if (event.target.classList.contains("user-extraButtons")) return;
     ChooseTeacher(teacherId);
 }
 
@@ -48,4 +48,10 @@ function ShowGroupsByTeacherIdQuery(teacherId) {
         },
         ShowGroupsHandler
     );
+}
+
+function onBackToTeachersButtonClick()
+{
+    ShowTeachersQuery();
+    Cookies.set("teacherUnderAdmin",'',{ path: '/'});
 }
